@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/item_selector"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_x10"
+        android:layout_gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivDelete"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/padding_x4"
+            android:text="二楼客厅 顶灯"
+            android:textColor="@color/security_gray"
+            android:textSize="@dimen/text_small"/>
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:padding="@dimen/padding_x1"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/security_linkage_delete_selector"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/padding_x4"
+        android:layout_marginRight="@dimen/padding_x4"
+        android:background="@color/security_gray_white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/security_image_item_height"
+        android:background="@null">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding_x2"
+            android:drawableRight="@drawable/device_item_arrow_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:text="@string/scene_action_time"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_normal"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/security_image_item_height1"
+            android:layout_gravity="center_vertical"
+            android:background="@color/security_gray_white"/>
+
+        <LinearLayout
+            android:id="@+id/linearAction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/padding_x4">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <com.orvibo.homemate.view.custom.ActionView
+                    android:id="@+id/av_bindaction"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="@dimen/padding_x4"
+                    android:paddingRight="@dimen/padding_x2"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:src="@drawable/device_item_arrow_right"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

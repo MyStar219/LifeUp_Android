@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/default_padding">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:text="@string/current_password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/field_pass"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/oldPass"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:text="@string/new_password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/field_pass"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/newPass"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:text="@string/confirm_password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/field_pass"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/confirmNewPass"
+        />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="@dimen/double_padding"
+        android:text="@string/update"
+        android:textSize="18sp"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+
+</LinearLayout>

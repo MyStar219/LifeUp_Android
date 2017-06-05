@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.orvibo.homemate.view.custom.CountdownTextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minEms="4"
+                android:text="00:00:00"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/text_big" />
+
+            <TextView
+                android:id="@+id/tvPeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x1"
+                android:layout_toRightOf="@+id/tvTime"
+                android:text="AM"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_tinny"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:text="dongzuo"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:focusable="false"/>
+
+    <com.orvibo.homemate.view.custom.OnOffCheckbox
+        android:id="@+id/cbIsPaused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/switch_selector"
+        android:focusable="false" />
+</LinearLayout>

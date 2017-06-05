@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/classification_item"
+    android:layout_width="wrap_content"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/warningImageView"
+        android:layout_width="match_parent"
+        android:background="@drawable/pic_warning_move"
+        android:layout_height="match_parent" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/padding_x4"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/deviceIcon_iv"
+            android:src="@drawable/icon_classification_lock"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x2"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/deviceName_tv"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:singleLine="true"
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+        <com.orvibo.homemate.view.custom.MyCountdownTextView
+            android:id="@+id/deviceStatus_tv"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:textSize="@dimen/text_tinny"
+            android:textColor="@color/gray"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout></RelativeLayout>

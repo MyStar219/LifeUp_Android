@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_image_item_height"
+    android:background="@drawable/tran"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:background="@drawable/item_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_x4"
+        android:paddingRight="@dimen/margin_x4">
+
+        <TextView
+            android:id="@+id/memberNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:singleLine="true"
+            android:text="device name"
+            android:textColor="@color/navigation_text_color"
+            android:textSize="@dimen/text_normal" />
+
+        <CheckBox
+            android:id="@+id/memberCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:tag="@string/save"
+            android:clickable="false"
+            android:button="@drawable/check_box"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

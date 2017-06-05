@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/switchLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_divide" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/line_vertical_divide" />
+
+            <CheckBox
+                android:id="@+id/openCheckBox"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/week_height"
+                android:layout_weight="1"
+                android:background="@drawable/time_repeat_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:singleLine="true"
+                android:tag="@string/action_open"
+                android:text="@string/action_open"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/line_vertical_divide" />
+
+            <CheckBox
+                android:id="@+id/closeCheckBox"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/week_height"
+                android:layout_weight="1"
+                android:background="@drawable/time_repeat_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:singleLine="true"
+                android:tag="@string/action_close"
+                android:text="@string/action_close"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/line_vertical_divide" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_divide" />
+    </LinearLayout>
+</LinearLayout>

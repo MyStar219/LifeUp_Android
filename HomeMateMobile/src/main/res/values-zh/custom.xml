@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="toast_message_wrong_address">Cannot build destination address from [%s]</string>
+    
+    <string name="notification_started">Started</string>
+    
+    <!-- registration status  -->
+    <string name="notification_registered_progress">Progress register to %s</string>
+    <string name="notification_registered_success">Registered to %s </string> 
+	<string name="notification_registered_failure">Fails to register to %s</string>
+</resources>

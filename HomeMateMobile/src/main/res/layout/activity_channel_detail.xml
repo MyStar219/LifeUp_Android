@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigation:bg_color="@color/title_bar_bg"
+        navigation:ng_left_img="@drawable/back_green"
+        navigation:right_img="@drawable/bt_nav_green_collection_normal" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/nbTitle"
+        android:background="@color/divide_line_color" />
+    <RelativeLayout
+        android:id="@+id/ll_program_guides"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nbTitle"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical">
+
+        <com.orvibo.homemate.view.custom.categoryscrollview.CategoryTabStrip
+            android:id="@+id/cts_programs_guides"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingLeft="6.0dip"
+            android:paddingRight="6.0dip" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/ll_program_guides"
+        android:background="@color/divide_line_color" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_programs_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_divide_line"/>
+
+</RelativeLayout>

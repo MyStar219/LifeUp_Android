@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popup_bg">
+
+    <View
+        android:id="@+id/v1"
+        style="@style/view_vertical"
+        android:layout_weight="4" />
+
+    <LinearLayout
+        android:id="@+id/wheel_ll"
+        style="@style/view_vertical"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+
+        <RelativeLayout
+            style="@style/view_vertical"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_weight="90"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/cancel_tv"
+                android:gravity="center"
+                android:textSize="@dimen/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/green"
+                android:paddingRight="@dimen/padding_x4"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="@dimen/padding_x4"
+                android:text="@string/cancel" />
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:gravity="center"
+                android:textSize="@dimen/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:textColor="@color/font_learned_white"
+                android:text="@string/time_start_choose" />
+
+            <TextView
+                android:id="@+id/confirm_tv"
+                android:gravity="center"
+                android:textSize="@dimen/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/padding_x4"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/padding_x4"
+                android:textColor="@color/green"
+                android:text="@string/confirm" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_white" />
+
+        <RelativeLayout
+            style="@style/view_vertical"
+            android:layout_weight="550">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tran"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <View
+                    style="@style/view_vertical"
+                    android:layout_weight="2" />
+
+                <View
+                    style="@style/view_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/device_set_select_room_wheel_middle_bg" />
+
+                <View
+                    style="@style/view_vertical"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_x11"
+                android:layout_marginRight="@dimen/margin_x11"
+                android:orientation="horizontal">
+
+                <com.orvibo.homemate.view.custom.wheelview.WheelView
+                    android:id="@+id/hour"
+                    style="@style/view_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+                
+                <TextView
+                    android:id="@+id/hour_title"
+                    style="@style/view_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/time_hours"
+                    android:textSize="@dimen/text_normal"/>
+
+                <com.orvibo.homemate.view.custom.wheelview.WheelView
+                    android:id="@+id/min"
+                    style="@style/view_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/min_title"
+                    style="@style/view_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/time_minute_mini"
+                    android:textSize="@dimen/text_normal"/>
+
+                <com.orvibo.homemate.view.custom.wheelview.WheelView
+                    android:id="@+id/sec"
+                    style="@style/view_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/sec_title"
+                    style="@style/view_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/time_second_mini"
+                    android:textSize="@dimen/text_normal"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

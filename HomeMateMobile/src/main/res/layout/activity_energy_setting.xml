@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_background"
+    android:layout_height="match_parent">
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        navigationBar:leftDrawableLeft="@drawable/back"
+        navigationBar:text="@string/message_energy_setting"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:layout_below="@+id/navigationBar"
+        android:id="@+id/devicesEnergySetListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/tran"
+        android:dividerHeight="0dp"
+        android:listSelector="@drawable/tran" />
+
+</RelativeLayout>

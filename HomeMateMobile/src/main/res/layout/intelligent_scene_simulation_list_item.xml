@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlAccountName"
+    android:layout_width="match_parent"
+    android:layout_height="120dip"
+    android:background="@drawable/bg_green">
+
+    <com.orvibo.homemate.view.custom.OfflineView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_superscript"
+        android:gravity="center_horizontal"
+        android:padding="5dip"
+        android:text="@string/intelligent_scene_simulation"
+        android:textColor="#43d2ae" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:paddingLeft="@dimen/margin_x6">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/securityNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:text="@string/intelligent_scene_go_home"
+                android:textColor="@color/font_white_255"
+                android:textSize="@dimen/text_big" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/securityDeviceIconImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_scene_light1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:background="@drawable/icon_scene_tv6" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:background="@drawable/icon_scene_aircondition5" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/activateImageView"
+            android:background="@drawable/pic_dividing_line" />
+
+        <TextView
+            android:id="@+id/activateImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_x4"
+            android:background="@drawable/btn_start"
+            android:gravity="center"
+            android:text="@string/intelligent_scene_start"
+            android:textColor="@color/font_white_255"
+            android:textSize="@dimen/text_big" />
+    </RelativeLayout>
+</FrameLayout>

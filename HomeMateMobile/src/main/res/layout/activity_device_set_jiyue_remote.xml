@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nb_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:text="@string/device_set_button" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_bar_height"
+        android:background="@color/set_key_background"
+        android:gravity="center"
+        android:text="@string/device_set_scene_tips"
+        android:textColor="@color/font_black"
+        android:textSize="@dimen/text_small" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_x12"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/panel_v1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:layout_marginRight="@dimen/margin_x2"
+                android:layout_weight="1"
+                android:background="@drawable/jiyue_remote_unbind"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="selectKeyNo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/panel_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="1"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_normal" />
+
+                <LinearLayout
+                    android:id="@+id/layoutView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/panel_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="order"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/text_normal" />
+
+                    <View
+                        android:id="@+id/colorView1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panel_v2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:layout_marginRight="@dimen/margin_x2"
+                android:layout_weight="1"
+                android:background="@drawable/jiyue_remote_unbind"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="selectKeyNo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/panel_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="2"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_normal" />
+
+                <LinearLayout
+                    android:id="@+id/layoutView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/panel_tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="order"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/text_normal" />
+
+                    <View
+                        android:id="@+id/colorView2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/panel_v3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:layout_marginRight="@dimen/margin_x2"
+                android:layout_weight="1"
+                android:background="@drawable/jiyue_remote_unbind"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="selectKeyNo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/panel_tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="3"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_normal" />
+
+                <LinearLayout
+                    android:id="@+id/layoutView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/panel_tv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="order"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/text_normal" />
+
+                    <View
+                        android:id="@+id/colorView3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panel_v4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:layout_marginRight="@dimen/margin_x2"
+                android:layout_weight="1"
+                android:background="@drawable/jiyue_remote_unbind"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="selectKeyNo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/panel_tv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="4"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_normal" />
+
+                <LinearLayout
+                    android:id="@+id/layoutView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/panel_tv8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="order"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/text_normal" />
+
+                    <View
+                        android:id="@+id/colorView4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:layout_marginRight="@dimen/margin_x2"
+                android:layout_weight="1"
+                android:src="@drawable/bg_btn_disable" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:layout_marginRight="@dimen/margin_x2"
+                android:layout_weight="1"
+                android:src="@drawable/bg_btn_disable" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

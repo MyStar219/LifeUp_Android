@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="@string/device_my"
+        app:rightDrawableRight="@drawable/white_add_selector" />
+
+    <com.orvibo.homemate.view.custom.InfoPushTopView
+        android:id="@+id/infoPushCountView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/bar_height"
+        app:typeBg="1" />
+
+    <GridView
+        android:id="@+id/deviceGridView"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_below="@id/navigationBar"
+        android:numColumns="2"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/deviceEmptyLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/navigationBar"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:src="@drawable/bg_light" />
+
+        <ImageView
+            android:id="@+id/scanning_image"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_x10"
+            android:layout_weight="1"
+            android:src="@drawable/icon_scanning" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/device_scanning"
+                style="@style/big_green"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/qr_scanning_device" />
+
+            <TextView
+                style="@style/small_gray"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_x4"
+                android:gravity="center"
+                android:padding="@dimen/margin_x1"
+                android:text="@string/qr_scanning_device_explain" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

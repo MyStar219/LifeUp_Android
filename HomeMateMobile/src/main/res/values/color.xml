@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="gray_ligth">#a0000000</drawable>
+    <color name="transparent">#00000000</color>
+    <!-- 灰白 -->
+    <color name="font_white_gray">#cccccc</color>
+
+    <!-- 设备离线的字体颜色-->
+    <color name="font_offline">#000000</color>
+
+    <!-- 正常白 -->
+    <color name="font_black">#333333</color>
+
+
+    <!-- 学习白 -->
+    <color name="font_learned_white">#868686</color>
+
+    <color name="rgb_bg">#CCCCCC</color>
+
+    <!-- 全白 -->
+    <color name="font_white_255">#ffffff</color>
+
+    <!-- 绿色 -->
+    <color name="green">#31c37c</color>
+    <color name="security_gray">#99999999</color>
+
+    <!-- 淡绿色 -->
+    <color name="gray_green">#BCF3D8</color>
+
+    <!-- 定时绿色 -->
+    <color name="timing_green">#52c884</color>
+    <!-- 情景绿色 -->
+    <color name="scene_green">#3cd289</color>
+    <color name="scene_press_green">#b9e9d8</color>
+    <!-- 情景黄色 -->
+    <color name="scene_yellow">#fec835</color>
+    <color name="scene_press_yellow">#f3e68f</color>
+    <!-- 情景红色 -->
+    <color name="scene_red">#fc6d6d</color>
+    <color name="intelligent_red">#fc6d6d</color>
+    <!-- 情景灰色 -->
+    <color name="scene_gray">#99999999</color>
+
+    <!--进度颜色-->
+    <color name="process_color1">#35b97a</color>
+    <color name="process_color2">#35b97a</color>
+    <color name="process_color3">#5edc9f</color>
+    <color name="process_color4">#b6eed3</color>
+
+
+    <!-- 红色 -->
+    <color name="red">#fd5c48</color>
+    <!-- 黄色 -->
+    <color name="yellow">#ffc815</color>
+    <!-- 黄色 -->
+    <color name="orange">#ccf9fa86</color>
+    <!-- 蓝色 -->
+    <color name="blue">#1f9ced</color>
+
+    <!-- 情景按下背景颜色 -->
+    <color name="bg_white_gray">#e1e1e1</color>
+
+    <!-- 门锁关锁字体颜色 -->
+    <color name="lock_red">#fc6d6d</color>
+
+    <!-- 删除楼层字体颜色 -->
+    <color name="delete_floor_red">#F95452</color>
+    <color name="warning_red">#ffc1bb</color>
+
+    <!-- login -->
+    <color name="login_font">#ffffff</color>
+    <color name="login_font_forget_pwd">#5b5b65</color>
+    <color name="login_font_register">#5b5b65</color>
+
+    <!-- bind -->
+    <color name="bind_bind">#ffffff</color>
+    <color name="popup_bg">#90000000</color>
+    <color name="bg">#ffffff</color>
+
+
+    <!-- sip start account registration state -->
+    <color name="account_inactive">#FF646464</color>
+    <color name="account_unregistered">#FFFFC200</color>
+    <color name="account_valid">#FF84E300</color>
+    <color name="account_error">#FFFF0F00</color>
+    <!-- sip end account registration state -->
+
+
+    <color name="tran">#00000000</color>
+    <color name="white_alpha">#44ffffff</color>
+    <color name="gray_white">#cccccc</color>
+    <color name="security_gray_white">#e2e2e2</color>
+    <color name="gray_white_color">#bbbbbb</color>
+    <color name="gray">#999999</color>
+    <color name="dark">#666666</color>
+    <color name="black">#333333</color>
+    <!--listview item按下颜色-->
+    <color name="item_pressed">#eeeeee</color>
+
+    <!-- 导航栏文字 -->
+    <color name="navigation_text_color">#333333</color>
+    <!-- 导航栏背景 -->
+    <color name="navigation_background">#33383b</color>
+    <!-- 智能情景导航栏背景 -->
+    <color name="scene_bar_background">#f8f8f8</color>
+    <!--所有导航栏的背景颜色-->
+    <color name="nav_background_color">#f5f5f5</color>
+    <!-- 验证身份提示 -->
+    <color name="identity_tip">#868686</color>
+
+    <!-- 背景用于注册登陆 old:f2f2f2-->
+    <color name="common_background">#f7f7f7</color>
+
+    <!--分割线颜色-->
+    <color name="common_line">#dddddd</color>
+    <!--导航栏分割线颜色-->
+    <color name="nav_line">#bbbbbb</color>
+
+    <!-- 文字提示 -->
+    <color name="hint_background">#a6a6a6</color>
+    <!-- edittext -->
+    <color name="et_hint_font">#cccccc</color>
+    <color name="et_font">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="white_alpha70">#B2ffffff</color>
+
+    <!-- 5键情景绑定 -->
+    <color name="set_key_background">#FEF5DD</color>
+
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+
+    <color name="yellow_deep">#fec835</color>
+    <color name="green_deep">#6ed5a3</color>
+
+    <!--分隔线颜色-->
+    <color name="divide_line_color">#d6d6d6</color>
+    <!--设备英文名文字颜色-->
+    <color name="device_name_en_color">#686868</color>
+    <color name="temprature_gray">#cccccc</color>
+    <!--温馨提示文本框背景-->
+    <color name="tips_textview_bg">#b3f9fa86</color>
+    <color name="temprature_green">#31c37c</color>
+    <color name="color_dedede">#dedede</color>
+
+    <!--节目类别自定义控件的颜色值-->
+    <color name="category_tab_text">#ff707070</color>
+    <color name="category_tab_highlight_text">#fffafafa</color>
+
+    <!--添加设备Item背景-->
+    <color name="add_device_item_press">#f4f4f4</color>
+
+    <color name="picture_rotation_tv_divide_color">#e6e6e6</color>
+
+    <color name="danale_security_msg_divile_color">#e5e5e5</color>
+    <color name="danale_activity_bg_color">#f7f7f7</color>
+    <color name="gray_holo_dark">#cccccc</color>
+
+    <color name="time_line_view_bg">#939393</color>
+    <color name="time_text_bg">#f3f3f4</color>
+
+    <color name="leftTextView">#b4b4b8</color>
+    <color name="feedback_divide_line_color">#dddddd</color>
+    <color name="feedback_c9c9c9">#c9c9c9</color>
+    <color name="feedback_edittext_hint_color">#d8d8d8</color>
+    <color name="title_bar_bg">#f5f5f5</color>
+    <!--插座背景色-->
+    <color name="coco_item_gray">#eeeeee</color>
+    <color name="socket_close_dark">#494848</color>
+    <color name="wave_white">#7fffffff</color>
+    <color name="energy_bar">#999999</color>
+
+    <color name="arm_red">#f1594b</color>
+    <color name="line_gray">#dddddd</color>
+
+    <!--传感器状态记录-->
+    <color name="statusrecord_text_record">#333333</color>
+    <color name="statusrecord_text_line">#e5e5e5</color>
+    <color name="statusrecord_text_time">#8d8d8d</color>
+
+
+    <!--sg-->
+    <color name="colorPrimary">#28a7e1</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#136990</color>
+    <color name="colorBackground">#6ccef5</color>
+
+    <color name="calendar_today_bg">#1000</color>
+    <color name="gray_bg">#eee</color>
+
+    <color name="menu_green">#a5e047</color>
+    <color name="menu_red">#f44336</color>
+    <color name="menu_blue">#03a9f4</color>
+</resources>

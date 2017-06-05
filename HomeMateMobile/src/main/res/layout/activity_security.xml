@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:right_text="@string/linkage_set"/>
+
+    <ImageView
+        android:id="@+id/ivDisarm"
+        android:layout_below="@+id/nbTitle"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_x16"
+        android:background="@drawable/security_disarm"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivDeployed"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nbTitle"
+        android:layout_marginTop="@dimen/margin_x16"
+        android:background="@drawable/security_deployed"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:id="@+id/switchSecurity"
+        android:layout_below="@+id/ivDisarm"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:switchMinWidth="@dimen/security_switch_width"
+        android:layout_marginTop="@dimen/margin_x16"
+        android:thumb="@drawable/switch_thumb"
+        android:thumbTextPadding="@dimen/padding_x6"
+        android:switchTextAppearance="@style/security_switch_text"
+        android:textOff="@string/security_disarm"
+        android:textOn="@string/security_arm"
+        android:track="@drawable/security_btn_bg"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

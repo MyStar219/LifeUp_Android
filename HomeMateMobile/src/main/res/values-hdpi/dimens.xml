@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="coco_popup_width">120dp</dimen>
+
+    <!--大拿播放器高度-->
+    <dimen name="danale_player_heigh">200dp</dimen>
+
+    <!--小欧部分-->
+    <dimen name="danale_security_verticalLine_marginLeft">34dp</dimen>
+    <dimen name="danale_security_verticalLine_heigh">35dp</dimen>
+    <dimen name="danale_security_time_marginTop">3dp</dimen>
+
+    <dimen name="allone_ac_tmp_line_divider">4.5dp</dimen>
+
+    <dimen name="empty_list_item_padding">90dp</dimen>
+</resources>

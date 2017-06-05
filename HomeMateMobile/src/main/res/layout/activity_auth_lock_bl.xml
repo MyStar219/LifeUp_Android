@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:centerText="@string/lock_add_tmp_pass"
+        navigationBar:leftDrawableLeft="@drawable/back" />
+
+    <TextView
+        android:id="@+id/textTip"
+        style="@style/small_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_x4"
+        android:text="@string/lock_bl_tip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:orientation="horizontal">
+
+        <com.orvibo.homemate.view.custom.EditTextWithCompound
+            android:id="@+id/phoneEditText"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:hint="@string/lock_bl_input_tip"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:textSize="@dimen/text_small" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/gray_white"></View>
+
+        <LinearLayout
+            android:id="@+id/btnSelectPhone"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_list_device_default"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_share_family" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timeView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@drawable/bg_list_device_default"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/lock_bl_tip1"
+            android:textColor="@color/font_learned_white"
+            android:textSize="@dimen/text_normal" />
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right_small" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAuth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@drawable/bg_list_device_default"
+        android:enabled="false"
+        android:text="@string/lock_bl_pass_get_btn"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_normal" />
+
+    <RelativeLayout
+        android:id="@+id/lockTipView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_x4"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/recentUse"
+            style="@style/small_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_x6"
+            android:gravity="center"
+            android:text="@string/smart_lock_recent_use" />
+
+        <ImageView
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/recentUse"
+            android:background="@drawable/line_divide" />
+
+        <ImageView
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/recentUse"
+            android:background="@drawable/line_divide" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/recentUseList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:divider="@null"
+        android:listSelector="#00000000"
+        android:visibility="gone"></ListView>
+</LinearLayout>

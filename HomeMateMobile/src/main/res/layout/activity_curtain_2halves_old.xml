@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/common_background"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        navigationBar:right_text="@string/device_timing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBG"
+                android:layout_width="@dimen/curtain_bg_width"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/percent_curtain_bg"
+                android:layout_height="wrap_content" />
+
+            <com.orvibo.homemate.view.custom.Curtain2HalvesInsideView
+                android:id="@+id/curtain2HalvesInsideView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:layout_width="@dimen/curtain_2halves_width"
+                android:layout_height="@dimen/curtain_2halves_height" />
+            <ImageView
+                android:layout_width="@dimen/curtain_bg_width"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/curtain_2halves_top"
+                android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <com.orvibo.homemate.view.custom.CurtainControlOldView
+        android:id="@+id/curtainControlOldView"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout></ScrollView>

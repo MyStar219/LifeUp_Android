@@ -1,0 +1,224 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:centerText="@string/cth_default_name"
+        navigationBar:leftDrawableLeft="@drawable/back"
+        navigationBar:rightDrawableRight="@drawable/setting_white_selector"/>
+
+
+    <RelativeLayout
+        android:id="@+id/control_circle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:layout_weight="1.3"
+        android:background="@drawable/airer_bg_bigcircle"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/all_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/airer_bg_smallcircle">
+
+            <TextView
+                android:id="@+id/airer_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:drawablePadding="@dimen/padding_x1"
+                android:drawableTop="@drawable/airer_icon_off"
+                android:gravity="center"
+                android:text="@string/cth_off"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_small"/>
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/airer_lighting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_x1"
+            android:drawableTop="@drawable/airer_icon_lighting_unselect"
+            android:gravity="center"
+            android:text="@string/cth_lighting"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small"/>
+
+        <TextView
+            android:id="@+id/airer_wind_drying"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_x1"
+            android:drawableTop="@drawable/airer_icon_air_dry_unselect"
+            android:gravity="center"
+            android:text="@string/cth_wind_drying_control"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small"/>
+
+        <TextView
+            android:id="@+id/airer_sterilizing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_x1"
+            android:drawableTop="@drawable/airer_icon_disinfect_unselect"
+            android:gravity="center"
+            android:text="@string/cth_sterilizing"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small"/>
+
+        <TextView
+            android:id="@+id/airer_heat_drying"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/all_off"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_x1"
+            android:drawableTop="@drawable/airer_icon_dry_unselect"
+            android:gravity="center"
+            android:text="@string/cth_heat_drying_control"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_x8"
+            android:layout_marginRight="@dimen/margin_x8"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/airer_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:drawablePadding="@dimen/padding_x1"
+                android:drawableTop="@drawable/airer_icon_up"
+                android:gravity="center"
+                android:text="@string/cth_up"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_tinny"/>
+
+            <TextView
+                android:id="@+id/airer_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:drawablePadding="@dimen/padding_x1"
+                android:drawableTop="@drawable/airer_icon_stop"
+                android:gravity="center"
+                android:text="@string/cth_stop"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_tinny"/>
+
+            <TextView
+                android:id="@+id/airer_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:drawablePadding="@dimen/padding_x1"
+                android:drawableTop="@drawable/airer_icon_down"
+                android:gravity="center"
+                android:text="@string/cth_down"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_tinny"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_x2"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cth_lighting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:text="@string/cth_lighting"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/cth_drying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_x1"
+                android:gravity="top"
+                android:text="@string/cth_heat_drying"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/cth_sterilizing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_x1"
+                android:gravity="top"
+                android:text="@string/cth_sterilizing"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

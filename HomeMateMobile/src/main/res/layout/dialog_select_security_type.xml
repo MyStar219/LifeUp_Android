@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/select_pic_popup"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    >
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d1cece"/>
+
+        <TextView
+            android:id="@+id/out_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/outhome_security"
+            android:textSize="@dimen/text_normal"
+            android:gravity="center"
+            android:clickable="true"
+            android:background="@drawable/list_item"
+            android:textColor="@color/black"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d1cece"/>
+
+
+        <TextView
+            android:id="@+id/inhome_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/inhome_security"
+            android:textSize="@dimen/text_normal"
+            android:gravity="center"
+            android:clickable="true"
+            android:background="@drawable/list_item"
+            android:textColor="@color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d1cece"/>
+
+
+        <TextView
+            android:id="@+id/disarm_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/cancel_security"
+            android:textSize="@dimen/text_normal"
+            android:gravity="center"
+            android:clickable="true"
+            android:background="@drawable/list_item"
+            android:textColor="@color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d1cece"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d1cece"
+        android:layout_marginTop="@dimen/margin_x6"
+        />
+    <TextView
+        android:id="@+id/dismiss_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/cancel"
+        android:textSize="@dimen/text_normal"
+        android:gravity="center"
+        android:background="@drawable/list_item"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

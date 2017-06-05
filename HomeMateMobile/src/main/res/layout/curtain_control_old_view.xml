@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvOn"
+            android:text="@string/device_on"
+            android:textSize="@dimen/text_big"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:drawableTop="@drawable/curtain_two_half_open"
+            android:layout_marginLeft="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvStop"
+            android:layout_centerHorizontal="true"
+            android:drawableTop="@drawable/curtain_two_half_stop"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_big"
+            android:gravity="center"
+            android:text="@string/device_stop"
+            android:textColor="@color/gray"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvOff"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/text_big"
+            android:drawableTop="@drawable/curtain_two_half_close"
+            android:text="@string/device_off"
+            android:layout_marginRight="18dp"
+            android:textColor="@color/gray"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

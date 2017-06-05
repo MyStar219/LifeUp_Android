@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/call_info"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:gravity="center"/>
+
+    <fragment
+        android:id="@+id/display_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:name="com.evideo.voip.sdk.EVVideoView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_mic"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:text="Mic"
+            android:textColor="@android:color/black"/>
+        <Button
+            android:id="@+id/btn_speaker"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:text="Speaker"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/btn_switch_video"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:text="Camera"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_snapshot"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:text="抓拍"
+            android:textColor="@android:color/black"/>
+        <Button
+            android:id="@+id/btn_unlock"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:text="Unlock"
+            android:textColor="@android:color/black"/>
+        <Button
+            android:id="@+id/btn_hangup"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:text="挂断"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+</LinearLayout>

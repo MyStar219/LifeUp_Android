@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/main_bar_title"
+            android:layout_centerInParent="true"
+            android:text="@string/set_device" />
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left|center_vertical"
+            android:background="@null"
+            android:paddingLeft="@dimen/padding_x4"
+            android:contentDescription="@null"
+            android:onClick="leftTitleClick"
+            android:paddingRight="@dimen/padding_x4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/add_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/padding_x4"
+            android:visibility="invisible"
+            android:clickable="true"
+            android:drawableLeft="@drawable/white_add_selector"
+            android:gravity="center_vertical"
+            android:onClick="addDevice"
+            android:paddingRight="@dimen/padding_x2" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/device_lv"
+        style="@style/listview_vertical_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/empty_add_layout" />
+</LinearLayout>

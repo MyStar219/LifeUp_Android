@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigation:text="@string/subscribe_title"
+        navigation:bg_color="@color/transparent"
+        navigation:ng_left_img="@drawable/back_green" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="@color/gray_white"
+        android:layout_height="0.5dp" />
+    <ListView
+        android:id="@+id/lvSubscribeTiming"
+        android:layout_width="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:divider="@null"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:drawableTop="@drawable/bg_no_device"
+            android:gravity="center"
+            android:text="@string/subscribe_empty"
+            android:textSize="@dimen/text_big"
+            android:drawablePadding="@dimen/padding_x2"
+            android:textColor="@color/gray"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

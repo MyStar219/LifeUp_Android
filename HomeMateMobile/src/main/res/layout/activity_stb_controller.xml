@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:irButton="http://schemas.android.com/apk/res-auto"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:right_text="@string/device_timing"
+        navigationBar:text="@string/device_set_panel_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <TextView
+        android:id="@+id/ir_learn_tips"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_bar_height"
+        android:textColor="@color/font_black"
+        android:textSize="@dimen/text_small"
+        android:text="@string/device_set_self_remote_buttons_tips"
+        android:gravity="center"
+        android:background="@color/hint_background"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x2">
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irMuteSilence"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:scaleType="fitCenter"
+            irButton:unLearnedBg="@drawable/tv_mute_unlearn"
+            irButton:learnedBg="@drawable/tv_mute_learn"
+            irButton:checkedBg="@drawable/tv_mute_learn_pressed"
+            irButton:keyName="@string/tv_silence"
+            irButton:command="310212"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_normal"/>
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButtonPower"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_alignParentRight="true"
+            irButton:unLearnedBg="@drawable/tv_power_unlearn"
+            irButton:learnedBg="@drawable/tv_power_learn"
+            irButton:checkedBg="@drawable/tv_power_learn_pressed"
+            irButton:keyName="@string/tv_power"
+            irButton:command="310210"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_normal"/>
+    </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:columnCount="3">
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton1"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:text="1"
+            irButton:keyName="@string/tv_program_1"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            android:textColor="@color/font_white_gray"
+            irButton:command="310201"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton2"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:text="2"
+            irButton:keyName="@string/tv_program_2"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310202"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton3"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:text="3"
+            irButton:keyName="@string/tv_program_3"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310203"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton4"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:text="4"
+            irButton:keyName="@string/tv_program_4"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310204"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton5"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:text="5"
+            irButton:keyName="@string/tv_program_5"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310205"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton6"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:text="6"
+            irButton:keyName="@string/tv_program_6"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310206"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton7"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:text="7"
+            irButton:keyName="@string/tv_program_7"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310207"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton8"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:text="8"
+            irButton:keyName="@string/tv_program_8"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310208"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton9"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:text="9"
+            irButton:keyName="@string/tv_program_9"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310209"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButtonMenu"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginRight="@dimen/margin_x4"
+            irButton:unLearnedBg="@drawable/tv_menu_unlearned"
+            irButton:learnedBg="@drawable/tv_menu_learned"
+            irButton:checkedBg="@drawable/tv_menu_pressed"
+            irButton:command="310218"
+            irButton:keyName="@string/stb_index"
+            android:textColor="@color/font_white_gray" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButton0"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_marginLeft="@dimen/margin_x4"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310200"
+            irButton:keyName="@string/tv_program_0"
+            android:text="0"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_huge" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButtonChange"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginLeft="@dimen/margin_x4"
+            irButton:unLearnedBg="@drawable/tv_change_unlearned"
+            irButton:learnedBg="@drawable/tv_change_learned"
+            irButton:checkedBg="@drawable/tv_change_pressed"
+            irButton:command="310226"
+            irButton:keyName="@string/tv_change"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_normal" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x2">
+
+        <RelativeLayout
+            android:layout_width="@dimen/tv_voice_height"
+            android:layout_height="@dimen/tv_voice_height"
+            android:layout_centerInParent="true"
+            android:background="@drawable/tv_ok_unlearn">
+            <com.orvibo.homemate.view.custom.IrButton
+                android:id="@+id/irButtonOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/tv_confirm"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_normal"
+                irButton:keyName="@string/tv_confirm"
+                irButton:command="310224"
+                irButton:unLearnedBg="@drawable/tv_ok_unlearn"
+                irButton:learnedBg="@drawable/tv_ok_learn"
+                irButton:checkedBg="@drawable/tv_ok_pressed"/>
+
+            <com.orvibo.homemate.view.custom.IrButton
+                android:id="@+id/irButtonUp"
+                android:layout_width="@dimen/tv_button_wh_small"
+                android:layout_height="@dimen/tv_button_wh_small"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                irButton:unLearnedBg="@drawable/tv_up_unlearn"
+                irButton:learnedBg="@drawable/tv_up_learn"
+                irButton:checkedBg="@drawable/tv_up_pressed"
+                irButton:keyName="@string/tv_up"
+                irButton:command="310220"/>
+
+            <com.orvibo.homemate.view.custom.IrButton
+                android:id="@+id/irButtonLeft"
+                android:layout_width="@dimen/tv_button_wh_small"
+                android:layout_height="@dimen/tv_button_wh_small"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                irButton:unLearnedBg="@drawable/tv_left_unlearn"
+                irButton:learnedBg="@drawable/tv_left_learn"
+                irButton:checkedBg="@drawable/tv_left_pressed"
+                irButton:keyName="@string/tv_left"
+                irButton:command="310222"/>
+
+            <com.orvibo.homemate.view.custom.IrButton
+                android:id="@+id/irButtonRight"
+                android:layout_width="@dimen/tv_button_wh_small"
+                android:layout_height="@dimen/tv_button_wh_small"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                irButton:unLearnedBg="@drawable/tv_right_unlearn"
+                irButton:learnedBg="@drawable/tv_right_learn"
+                irButton:checkedBg="@drawable/tv_right_pressed"
+                irButton:keyName="@string/tv_right"
+                irButton:command="310223"/>
+
+            <com.orvibo.homemate.view.custom.IrButton
+                android:id="@+id/irButtonDown"
+                android:layout_width="@dimen/tv_button_wh_small"
+                android:layout_height="@dimen/tv_button_wh_small"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                irButton:unLearnedBg="@drawable/tv_down_unlearn"
+                irButton:learnedBg="@drawable/tv_down_learn"
+                irButton:checkedBg="@drawable/tv_down_pressed"
+                irButton:keyName="@string/tv_down"
+                irButton:command="310221"/>
+        </RelativeLayout>
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButtonHome"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginLeft="@dimen/margin_x4"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310241"
+            irButton:keyName="@string/tv_home"
+            android:padding="0dip"
+            android:text="@string/tv_home"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_normal" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/irButtonBack"
+            android:layout_width="@dimen/tv_button_wh"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/tv_button_wh"
+            android:layout_marginLeft="@dimen/margin_x4"
+            irButton:unLearnedBg="@drawable/tv_number_unlearned"
+            irButton:learnedBg="@drawable/tv_number_learned"
+            irButton:checkedBg="@drawable/tv_number_pressed"
+            irButton:command="310217"
+            irButton:keyName="@string/tv_back"
+            android:text="@string/tv_back"
+            android:padding="0dip"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_normal" />
+    </RelativeLayout>
+        </LinearLayout></ScrollView>
+</LinearLayout>

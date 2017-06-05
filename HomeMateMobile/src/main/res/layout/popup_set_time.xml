@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/popup_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/v1"
+        style="@style/view_vertical"
+        android:layout_weight="4" />
+
+    <LinearLayout
+        android:id="@+id/wheel_ll"
+        style="@style/view_vertical"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+        <RelativeLayout
+            style="@style/view_vertical"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_weight="90"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/cancel_tv"
+                android:gravity="center"
+                android:textSize="@dimen/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/green"
+                android:paddingRight="@dimen/padding_x4"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="@dimen/padding_x4"
+                android:text="@string/cancel" />
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:gravity="center"
+                android:textSize="@dimen/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:textColor="@color/font_learned_white"
+                android:text="@string/time_start_choose" />
+
+            <TextView
+                android:id="@+id/confirm_tv"
+                android:gravity="center"
+                android:textSize="@dimen/text_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/padding_x4"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/padding_x4"
+                android:textColor="@color/green"
+                android:text="@string/confirm" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_white" />
+
+        <LinearLayout
+            style="@style/view_vertical"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="550">
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TimePicker>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

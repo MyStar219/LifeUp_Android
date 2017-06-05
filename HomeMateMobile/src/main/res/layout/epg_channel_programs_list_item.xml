@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/tv_program_time"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_image_item_height"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_x6"
+        android:text="00:00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_large"/>
+
+    <TextView
+        android:id="@+id/tv_program_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/margin_x6"
+        android:textSize="@dimen/text_big"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/change_channel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginRight="@dimen/margin_x6"
+        android:text="@string/change_channel"
+        android:focusable="false"
+        android:layout_alignTop="@+id/ll_program_info"
+        android:background="@drawable/bt_order_ellipse_press"/>
+</LinearLayout>

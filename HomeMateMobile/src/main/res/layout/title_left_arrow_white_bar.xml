@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/navigation_ll"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:onClick="leftTitleClick"
+            android:paddingLeft="@dimen/margin_x4"
+            android:paddingRight="@dimen/margin_x4"
+            android:src="@drawable/bg_green_arrow_selector"/>
+
+        <TextView
+            android:id="@+id/back_titlebar_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_x32"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/identity"
+            android:textColor="@color/green"
+            android:textSize="@dimen/navigation_textsize"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_x2"
+            android:gravity="center|right"
+            android:onClick="rightTitleClick"
+            android:paddingLeft="@dimen/margin_x4"
+            android:paddingRight="@dimen/margin_x4"
+            android:text="@string/cancel"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_normal"/>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/progress_swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_swiperefresh_hgith"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"/>
+</LinearLayout>

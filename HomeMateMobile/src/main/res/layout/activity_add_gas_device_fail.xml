@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationTextBar
+        android:id="@+id/navigationBar"
+        navigationBar:left="@string/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:middle="@string/add_device_fail" />
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/green"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_x8">
+
+        <ImageView
+            android:id="@+id/blueGrayImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_add_switch" />
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/green"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_x8">
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+           />
+
+        <ImageView
+            android:layout_weight="6"
+            android:id="@+id/blueGrayImageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/pic_combustible_press"/>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tipTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:text="@string/device_add_flammable_gas_sensor_fail_tips1"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small"/>
+
+        <TextView
+            android:id="@+id/tipTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tipTextView1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:text="@string/device_add_tipTextView2"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_small"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/button1"
+        android:layout_width="@dimen/button_width_long"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:padding="@dimen/padding_x2"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@drawable/btn_choice"
+        android:text="@string/device_add_flammable_gas_sensor_fail_tips2"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_big"/>
+    <TextView
+        android:id="@+id/button2"
+        android:layout_width="@dimen/button_width_long"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:padding="@dimen/padding_x2"
+        android:layout_margin="@dimen/margin_x4"
+        android:background="@drawable/btn_choice"
+        android:text="@string/device_add_flammable_gas_sensor_fail_tips3"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_big"/>
+
+</LinearLayout>

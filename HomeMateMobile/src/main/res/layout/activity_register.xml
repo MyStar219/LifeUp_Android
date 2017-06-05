@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="@string/register_account"
+        app:leftDrawableLeft="@drawable/back" />
+
+    <com.orvibo.homemate.view.custom.EditTextWithCompound
+        android:id="@+id/userPhoneEmailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@drawable/edit_text_bg"
+        android:drawablePadding="@dimen/padding_x4"
+        android:drawableRight="@drawable/edit_text_delete_icon"
+        android:hint="@string/user_phone"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/text_big" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_x4"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/userPhoneTipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/tip_icon"
+            android:drawablePadding="@dimen/padding_x1"
+            android:text="@string/user_phone_only_china"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/loginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_small"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:background="@drawable/button_green"
+        android:enabled="false"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_x4"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/registerNextTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_next_tip"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small" />
+
+        <!--<TextView
+            android:id="@+id/userAgreementTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_user_agreement"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_small" />-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/emailRegisterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_x8"
+            android:background="@null"
+            android:text="@string/register_by_email"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_small" />
+    </RelativeLayout>
+</LinearLayout>

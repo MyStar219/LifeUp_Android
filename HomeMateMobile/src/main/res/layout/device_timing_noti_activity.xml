@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/common_background">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="@string/message_setting"
+        app:leftDrawableLeft="@drawable/back" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_x4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:paddingLeft="@dimen/margin_x2"
+        android:paddingRight="@dimen/margin_x2"
+        android:background="@drawable/list_item"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_toRightOf="@id/deviceImageView"
+            android:layout_weight="1"
+            android:text="@string/message_setting_coco"
+            android:textSize="@dimen/text_big" />
+
+        <ImageView
+            android:id="@+id/ctrl_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/socket_switch"
+            android:contentDescription="@null"
+            android:onClick="control"
+            android:paddingLeft="@dimen/padding_x1"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+</LinearLayout>

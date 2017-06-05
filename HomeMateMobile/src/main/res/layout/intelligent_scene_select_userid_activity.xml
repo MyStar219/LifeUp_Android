@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:centerText="@string/intelligent_scene_user"
+        navigationBar:leftDrawableLeft="@drawable/back"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide"/>
+
+    <RelativeLayout
+        android:id="@+id/allUsersRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector"
+        android:descendantFocusability="blocksDescendants">
+
+        <ImageView
+            android:id="@+id/memberImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/et_padding_left"
+            android:background="@drawable/icon_member"/>
+
+        <TextView
+            style="@style/et_common"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/memberImageView"
+            android:gravity="center_vertical"
+            android:text="@string/intelligent_scene_all_users"/>
+
+        <RadioButton
+            android:id="@+id/allMemberRadioButton"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/margin_x6"
+            android:background="@drawable/delay_time_check_selector"
+            android:button="@null"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/customUserRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_height"
+        android:background="@drawable/item_selector"
+        android:descendantFocusability="blocksDescendants">
+
+        <ImageView
+            android:id="@+id/customImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/et_padding_left"
+            android:background="@drawable/icon_custom"/>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/margin_x12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/customImageView"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                style="@style/et_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/intelligent_scene_custom"/>
+
+            <TextView
+                android:id="@+id/customTextView"
+                android:paddingLeft="@dimen/et_padding_left"
+                android:layout_marginTop="@dimen/margin_x1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/padding_x4"
+                android:singleLine="true"
+                android:textSize="@dimen/text_tinny"
+                android:textColor="@color/hint_background"
+                android:text="@string/intelligent_scene_custom"/>
+        </LinearLayout>
+
+
+        <RadioButton
+            android:id="@+id/customMemberRadioButton"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/margin_x6"
+            android:background="@drawable/delay_time_check_selector"
+            android:button="@null"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/keyUnlockRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:descendantFocusability="blocksDescendants">
+
+        <TextView
+            style="@style/et_common"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/item_selector"
+            android:drawableLeft="@drawable/icon_key_to_unlock"
+            android:drawablePadding="@dimen/padding_x4"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/padding_x2"
+            android:paddingRight="@dimen/padding_x4"
+            android:paddingTop="@dimen/padding_x2"
+            android:text="@string/intelligent_scene_all_key_unlock"/>
+
+        <ImageView
+            android:id="@+id/keyUnlockImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/device_on"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

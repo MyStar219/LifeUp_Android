@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+    <!--此layout在设备控制列表和绑定选择设备列表都使用到-->
+
+
+    <RelativeLayout
+        android:id="@+id/bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/green"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="50"
+            android:contentDescription="@null"
+            android:onClick="leftTitleClick"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/selectRoom_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/margin_x32"
+            android:background="@null"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_x2"
+            android:paddingRight="@dimen/padding_x2">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_big"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/arrow_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/select_room_arrow_selector"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/devices_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/tran"
+        android:dividerHeight="0dp"
+        android:listSelector="@drawable/tran"/>
+
+    <LinearLayout
+        android:id="@+id/deviceEmptyLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/deviceEmptyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_no_device"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/deviceEmptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deviceEmptyImageView"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:paddingBottom="@dimen/margin_x4"
+            android:text="@string/device_add_tip"
+            android:textColor="@color/gray_white"
+            android:textSize="@dimen/text_big"/>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+</LinearLayout>

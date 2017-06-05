@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:irKey="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="17dp"
+            android:orientation="vertical"
+            android:background="@drawable/ac_status_led_bg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_air_conditioner_work_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:id="@+id/tv_air_conditioner_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/device_name_en_color"
+                    android:textSize="70sp"/>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/dash_divide_line"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/dash_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_swept_wind_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_swept_wind_normal"/>
+
+                <ImageView
+                    android:id="@+id/iv_wind_direction_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_wind_direction_horizontal"/>
+
+                <ImageView
+                    android:id="@+id/iv_wind_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_wind_strong"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical">
+
+            <com.orvibo.homemate.view.custom.IrKeyButton
+                android:id="@+id/tv_air_conditioner_model"
+                style="@style/allone2_textview_style"
+                android:drawableTop="@drawable/allone2_model_selector"
+                android:text="@string/ac_commands_model"
+                irKey:fid="2"/>
+
+            <com.orvibo.homemate.view.custom.IrKeyButton
+                android:id="@+id/tv_air_conditioner_power"
+                style="@style/allone2_textview_style"
+                android:drawableTop="@drawable/allone2_power_selector"
+                android:text="@string/ac_commands_power"
+                irKey:fid="1"/>
+
+            <com.orvibo.homemate.view.custom.IrKeyButton
+                android:id="@+id/tv_air_conditioner_swept_wind"
+                style="@style/allone2_textview_style"
+                android:drawableTop="@drawable/allone2_swept_wind_selector"
+                android:text="@string/ac_commands_sweep_wind"
+                irKey:fid="9407"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/ac_middle_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/tv_air_conditioner_hearting"
+                    style="@style/allone2_textview_style"
+                    android:drawableTop="@drawable/allone2_heating_selector"
+                    android:text="@string/ac_commands_warm_wind"/>
+
+                <TextView
+                    style="@style/allone2_textview_style"/>
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/tv_air_conditioner_wind_direction"
+                    style="@style/allone2_textview_style"
+                    android:drawableTop="@drawable/allone2_wind_direction_selector"
+                    android:text="@string/ac_commands_put_wind"
+                    irKey:fid="9487"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/ac_middle_button_layout"
+                android:orientation="horizontal">
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/tv_air_conditioner_refrigeration"
+                    style="@style/allone2_textview_style"
+                    android:drawableTop="@drawable/allone2_refrigeration_selector"
+                    android:text="@string/ac_commands_cold_wind"
+                    irKey:fid="9402"/>
+
+                <TextView
+                    style="@style/allone2_textview_style"/>
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/tv_air_conditioner_air_volume"
+                    style="@style/allone2_textview_style"
+                    android:drawableTop="@drawable/allone2_air_volume_mid_selector"
+                    android:text="@string/ac_commands_wind_sppd"
+                    irKey:fid="5"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/iv_wether_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/allone2_wether_up_selector"
+                    irKey:fid="3"/>
+
+                <TextView
+                    android:id="@+id/tv_wether"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/device_name_en_color"
+                    android:textSize="15sp"
+                    android:text="@string/ac_commands_temperature"/>
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/iv_wether_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_wether_up"
+                    android:background="@drawable/allone2_wether_down_selector"
+                    irKey:fid="4"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+    </LinearLayout>
+
+</ScrollView>

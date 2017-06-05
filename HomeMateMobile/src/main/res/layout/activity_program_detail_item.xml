@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:text="Today"
+        android:textColor="@color/dark"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="@color/common_line"
+        android:layout_height="0.5dp" />
+
+    <LinearLayout
+        android:id="@+id/epgItems"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+</LinearLayout>

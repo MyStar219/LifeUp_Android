@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:mXmln="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mXmln:text="@string/device_set_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/deviceName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/list_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4">
+
+                <TextView
+                    android:id="@+id/deviceNameTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/device_name"
+                    android:textColor="@color/font_learned_white"
+                    android:textSize="@dimen/text_normal"/>
+
+                <TextView
+                    android:id="@+id/deviceNameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:maxLines="2"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right_small"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"/>
+
+            <LinearLayout
+                android:id="@+id/select_deviceType_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/bg_list_device_single_default"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/type_tips_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/device_set_devicetype"
+                    android:textColor="@color/font_learned_white"
+                    android:textSize="@dimen/text_normal"/>
+
+
+                <TextView
+                    android:id="@+id/type_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/device_set_devicetype_default"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+                <ImageView
+                    android:id="@+id/arrow_type_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right_small"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/itemArrow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/bg_list_device_single_default"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/itemArrowText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/lock_set_timing_tip1"
+                    android:textColor="@color/font_learned_white"
+                    android:textSize="@dimen/text_normal"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right_small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/itemCheck"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/bg_list_device_single_default"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_x4"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/itemCheckText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/lock_set_timing_tip2"
+                    android:textColor="@color/font_learned_white"
+                    android:textSize="@dimen/text_normal"/>
+
+                <ImageView
+                    android:id="@+id/imageCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/socket_switch"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/selectLevelDalayTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:background="@drawable/bg_list_device_single_default"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_x4"
+                    android:paddingRight="@dimen/padding_x4"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/skyworth_rgb_select_level_delaytime"
+                        android:textColor="@color/font_learned_white"
+                        android:textSize="@dimen/text_normal"/>
+
+
+                    <TextView
+                        android:id="@+id/levelDalayTimeTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_x2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_normal"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow_right_small"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectOffDalayTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:background="@drawable/bg_list_device_single_default"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_x4"
+                    android:paddingRight="@dimen/padding_x4"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/skyworth_rgb_select_off_delaytime"
+                        android:textColor="@color/font_learned_white"
+                        android:textSize="@dimen/text_normal"/>
+
+
+                    <TextView
+                        android:id="@+id/offDalayTimeTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_x2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_normal"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow_right_small"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/select_room_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/bg_list_device_single_default"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/device_set_room"
+                    android:textColor="@color/font_learned_white"
+                    android:textSize="@dimen/text_normal"/>
+
+
+                <TextView
+                    android:id="@+id/room_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/device_set_room_default"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+                <ImageView
+                    android:id="@+id/arrow_room_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right_small"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/device_room_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"/>
+
+            <TextView
+                android:id="@+id/unknown_device_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/margin_x2"
+                android:layout_marginTop="@dimen/margin_x2"
+                android:gravity="center"
+                android:text="@string/device_set_find_device"
+                android:textColor="@color/font_learned_white"
+                android:textSize="@dimen/text_small"/>
+
+            <LinearLayout
+                android:id="@+id/add_remote_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/bg_list_device_single_default"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tip4_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/device_set_add_remote"
+                    android:textColor="@color/font_learned_white"
+                    android:textSize="@dimen/text_normal"/>
+
+
+                <TextView
+                    android:id="@+id/add_remote_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/device_set_room_default"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right_small"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/add_remote_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"/>
+
+            <RelativeLayout
+                android:id="@+id/messageSettingView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/item_selector"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/remaindText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:text="@string/message_setting_coco"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+                <ImageView
+                    android:id="@+id/infoPushSwitchImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="setSingleDeviceInfoPush"
+                    android:src="@drawable/socket_switch"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/programSettingView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/item_selector"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:text="@string/porgram_reserve_remaid"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+                <ImageView
+                    android:id="@+id/programSwitchImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="setSingleDeviceInfoPush"
+                    android:src="@drawable/socket_switch"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/deviceInfoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/list_item"
+                android:drawableRight="@drawable/arrow_right_small"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/device_info"
+                android:textColor="@color/font_learned_white"
+                android:textSize="@dimen/text_normal"/>
+
+            <ImageView
+                android:id="@+id/deviceInfoImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"/>
+
+            <TextView
+                android:id="@+id/deviceFaqTextView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/list_item"
+                android:drawableRight="@drawable/arrow_right_small"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/sensor_faq"
+                android:textColor="@color/font_learned_white"
+                android:textSize="@dimen/text_normal"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/faq_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/learn_ir_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/bg_list_device_single_default"
+                android:drawableRight="@drawable/arrow_right_small"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/learn_ir"
+                android:textColor="@color/font_learned_white"
+                android:textSize="@dimen/text_normal"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/learn_ir_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x8"
+                android:background="@drawable/list_item"
+                android:text="@string/delete_device"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_normal"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

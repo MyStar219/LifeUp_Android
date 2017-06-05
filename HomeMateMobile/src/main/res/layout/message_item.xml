@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/padding_x2"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:paddingTop="@dimen/padding_x2">
+
+    <ImageView
+        android:id="@+id/deviceIconImageView"
+        android:layout_width="@dimen/device_add_icon_wh"
+        android:layout_height="@dimen/device_add_icon_wh"
+        android:background="@drawable/icon_socket"/>
+
+    <TextView
+        android:id="@+id/deviceNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_x1"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_toRightOf="@+id/deviceIconImageView"
+        android:singleLine="true"
+        android:text="@string/device"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deviceNameTextView"
+        android:layout_marginLeft="@dimen/margin_x2"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_toRightOf="@+id/deviceIconImageView"
+        android:background="@drawable/message_bg">
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textSize="@dimen/text_normal"/>
+
+        <TextView
+            android:id="@+id/messageTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/messageTextView"
+            android:layout_below="@id/messageTextView"
+            android:layout_margin="@dimen/margin_x1"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_tinny"/>
+    </RelativeLayout>
+
+</RelativeLayout>

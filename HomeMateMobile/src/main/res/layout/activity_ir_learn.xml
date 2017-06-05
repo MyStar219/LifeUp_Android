@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:LinearTipView="http://schemas.android.com/tools"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.orvibo.homemate.view.custom.LinearTipView
+        android:id="@+id/tipView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.orvibo.homemate.view.custom.LinearTipView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/deleteIr"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_x8"
+            android:src="@drawable/pic_remote_control_alignment" />
+
+        <TextView
+            android:id="@+id/deleteIr"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_image_item_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/item_selector"
+            android:gravity="center"
+            android:text="@string/allone_ir_delete"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+</LinearLayout>

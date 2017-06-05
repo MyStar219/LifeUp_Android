@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pressed">#c0df</color>
+    <color name="background_accent">#9fff</color>
+    <color name="text_dimmed">#777</color>
+    <color name="divider">#33000000</color>
+    <color name="panel_bg">#ddd</color>
+    <color name="panel_bg_selected">#ffd</color>
+    <color name="shadow">#9999</color>
+    <color name="messages_background">#b000</color>
+    <color name="message_text">#fff</color>
+</resources>

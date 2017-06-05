@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/allone2_dialog_corner_bg"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_x4"
+        android:text="@string/subscribe_success_title"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_x4"
+        android:text="@string/subscribe_success_content"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line_color" />
+
+    <TextView
+        android:id="@+id/hasALook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/allone2_dialog_tv_selector"
+        android:gravity="center"
+        android:text="@string/sensor_to_message"
+        android:padding="16dp"
+        android:textColor="@color/green"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line_color" />
+
+    <TextView
+        android:id="@+id/neverFuckMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/allone2_dialog_tv_selector"
+        android:gravity="center"
+        android:text="@string/subscribe_success_never"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line_color" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bottom_tv_bg_selector"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/subscribe_success_shutdown"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+</LinearLayout>

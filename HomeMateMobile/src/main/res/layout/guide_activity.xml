@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guideViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/getStart"
+            android:layout_width="@dimen/button_width_long"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/btn_guide_experience"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/authIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_x2"
+                android:src="@drawable/pic_guide_wechat_normal"/>
+
+            <TextView
+                android:id="@+id/authName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auth_login_wechat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_big"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/otherLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_x2"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:text="@string/login_other"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal"/>
+    </LinearLayout>
+</RelativeLayout>

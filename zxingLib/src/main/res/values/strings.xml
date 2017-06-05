@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ZxingLib</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+     
+    <string name="general_back">Cancel</string>
+    <string name="general_select_qrcode">相册</string>
+    <string name="scan_failed">Invalid QR Code</string>
+    <string name="scan_failed_out_of_memory">Unable to process QR Code</string>
+    <string name="scan_failed_not_found">File not found</string>
+    <string name="scan_text">Position the QR Code within the frame</string>
+	<string name="title_text">Scan</string>
+</resources>

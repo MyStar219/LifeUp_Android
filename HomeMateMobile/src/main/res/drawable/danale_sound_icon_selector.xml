@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/icon_sound_disable" android:state_enabled="false"/>
+    <item android:state_activated="true" android:drawable="@drawable/icon_sound_default"></item>
+    <item android:drawable="@drawable/icon_mute_default"/>
+</selector>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 指定动画循环播放 -->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+	android:oneshot="false">
+	<!-- 添加多个帧 -->
+	<item android:drawable="@drawable/pic_add_allone2_press" android:duration="3000"/>
+	<item android:drawable="@drawable/pic_add_allone2_non_light" android:duration="200" />
+	<item android:drawable="@drawable/pic_add_allone2_red_light" android:duration="200" />
+	<item android:drawable="@drawable/pic_add_allone2_non_light" android:duration="200" />
+	<item android:drawable="@drawable/pic_add_allone2_red_light" android:duration="200" />
+	<item android:drawable="@drawable/pic_add_allone2_non_light" android:duration="200" />
+	<item android:drawable="@drawable/pic_add_allone2_red_light" android:duration="200" />
+	<item android:drawable="@drawable/pic_add_allone2_non_light" android:duration="200" />
+	<item android:drawable="@drawable/pic_add_allone2_red_light" android:duration="200" />
+	<item android:drawable="@drawable/pic_add_allone2_non_light" android:duration="200" />
+	<item android:drawable="@drawable/pic_add_allone2_red_light" android:duration="200" />
+</animation-list>

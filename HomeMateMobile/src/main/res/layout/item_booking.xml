@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/default_padding">
+
+    <com.smartgateway.app.views.AvenirRomanTextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:drawableLeft="@drawable/booking_item"
+        android:drawableStart="@drawable/booking_item"
+        android:text="20 Oct 2016"
+        android:drawablePadding="@dimen/default_padding"
+        android:gravity="center_vertical|left" />
+
+    <com.smartgateway.app.views.AvenirRomanTextView
+        android:id="@+id/where"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_inset"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/text_dimmed" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:id="@+id/state"
+            android:layout_width="@dimen/state_tag_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_inset"
+            android:paddingStart="@dimen/default_padding"
+            android:paddingEnd="@dimen/default_padding"
+            android:paddingTop="@dimen/half_padding"
+            android:paddingBottom="@dimen/half_padding"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="?android:textColorPrimaryInverse"
+            android:background="#999" />
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:paddingStart="@dimen/default_padding"
+            android:paddingEnd="@dimen/default_padding"
+            android:paddingTop="@dimen/half_padding"
+            android:paddingBottom="@dimen/half_padding"
+            android:textStyle="bold"
+            android:id="@+id/btn_payment"
+            android:text="Make Payment"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:background="#D00010"
+            android:layout_marginTop="@dimen/top_inset"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

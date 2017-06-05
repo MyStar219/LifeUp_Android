@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:irButton="http://schemas.android.com/apk/res-auto"
+              xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:right_text="@string/save"
+        navigationBar:text="@string/device_timing_set_action"/>
+    <LinearLayout
+        android:id="@+id/toggleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_x2"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/rbOpen"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/margin_x2"
+            android:drawableTop="@drawable/icon_switch_light_on_selector"
+            android:gravity="center_horizontal"
+            android:text="@string/bind_device_open"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_big" />
+
+        <TextView
+            android:id="@+id/rbClose"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/margin_x2"
+            android:drawableTop="@drawable/icon_switch_light_off_selector"
+            android:gravity="center_horizontal"
+            android:text="@string/bind_device_close"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_big" />
+
+        <TextView
+            android:id="@+id/rbToggle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/margin_x2"
+            android:drawableTop="@drawable/icon_switch_light_on_or_off_selector"
+            android:gravity="center_horizontal"
+            android:text="@string/bind_device_toggle"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_big"
+            android:visibility="visible" />
+    </LinearLayout>
+    <!--<RadioGroup-->
+        <!--android:id="@+id/rgAction"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/nbTitle"-->
+        <!--android:layout_margin="@dimen/margin_x2"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="@dimen/margin_x2"-->
+        <!--android:visibility="visible">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rbOpen"-->
+            <!--android:layout_width="0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:button="@null"-->
+            <!--android:drawableLeft="@drawable/button_green_radio"-->
+            <!--android:padding="@dimen/margin_x1"-->
+            <!--android:text="@string/bind_device_open"-->
+            <!--android:textColor="@color/green"-->
+            <!--android:textSize="@dimen/text_big"/>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rbClose"-->
+            <!--android:layout_width="0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:button="@null"-->
+            <!--android:drawableLeft="@drawable/button_green_radio"-->
+            <!--android:padding="@dimen/margin_x1"-->
+            <!--android:text="@string/bind_device_close"-->
+            <!--android:textColor="@color/green"-->
+            <!--android:textSize="@dimen/text_big"/>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rbToggle"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:button="@null"-->
+            <!--android:drawableLeft="@drawable/button_green_radio"-->
+            <!--android:padding="@dimen/margin_x1"-->
+            <!--android:text="@string/bind_device_toggle"-->
+            <!--android:textColor="@color/green"-->
+            <!--android:textSize="@dimen/text_big"/>-->
+    <!--</RadioGroup>-->
+
+    <RelativeLayout
+        android:id="@+id/rlAction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green">
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/btnSwitchOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            irButton:checkedBg="@drawable/socket_open"
+            irButton:command="off"
+            irButton:keyName="@string/device_timing_action_shutdown"
+            irButton:unLearnedBg="@drawable/socket_open"/>
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/btnSwitchOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            irButton:checkedBg="@drawable/socket_close"
+            irButton:command="on"
+            irButton:keyName="@string/device_timing_action_open"
+            irButton:unLearnedBg="@drawable/socket_close"/>
+
+        <ImageView
+            android:id="@+id/statusImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/socket_open_background"/>
+    </RelativeLayout>
+</LinearLayout>

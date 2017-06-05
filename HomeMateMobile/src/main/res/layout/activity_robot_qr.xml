@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftDrawableLeft="@drawable/back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_x8"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageQr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_x8"
+            android:scaleType="fitXY" />
+
+        <TextView
+            style="@style/small_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageQr"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:gravity="center"
+            android:text="@string/robot_qr_code_tip" />
+
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="@dimen/margin_x8"
+            android:background="@drawable/button_green"
+            android:gravity="center"
+            android:text="@string/finish"
+            android:textColor="@color/login_font"
+            android:textSize="@dimen/navigation_textsize" />
+
+    </RelativeLayout>
+</LinearLayout>

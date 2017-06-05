@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:irKey="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/relativeLayoutVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.orvibo.homemate.view.custom.IrKeyButton
+            android:id="@+id/irKeyButtonVolumeAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            irKey:fid="50"
+            irKey:learnBg="@drawable/icon_bg_vol_up_replace_selector"
+            irKey:learnedBg1="@drawable/icon_bg_vol_up_selector" />
+
+        <com.orvibo.homemate.view.custom.IrKeyButton
+            android:id="@+id/irKeyButtonVolumeMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            irKey:fid="51"
+            irKey:learnBg="@drawable/icon_bg_vol_down_replace_selector"
+            irKey:learnedBg1="@drawable/icon_bg_vol_down_selector" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/text_style_allone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/tv_volume" />
+</RelativeLayout>

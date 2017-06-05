@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mainTab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_tag_height"
+    android:background="@drawable/bg_box_checked"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.orvibo.homemate.view.custom.MainBottomFourTab
+        android:id="@+id/deviceBottomTab"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        mainTab:tabName="@string/main_bottom_tab_device"
+        mainTab:tabNormalIcon="@drawable/icon_equipment_normal"
+        mainTab:tabSelectedIcon="@drawable/icon_equipment_checked" />
+
+    <com.orvibo.homemate.view.custom.MainBottomFourTab
+        android:id="@+id/sceneBottomTab"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        mainTab:tabName="@string/main_bottom_tab_smart_scene"
+        mainTab:tabNormalIcon="@drawable/icon_scene_pressed"
+        mainTab:tabSelectedIcon="@drawable/icon_scene_checked" />
+    <com.orvibo.homemate.view.custom.MainBottomFourTab
+        android:id="@+id/securityBottomTab"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        mainTab:tabName="@string/main_bottom_tab_security"
+        android:visibility="gone"
+        mainTab:tabNormalIcon="@drawable/icon_security_normal"
+        mainTab:tabSelectedIcon="@drawable/icon_security_press" />
+    <com.orvibo.homemate.view.custom.MainBottomFourTab
+        android:id="@+id/personalBottomTab"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        mainTab:tabName="@string/main_bottom_tab_personal"
+        mainTab:tabNormalIcon="@drawable/icon_center_normal"
+        mainTab:tabSelectedIcon="@drawable/icon_center_checked" />
+</LinearLayout>

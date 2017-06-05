@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingLeft="40dip"
+              android:paddingTop="@dimen/padding_x2">
+
+    <LinearLayout
+        android:layout_width="100dip"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:paddingBottom="@dimen/margin_x1"
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="@dimen/padding_x2"
+            android:text="09:00:01"
+            android:textColor="@color/statusrecord_text_time"/>
+
+        <View
+            android:id="@+id/image_line"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/margin_x8"
+            android:layout_gravity="center"
+            android:background="@color/gray_white_color"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/statusRecordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x6"
+        android:paddingRight="@dimen/margin_x4"
+        android:text="有人经过"
+        android:minLines="3"
+        android:textColor="@color/statusrecord_text_record"
+        android:textSize="@dimen/text_normal"/>
+
+
+</LinearLayout>

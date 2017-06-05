@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mXmln="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationCocoBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mXmln:centerText="@string/frequently_mode_name"
+        mXmln:leftText="@string/cancel"
+        mXmln:rightText="@string/save"/>
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/line_divide" />
+            <LinearLayout
+                android:id="@+id/deviceName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4">
+
+                <TextView
+                    android:id="@+id/deviceNameTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/frequently_mode_name"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal" />
+
+                <com.orvibo.homemate.view.custom.EditTextWithCompound
+                    android:id="@+id/frequentlyModeName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal" />
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_right_small" />-->
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/line_divide" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.orvibo.homemate.view.custom.seekbar.DiscreteSeekBar
+                    android:id="@+id/discrete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_marginTop="70dp"
+                    app:dsb_indicatorTextAppearance="@style/CustomFloaterTextAppearance"
+                    app:dsb_progressColor="#31c37c"
+                    app:dsb_rippleColor="#31c37c"
+                    app:dsb_indicatorColor="#31c37c"
+                    app:dsb_trackColor="#cccccc"
+                    app:dsb_indicatorFormatter="%2d%%"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:layout_marginLeft="@dimen/margin_x6"
+                    android:layout_marginRight="@dimen/margin_x6">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_off"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/gray_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_on"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/gray_white" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide" />
+
+        </LinearLayout>
+    <!--</ScrollView>-->
+
+
+</LinearLayout>

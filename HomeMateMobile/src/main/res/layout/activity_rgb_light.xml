@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/digitColorRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/redTextView"
+                    android:layout_width="40dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/margin_x4"
+                    android:background="@drawable/bg_red"
+                    android:paddingBottom="@dimen/padding_x0"
+                    android:paddingLeft="@dimen/padding_x2"
+                    android:paddingRight="@dimen/padding_x2"
+                    android:paddingTop="@dimen/padding_x0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_small"/>
+
+                <TextView
+                    android:id="@+id/greenTextView"
+                    android:layout_width="40dip"
+                    android:layout_height="20dip"
+                    android:layout_below="@+id/redTextView"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:background="@drawable/bg_green"
+                    android:paddingBottom="@dimen/padding_x0"
+                    android:paddingLeft="@dimen/padding_x2"
+                    android:paddingRight="@dimen/padding_x2"
+                    android:paddingTop="@dimen/padding_x0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_small"/>
+
+                <TextView
+                    android:id="@+id/blueTextView"
+                    android:layout_width="40dip"
+                    android:layout_height="20dip"
+                    android:layout_below="@+id/greenTextView"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:background="@drawable/bg_blue"
+                    android:paddingBottom="@dimen/padding_x0"
+                    android:paddingLeft="@dimen/padding_x2"
+                    android:paddingRight="@dimen/padding_x2"
+                    android:paddingTop="@dimen/padding_x0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_small"/>
+
+                <RelativeLayout
+                    android:layout_width="40dip"
+                    android:layout_height="20dip"
+                    android:layout_below="@+id/blueTextView"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/margin_x2">
+
+                    <TextView
+                        android:id="@+id/currentColorTextView"
+                        android:layout_width="40dip"
+                        android:layout_height="20dip"
+                        android:background="@color/white"
+                        android:paddingBottom="@dimen/padding_x0"
+                        android:paddingLeft="@dimen/padding_x2"
+                        android:paddingRight="@dimen/padding_x2"
+                        android:paddingTop="@dimen/padding_x0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"/>
+
+                    <TextView
+                        android:layout_width="40dip"
+                        android:layout_height="20dip"
+                        android:background="@drawable/bg_keep_out"
+                        android:paddingBottom="@dimen/padding_x0"
+                        android:paddingLeft="@dimen/padding_x2"
+                        android:paddingRight="@dimen/padding_x2"
+                        android:paddingTop="@dimen/padding_x0"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rlAction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.orvibo.homemate.view.custom.RGBColorView
+                    android:id="@+id/colorView"
+                    android:layout_width="@dimen/rgb_color_view"
+                    android:layout_height="@dimen/rgb_color_view"/>
+
+                <LinearLayout
+                    android:id="@+id/customColorLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/bar_height"
+                        android:layout_height="@dimen/bar_height">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_border"/>
+
+                        <com.orvibo.homemate.view.custom.RoundImageView
+                            android:id="@+id/customColorImageView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_color_add"
+                            android:clickable="true"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/bar_height"
+                        android:layout_height="@dimen/bar_height">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_border"/>
+
+                        <com.orvibo.homemate.view.custom.RoundImageView
+                            android:id="@+id/customColorImageViewView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_color_add"
+                            android:clickable="true"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/bar_height"
+                        android:layout_height="@dimen/bar_height">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_border"/>
+
+                        <com.orvibo.homemate.view.custom.RoundImageView
+                            android:id="@+id/customColorImageView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_color_add"
+                            android:clickable="true"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/bar_height"
+                        android:layout_height="@dimen/bar_height">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_border"/>
+
+                        <com.orvibo.homemate.view.custom.RoundImageView
+                            android:id="@+id/customColorImageView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_color_add"
+                            android:clickable="true"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/bar_height"
+                        android:layout_height="@dimen/bar_height">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_border"/>
+
+                        <com.orvibo.homemate.view.custom.RoundImageView
+                            android:id="@+id/customColorImageView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_color_add"
+                            android:clickable="true"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/margin_x4">
+
+                    <ImageView
+                        android:layout_width="@dimen/notification_ic_wh"
+                        android:layout_height="@dimen/notification_ic_wh"
+                        android:background="@drawable/rgb_dark"/>
+
+                    <SeekBar
+                        android:id="@+id/seekBarLight"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="255"
+                        android:maxHeight="@dimen/rgb_seek_bar_height"
+                        android:minHeight="@dimen/rgb_seek_bar_height"
+                        android:paddingLeft="@dimen/padding_x4"
+                        android:paddingRight="@dimen/padding_x4"
+                        android:progressDrawable="@drawable/dimming_seekbar"
+                        android:thumb="@drawable/dimming_thumb"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/notification_ic_wh"
+                        android:layout_height="@dimen/notification_ic_wh"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rgb_bright"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/view_ligth_alpha_50"/>
+
+        <include layout="@layout/view_ligth_on_off_btn"/>
+
+        <include layout="@layout/view_ligth_action"/>
+    </FrameLayout>
+</LinearLayout>

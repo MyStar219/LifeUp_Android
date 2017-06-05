@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircularSeekBar">
+        <attr name="width" format="dimension"></attr>
+        <attr name="cicular_height" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="IrButton">
+        <attr name="command" format="string" />
+        <attr name="keyName" format="string" />
+        <attr name="unLearnedBg" format="reference" />
+        <attr name="learnedBg" format="reference" />
+        <attr name="checkedBg" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IrKeyButton">
+        <attr name="fid" format="integer" />
+        <attr name="learnBg" format="reference" />
+        <attr name="learnTopBg" format="reference" />
+        <attr name="learnedBg1" format="reference" />
+        <attr name="learnedTopBg" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LinearTipView">
+        <attr name="tipText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="PasswordInputView">
+        <attr name="passwordWidth" format="dimension" />
+        <attr name="passwordColor" format="color" />
+        <attr name="passwordRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="Theme">
+        <attr name="discreteSeekBarStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="DiscreteSeekBar">
+        <attr name="dsb_min" format="integer|dimension" />
+        <attr name="dsb_max" format="integer|dimension" />
+        <attr name="dsb_value" format="integer|dimension" />
+        <attr name="dsb_mirrorForRtl" format="boolean" />
+        <attr name="dsb_allowTrackClickToDrag" format="boolean" />
+        <attr name="dsb_progressColor" format="color|reference" />
+        <attr name="dsb_trackColor" format="color|reference" />
+        <attr name="dsb_indicatorTextAppearance" format="reference" />
+        <attr name="dsb_indicatorColor" format="color|reference" />
+        <attr name="dsb_indicatorElevation" format="dimension" />
+        <attr name="dsb_indicatorFormatter" format="string|reference" />
+        <attr name="dsb_rippleColor" format="color|reference" />
+        <attr name="dsb_indicatorPopupEnabled" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="AutoFitScreenLayout">
+        <attr name="mulriple" format="float"></attr>
+        <attr name="relative">
+            <enum name="relative_width" value="0"></enum>
+            <enum name="relative_height" value="1"></enum>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+    <!-- listviewde header和footer的开关 -->
+    <declare-styleable name="pull_refresh_listview">
+        <attr name="has_header" format="boolean" />
+        <attr name="has_footer" format="boolean" />
+        <attr name="show_text" format="boolean" />
+        <attr name="has_pull_refresh" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="bound_color" format="color"/>
+        <attr name="bound_color_press" format="color"/>
+        <attr name="default_bound_color" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress_current" format="integer"/>
+        <attr name="progress_max" format="integer"/>
+
+        <attr name="progress_unreached_color" format="color"/>
+        <attr name="progress_reached_color" format="color"/>
+
+        <attr name="progress_reached_bar_height" format="dimension"/>
+        <attr name="progress_unreached_bar_height" format="dimension"/>
+
+        <attr name="progress_text_size" format="dimension"/>
+        <attr name="progress_text_color" format="color"/>
+
+        <attr name="progress_text_offset" format="dimension"/>
+
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ThreeStateImageView">
+        <attr name="uncheck_drawable" format="reference"/>
+        <attr name="check_normal_drawable" format="reference"/>
+        <attr name="check_press_drawable" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="Themes">
+        <attr name="numberProgressBarStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <declare-styleable name="TouchImageView">
+        <attr name="normalDrawable" format="reference"/>
+        <attr name="pressDrawable" format="reference"/>
+    </declare-styleable>
+</resources>

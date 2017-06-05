@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@null"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/smartscene_fragment"
+        android:name="com.orvibo.homemate.smartscene.SmartSceneFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!--<fragment-->
+        <!--android:id="@+id/security_fragment"-->
+        <!--android:name="com.orvibo.homemate.security.SecurityFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"/>-->
+
+    <fragment
+        android:id="@+id/me_fragment"
+        android:name="com.orvibo.homemate.user.ViHomePersonalFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <fragment
+        android:id="@+id/device_fragment"
+        android:name="com.orvibo.homemate.device.DeviceFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.orvibo.homemate.view.custom.MainFourTabView
+        android:id="@+id/mainFourTabView"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:visibility="visible"/>
+
+</LinearLayout>

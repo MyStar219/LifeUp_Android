@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <com.orvibo.homemate.view.custom.BottomTabView
+        android:id="@+id/btnDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </com.orvibo.homemate.view.custom.BottomTabView>
+
+    <com.orvibo.homemate.view.custom.BottomTabView
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </com.orvibo.homemate.view.custom.BottomTabView>
+
+    <com.orvibo.homemate.view.custom.BottomTabView
+        android:id="@+id/btnPersonal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </com.orvibo.homemate.view.custom.BottomTabView>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:paddingLeft="6.0dip"
+    android:paddingRight="6.0dip">
+
+    <TextView
+        android:id="@+id/category_text"
+        android:textSize="@dimen/text_big"
+        android:textColor="@color/device_name_en_color"
+        android:layout_gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dip"
+        android:paddingRight="12dip"
+        android:paddingBottom="8dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

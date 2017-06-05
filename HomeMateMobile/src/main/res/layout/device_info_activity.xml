@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="@string/device_info_title"
+        app:leftDrawableLeft="@drawable/back"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.orvibo.homemate.view.custom.ClickCountImageView
+                    android:id="@+id/iconImageView"
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"/>
+
+                <TextView
+                    android:id="@+id/productNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/companyNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_small"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/line_divide"/>
+
+            <LinearLayout
+                android:id="@+id/ZigbeeDeviceCount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_image_item_height"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:text="@string/zigbee_device_count"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/ZigbeeDeviceCountTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ZigbeeDeviceCountImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/centerModel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_image_item_height"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/centerModelTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:text="@string/device_model"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/centerModelTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/centerModelImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/info1LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_image_item_height"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/info1TitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:text="@string/device_mac"
+                    android:textSize="@dimen/text_big"/>
+
+                <com.orvibo.homemate.view.custom.AutoAjustSizeTextView
+                    android:id="@+id/info1TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/info5LineImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/info5LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_image_item_height"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/info5TitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_toRightOf="@id/deviceImageView"
+                    android:text="@string/connect_wifi"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/info5TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_toRightOf="@id/deviceImageView"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/info1LineImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"/>
+
+            <LinearLayout
+                android:id="@+id/info2LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_image_item_height"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/info2TitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_toRightOf="@id/deviceImageView"
+                    android:text="@string/device_ip"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/info2TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_toRightOf="@id/deviceImageView"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/info4LineImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/info4LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_image_item_height"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/info4TitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_toRightOf="@id/deviceImageView"
+                    android:text="@string/device_serial"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/info4TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_toRightOf="@id/deviceImageView"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/info2LineImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"/>
+
+            <LinearLayout
+                android:id="@+id/info3LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_image_item_height"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/info3TitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_toRightOf="@id/deviceImageView"
+                    android:text="@string/device_firmware"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/info3TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:layout_toRightOf="@id/deviceImageView"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/info3LineImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_divide"/>
+
+            <TextView
+                android:id="@+id/moreTextView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_image_item_height"
+                android:layout_marginBottom="@dimen/margin_x4"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@color/white"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/padding_x2"
+                android:paddingRight="@dimen/margin_x2"
+                android:text="@string/more"
+                android:textSize="@dimen/text_big"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigation:leftDrawableLeft="@drawable/back"
+        navigation:centerText="@string/set_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_x2" />
+
+    <com.orvibo.homemate.view.custom.ArrowItem
+        android:id="@+id/set_device_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        navigation:hm_arrow_icon="@drawable/set_device"
+        navigation:hm_arrow_title="@string/set_device" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray_white"
+        android:layout_height="0.2dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_x2" />
+
+    <com.orvibo.homemate.view.custom.ArrowItem
+        android:id="@+id/set_scene_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        navigation:hm_arrow_icon="@drawable/set_scene"
+        navigation:hm_arrow_title="@string/set_scene" />
+
+    <com.orvibo.homemate.view.custom.ArrowItem
+        android:id="@+id/set_room_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        navigation:hm_arrow_icon="@drawable/set_room"
+        navigation:hm_arrow_title="@string/set_room" />
+
+    <!--<com.orvibo.homemate.view.custom.ArrowItem-->
+        <!--android:id="@+id/set_jieneng_ll"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/list_image_item_height"-->
+        <!--navigation:hm_arrow_icon="@drawable/set_jieneng"-->
+        <!--navigation:title="@string/set_jieneng" />-->
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray_white"
+        android:layout_height="0.2dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_x2"
+        android:visibility="gone" />
+
+    <com.orvibo.homemate.view.custom.ArrowItem
+        android:id="@+id/set_addGateway_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:visibility="gone"
+        navigation:hm_arrow_icon="@drawable/set_add_gateway"
+        navigation:hm_arrow_title="@string/set_add_gateway" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray_white"
+        android:layout_height="0.2dp" />
+</LinearLayout>

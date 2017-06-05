@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/emptyText"
+            style="@style/small_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/margin_x6"
+            android:drawableTop="@drawable/bg_no_device"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:text="@string/not_yet_add_button" />
+
+        <Button
+            android:id="@+id/btnAddKey"
+            android:layout_width="@dimen/button_width_long"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/emptyText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_x12"
+            android:background="@drawable/btn_guide_experience"
+            android:text="@string/allone_btn_add_custom_key"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+    <GridView
+        android:id="@+id/moreKeyGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="false"
+        android:horizontalSpacing="@dimen/padding_x4"
+        android:listSelector="@color/tran"
+        android:numColumns="2"
+        android:padding="@dimen/padding_x4"
+        android:verticalSpacing="@dimen/padding_x4"
+        android:visibility="gone"></GridView>
+
+</RelativeLayout>

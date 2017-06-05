@@ -1,0 +1,2 @@
+include ':HomeMateMobile', ':zxingLib'
+include ':LifeTools Reporter', ':LifeToolsNew'

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/common_background"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:text="@string/device_set_add_remote"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/font_black"
+        android:textSize="@dimen/text_small"
+        android:text="@string/device_set_ir_repeater_tips"
+        android:gravity="center"
+        android:background="@color/hint_background"
+        android:layout_height="@dimen/text_bar_height" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/item_selector"
+        android:paddingRight="@dimen/padding_x4"
+        android:gravity="center"
+        android:layout_height="@dimen/list_image_item_height">
+        <TextView
+            android:layout_width="64dp"
+            android:gravity="right"
+            android:text="@string/device_set_ir_repeater_tv"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_normal"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnMinusTV"
+            android:layout_width="30dip"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:background="@drawable/bg_minus_selector"
+            android:layout_height="30dip" />
+        <TextView
+            android:id="@+id/tvNumberTV"
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:textColor="@color/font_black"
+            android:background="@drawable/bg_number"
+            android:gravity="center"
+            android:textSize="@dimen/text_normal"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnPlusTV"
+            android:layout_margin="@dimen/padding_x2"
+            android:layout_width="30dip"
+            android:background="@drawable/bg_add_selector"
+            android:layout_height="30dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingRight="@dimen/padding_x4"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:layout_height="@dimen/list_image_item_height">
+        <TextView
+            android:layout_width="64dp"
+            android:gravity="right"
+            android:text="@string/device_set_ir_repeater_tv_box"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_normal"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnMinusTVBox"
+            android:layout_width="30dip"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:background="@drawable/bg_minus_selector"
+            android:layout_height="30dip" />
+        <TextView
+            android:id="@+id/tvNumberTVBox"
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:textColor="@color/font_black"
+            android:background="@drawable/bg_number"
+            android:gravity="center"
+            android:textSize="@dimen/text_normal"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnPlusTVBox"
+            android:layout_margin="@dimen/padding_x2"
+            android:layout_width="30dip"
+            android:background="@drawable/bg_add_selector"
+            android:layout_height="30dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingRight="@dimen/padding_x4"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:layout_height="@dimen/list_image_item_height">
+        <TextView
+            android:layout_width="64dp"
+            android:gravity="right"
+            android:text="@string/device_set_ir_repeater_conditioner"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_normal"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="30dip"
+            android:id="@+id/btnMinusConditioner"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:background="@drawable/bg_minus_selector"
+            android:layout_height="30dip" />
+        <TextView
+            android:id="@+id/tvNumberConditioner"
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:textColor="@color/font_black"
+            android:background="@drawable/bg_number"
+            android:gravity="center"
+            android:textSize="@dimen/text_normal"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnPlusConditioner"
+            android:layout_margin="@dimen/padding_x2"
+            android:layout_width="30dip"
+            android:background="@drawable/bg_add_selector"
+            android:layout_height="30dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingRight="@dimen/padding_x4"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:layout_height="@dimen/list_image_item_height">
+        <TextView
+            android:layout_width="64dp"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="@string/device_set_ir_repeater_self_define"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_normal"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnMinusSelfDefine"
+            android:layout_width="30dip"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:background="@drawable/bg_minus_selector"
+            android:layout_height="30dip" />
+        <TextView
+            android:id="@+id/tvNumberSelfDefine"
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:textColor="@color/font_black"
+            android:background="@drawable/bg_number"
+            android:gravity="center"
+            android:textSize="@dimen/text_normal"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnPlusSelfDefine"
+            android:layout_margin="@dimen/padding_x2"
+            android:layout_width="30dip"
+            android:background="@drawable/bg_add_selector"
+            android:layout_height="30dip" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_x12"
+        android:layout_marginLeft="@dimen/margin_x2"
+        android:layout_marginRight="@dimen/margin_x2"
+        android:text="@string/confirm"
+        android:textSize="@dimen/text_big"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@drawable/button_green"
+        android:layout_height="wrap_content" />
+</LinearLayout>

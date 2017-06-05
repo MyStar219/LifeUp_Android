@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/floorRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/showRoomsLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="showRoom">
+
+            <View
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="0dip" />
+
+            <TextView
+                android:id="@+id/floorNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dip"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:layout_marginRight="@dimen/margin_x2"
+                android:textSize="@dimen/text_normal"
+                android:text="@string/floor"/>
+
+            <ImageView
+                android:id="@+id/editFloorImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="renameFloorName"
+                android:src="@drawable/btn_edit_selector" />
+
+            <View
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/showRoomsImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/arrow_down_selector"
+            android:layout_marginRight="@dimen/margin_x2"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="@drawable/line_divide"
+        android:layout_height="wrap_content" />
+
+    <com.orvibo.homemate.view.custom.NoScrollGridView
+        android:id="@+id/rooms_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:horizontalSpacing="@dimen/margin_x2"
+        android:layout_marginLeft="@dimen/margin_x2"
+        android:layout_marginRight="@dimen/margin_x2"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:stretchMode="columnWidth" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_marginRight="@dimen/margin_x2"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:gravity="right|center_vertical"
+        android:text="@string/set_floor_room_tips2"
+        android:textColor="@color/identity_tip"
+        android:textSize="@dimen/identity_textsize"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/deleteFloorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:layout_gravity="center"
+        android:drawableTop="@drawable/line_divide"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="deleteFloor"
+        android:text="@string/delete_floor"
+        android:textColor="@color/delete_floor_red"
+        android:textSize="@dimen/text_normal"
+        android:drawableBottom="@drawable/line_divide"/>
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationTextBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationTextBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationTextBar:left="@string/cancel"
+        navigationTextBar:middle="@string/mode_add_title"
+        navigationTextBar:right="@string/save"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_height="@dimen/bar_height">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_big"
+                    android:text="@string/mode_name"
+                    android:layout_height="wrap_content" />
+
+                <com.orvibo.homemate.view.custom.EditTextWithCompound
+                    android:id="@+id/etModeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBeginTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/item_selector"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:text="@string/mode_begin_time"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/tvBeginTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/margin_x4"
+                    android:text="@string/device_timing_action_set"
+                    android:textColor="@color/font_white_gray"
+                    android:textSize="@dimen/text_small"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/bg_arrow_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEndTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:background="@drawable/item_selector"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:text="@string/mode_end_time"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/margin_x4"
+                    android:text="@string/device_timing_action_set"
+                    android:textColor="@color/font_white_gray"
+                    android:textSize="@dimen/text_small"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/bg_arrow_gray"/>
+            </LinearLayout>
+
+            <com.orvibo.homemate.view.custom.SelectRepeatView
+                android:id="@+id/selectRepeatView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:layout_marginBottom="@dimen/margin_x8"
+                android:layout_marginTop="@dimen/margin_x8"
+                android:background="@drawable/list_item"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_big"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

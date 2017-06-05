@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:irKey="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/margin_x8">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.orvibo.homemate.view.custom.IrKeyButton
+            android:id="@+id/irKeyButtonUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            irKey:fid="46"
+            irKey:learnBg="@drawable/icon_direction_up_replace_selector"
+            irKey:learnedBg1="@drawable/icon_direction_up_selector" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_cover"
+            android:visibility="invisible" />
+
+        <com.orvibo.homemate.view.custom.IrKeyButton
+            android:id="@+id/irKeyButtonDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            irKey:fid="47"
+            irKey:learnBg="@drawable/icon_direction_down_replace_selector"
+            irKey:learnedBg1="@drawable/icon_direction_down_selector" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <com.orvibo.homemate.view.custom.IrKeyButton
+            android:id="@+id/irKeyButtonLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            irKey:fid="48"
+            irKey:learnBg="@drawable/icon_direction_left_replace_selector"
+            irKey:learnedBg1="@drawable/icon_direction_left_selector" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_cover"
+            android:visibility="invisible" />
+
+        <com.orvibo.homemate.view.custom.IrKeyButton
+            android:id="@+id/irKeyButtonRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            irKey:fid="49"
+            irKey:learnBg="@drawable/icon_direction_right_replace_selector"
+            irKey:learnedBg1="@drawable/icon_direction_right_selector" />
+
+    </LinearLayout>
+
+    <com.orvibo.homemate.view.custom.IrKeyButton
+        android:id="@+id/irKeyButtonOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/tv_confirm"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_normal"
+        irKey:fid="42"
+        irKey:learnBg="@drawable/icon_direction_middle_replace_selector"
+        irKey:learnedBg1="@drawable/simple_ac_btn_selector" />
+
+</RelativeLayout>

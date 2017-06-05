@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:right_text="@string/device_timing"/>
+
+    <com.orvibo.homemate.view.custom.Curtain2HalvesView
+        android:id="@+id/curtain2HalvesView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_x16"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:gravity="center">-->
+        <!--<TextView-->
+            <!--android:id="@+id/openTimesTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/bar_height"-->
+            <!--android:text="打开次数"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:textColor="@color/red"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/closeTimesTextView"-->
+            <!--android:layout_marginLeft="@dimen/margin_x4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/bar_height"-->
+            <!--android:text="关闭次数"-->
+            <!--android:textColor="@color/red"/>-->
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigation:text="@string/title_allone_device_add" />
+
+    <RelativeLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/stbList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null" />
+
+        <TextView
+            android:id="@+id/stbDataTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/areaText"
+            android:layout_below="@+id/stbList"
+            android:padding="@dimen/margin_x4"
+            android:text="@string/allone_stb_tip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/stbNoDataTip"
+            style="@style/normal_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/margin_x4"
+            android:gravity="center"
+            android:drawableTop="@drawable/bg_no_device"
+            android:text="@string/allone_stb_area_tip1"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/areaText"
+            style="@style/normal_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/pic_location"
+            android:drawablePadding="@dimen/margin_x2"
+            android:drawableRight="@drawable/pic_location_arrow"
+            android:padding="@dimen/margin_x4"
+            android:text="@string/allone_stb_area_tip" />
+    </RelativeLayout>
+</LinearLayout>

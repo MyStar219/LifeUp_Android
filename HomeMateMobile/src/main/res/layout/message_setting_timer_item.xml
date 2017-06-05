@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@drawable/list_item">
+
+        <TextView
+            android:id="@+id/deviceNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_toLeftOf="@id/infoPushSwitchImageView"
+            android:singleLine="true"
+            android:text="COCO智能插线板"
+            android:textSize="@dimen/text_big"/>
+
+        <ImageView
+            android:id="@+id/infoPushSwitchImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="setSingleDeviceInfoPush"
+            android:src="@drawable/socket_switch"/>
+    </RelativeLayout>
+</RelativeLayout>

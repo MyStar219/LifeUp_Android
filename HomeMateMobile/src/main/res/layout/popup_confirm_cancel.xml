@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/popup_bg"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dialog_up"
+                android:clipToPadding="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/margin_x4"
+                    android:gravity="center"
+                    android:text="Title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_big"/>
+
+                <TextView
+                    android:id="@+id/contentTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:gravity="center"
+                    android:text="Tip Content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/leftTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/dialog_left"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="@string/not_to_save"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_normal"/>
+
+                <TextView
+                    android:id="@+id/rightTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/dialog_right"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_normal"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

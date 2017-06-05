@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/levelDalayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@drawable/bg_list_device_single_default"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_x4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/skyworth_rgb_level_delaytime_set"
+            android:textColor="@color/font_learned_white"
+            android:textSize="@dimen/text_normal" />
+
+        <CheckBox
+            android:id="@+id/levelDelayCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checkbox_bg"
+            android:button="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/levelDalayTimeView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@drawable/bg_list_device_single_default"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/skyworth_rgb_select_level_delaytime"
+            android:textColor="@color/font_learned_white"
+            android:textSize="@dimen/text_normal" />
+
+
+        <TextView
+            android:id="@+id/levelDalayTimeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@drawable/bg_list_device_single_default"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_x4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/skyworth_rgb_off_dalaytime_set"
+            android:textColor="@color/font_learned_white"
+            android:textSize="@dimen/text_normal" />
+
+        <CheckBox
+            android:id="@+id/offDelayCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checkbox_bg"
+            android:button="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/offDalayTimeView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@drawable/bg_list_device_top_default"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/skyworth_rgb_select_off_delaytime"
+            android:textColor="@color/font_learned_white"
+            android:textSize="@dimen/text_normal" />
+
+
+        <TextView
+            android:id="@+id/offDalayTimeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right_small" />
+
+    </LinearLayout>
+
+</LinearLayout>

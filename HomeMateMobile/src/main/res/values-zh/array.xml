@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <!-- 星期天放在首位 -->
+    <string-array name="week">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+
+
+    <!-- 星期，按顺序放周一到周日 -->
+    <string-array name="weeks_">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </string-array>
+
+    <string-array name="weeks_new">
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+        <item>周日</item>
+    </string-array>
+
+    <!-- 时间延时，单位100毫秒 -->
+    <integer-array name="time_delay">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </integer-array>
+
+    <array name="guide_img" >
+        <item>@drawable/guide_pic_1</item>
+        <item>@drawable/guide_pic_2</item>
+        <item>@drawable/guide_pic_3</item>
+        <item>@drawable/guide_pic_4</item>
+    </array>
+    <string-array name="guide_title">
+        <item>手机控制空调功能</item>
+        <item>独创电视节目导航</item>
+        <item>新增8000多套码库</item>
+        <item>新品小方震撼上市</item>
+    </string-array>
+    <string-array name="guide_content">
+        <item>下班提前开空调，到家立即享清凉</item>
+        <item>通过节目内容选台，看剧换台不用「方」</item>
+        <item>抛弃繁琐配置，快速匹配家里的遥控器</item>
+        <item>立刻前往欧瑞博京东旗舰店购买→_→</item>
+    </string-array>
+    <array name="guide_index_img" >
+        <item>@drawable/pic_guide_indicate_1</item>
+        <item>@drawable/pic_guide_indicate_2</item>
+        <item>@drawable/pic_guide_indicate_3</item>
+        <item>@drawable/pic_guide_indicate_4</item>
+    </array>
+</resources>

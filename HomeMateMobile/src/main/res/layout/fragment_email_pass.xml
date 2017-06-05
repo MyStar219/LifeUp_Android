@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/double_padding">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/double_padding"
+        android:background="@drawable/bg_white_circle"
+        android:src="@drawable/lock_big"/>
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="?android:textColorPrimaryInverse"
+        android:gravity="center"
+        android:text="@string/forgotpassword"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:gravity="center"
+        android:textColor="?android:textColorPrimaryInverse"
+        android:text="@string/enter_phone_for_pass_recovery"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_padding"
+        android:drawablePadding="@dimen/default_padding"
+        android:drawableLeft="@drawable/field_phone"
+        android:inputType="phone"
+        />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="@dimen/double_padding"
+        android:text="@string/next"
+        android:textSize="18sp"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation" >
+
+    <!-- 星期天放在首位 -->
+    <string-array name="week">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <!-- 星期，按顺序放周一到周日 -->
+    <string-array name="weeks_">
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+
+    <string-array name="weeks_new">
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+
+    <!-- 时间延时，单位100毫秒 -->
+    <integer-array name="time_delay">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </integer-array>
+
+
+    <array name="guide_img" >
+        <item>@drawable/guide_pic_1</item>
+        <item>@drawable/guide_pic_2</item>
+        <item>@drawable/guide_pic_3</item>
+        <item>@drawable/guide_pic_4</item>
+    </array>
+    <string-array name="guide_title">
+        <item>Original TV Program Navigation
+
+</item>
+        <item>Original TV Program Navigation</item>
+        <item>Add More Than 8000 Sets of Code Library</item>
+        <item>Magic Cube Shocks the Market
+</item>
+    </string-array>
+    <string-array name="guide_content">
+        <item>Open Air Conditioner Ahead of Time, Enjoy the Cool Immediately Back Home
+</item>
+        <item>Select TV Programs by Content，Change Channel for Favorite Program Easyly and Simplely
+</item>
+        <item>Abandon Tedious Configuration, Matching Home Remote Control Fastly
+</item>
+        <item>Change Your Perception of Remote Control
+</item>
+    </string-array>
+    <array name="guide_index_img" >
+        <item>@drawable/pic_guide_indicate_1</item>
+        <item>@drawable/pic_guide_indicate_2</item>
+        <item>@drawable/pic_guide_indicate_3</item>
+        <item>@drawable/pic_guide_indicate_4</item>
+    </array>
+
+    <string-array name="security_add_contact">
+        <item>051482043270</item>
+        <item>051482043271</item>
+        <item>051482043272</item>
+        <item>051482043273</item>
+        <item>051482043274</item>
+    </string-array>
+</resources>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="@string/security_warning_setting"
+        app:leftDrawableLeft="@drawable/back" />
+
+    <RelativeLayout
+        android:id="@+id/app"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:background="@drawable/list_item">
+
+        <ImageView
+            android:id="@+id/appImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:src="@drawable/bg_app_notice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:layout_toLeftOf="@+id/appHookImageView"
+            android:layout_toRightOf="@id/appImageView"
+            android:text="@string/security_warning_setting_app"
+            android:textSize="@dimen/text_big" />
+
+
+        <ImageView
+            android:id="@+id/appHookImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:src="@drawable/pic_hook" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:background="@drawable/line_divide" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/appAndPhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:background="@drawable/list_item"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/appAndPhoneImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:src="@drawable/bg_app_and_phone_notice" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/appAndPhoneImageView"
+            android:layout_toLeftOf="@+id/appAndPhoneHookImageView"
+            android:textColor="@color/black"
+            android:text="@string/security_warning_setting_app_phone"
+            android:textSize="@dimen/text_big" />
+
+
+        <ImageView
+            android:id="@+id/appAndPhoneHookImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:src="@drawable/pic_hook" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@drawable/line_divide" />
+
+
+    <RelativeLayout
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:background="@drawable/list_item">
+
+        <ImageView
+            android:id="@+id/contactImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:src="@drawable/bg_call_contact" />
+
+        <TextView
+            android:id="@+id/membersTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/contactImageView"
+            android:textColor="@color/black"
+            android:text="@string/security_warning_setting_contact"
+            android:textSize="@dimen/text_big" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:src="@drawable/device_item_arrow_right" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:background="@drawable/line_divide" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/familyMember"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:background="@drawable/list_item">
+
+        <ImageView
+            android:id="@+id/familyMemberImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:src="@drawable/bg_telephone_reminder" />
+
+
+        <TextView
+            android:id="@+id/leftCountTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/familyMemberImageView"
+            android:layout_toLeftOf="@+id/leftCountTextView"
+            android:textColor="@color/black"
+            android:text="@string/security_warning_setting_phone_count"
+            android:textSize="@dimen/text_big" />
+
+
+        <TextView
+            android:id="@+id/leftCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small"
+        android:text="@string/security_warning_setting_phone_count_tips"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginLeft="@dimen/margin_x4" />
+</LinearLayout>

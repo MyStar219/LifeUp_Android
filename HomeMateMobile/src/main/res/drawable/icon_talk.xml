@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/icon_talk_disable" android:state_enabled="false"/>
+    <item android:state_activated="true" android:drawable="@drawable/icon_talk_select"></item>
+    <item android:drawable="@drawable/icon_talk_select" android:state_pressed="true"/>
+    <item android:drawable="@drawable/icon_talk_default" />
+
+</selector>

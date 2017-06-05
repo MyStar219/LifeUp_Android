@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/navigationGreenBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:right_img="@drawable/setting_white_selector"
+        app:text="@string/device_add_iintelligent_door_lock" />
+
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/noRecordTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/margin_x4"
+            android:drawableTop="@drawable/pic_nomessage_lock"
+            android:gravity="center"
+            android:text="@string/smart_lock_no_record_tip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/unlock"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/list_image_item_height"
+            android:layout_weight="1"
+            android:background="@drawable/item_selector"
+            android:onClick="onClick"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/normal_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/margin_x2"
+                android:text="@string/unlock_at_once" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/gray_white" />
+
+        <RelativeLayout
+            android:id="@+id/addTmpPass"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/list_image_item_height"
+            android:layout_weight="1"
+            android:background="@drawable/item_selector"
+            android:onClick="onClick">
+
+            <TextView
+                android:id="@+id/btnText"
+                style="@style/normal_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="@dimen/margin_x2"
+                android:text="@string/lock_add_tmp_pass" />
+
+            <TextView
+                android:id="@+id/btnText1"
+                style="@style/normal_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomView"
+        android:layout_below="@+id/navigationGreenBar"
+        android:clickable="false"
+        android:divider="#00000000"
+        android:listSelector="#00000000" />
+</RelativeLayout>

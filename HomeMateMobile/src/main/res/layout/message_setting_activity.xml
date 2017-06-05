@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_background"
+    android:layout_height="match_parent">
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        navigationBar:leftDrawableLeft="@drawable/back"
+        navigationBar:text="@string/message_setting"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:layout_below="@+id/navigationBar"
+        android:id="@+id/devicesInfoPushSetListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/tran"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/tran" />
+
+    <LinearLayout
+        android:id="@+id/deviceEmptyLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/deviceEmptyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_no_device"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/deviceEmptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deviceEmptyImageView"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:paddingBottom="@dimen/margin_x4"
+            android:text="@string/message_setting_tips"
+            android:textColor="@color/gray_white"
+            android:textSize="@dimen/text_big" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <!--<TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/clearTextView"
+        android:text="@string/message_clear_all"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_list_device_single_default"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:textSize="@dimen/text_big"
+        android:layout_height="@dimen/list_item_height"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/deviceInfoImageView"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/line_divide"
+        android:layout_height="wrap_content" />-->
+</LinearLayout>

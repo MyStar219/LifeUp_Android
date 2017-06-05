@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gray_background">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        navigationBar:leftText="@string/cancel"
+        navigationBar:centerText="@string/ap_config_title"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tipTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="@string/ap_config_tips_tip1"
+        android:textSize="@dimen/text_normal" />
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ap_wifi" />
+
+    <TextView
+        android:id="@+id/tipTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="@string/ap_config_tips_tip2"
+        android:textSize="@dimen/text_normal" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/app_logo" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_x8"
+        android:textSize="@dimen/text_big"
+        android:text="@string/ap_config_connect_wifi"
+        android:textColor="@color/white"
+        android:background="@drawable/button_green" />
+
+</LinearLayout>

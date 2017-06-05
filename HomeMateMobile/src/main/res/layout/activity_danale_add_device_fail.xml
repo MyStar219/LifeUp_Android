@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/green"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/ap_config_add_failed"
+            android:textSize="@dimen/text_large"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center_vertical"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_refresh_selector"/>
+
+            <TextView
+                android:id="@+id/tv_find_no_device_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/find_no_device_can_add"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_big"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_find_no_device_tips"
+                android:src="@drawable/pic_search_fail"
+                android:layout_marginRight="6dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_finish"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/add_device_finish"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="42dp"
+        android:layout_marginTop="37dp"
+        android:gravity="center"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"
+        android:background="@drawable/btn_green_selector"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_top"
+        android:layout_above="@id/tv_finish">
+
+        <com.orvibo.homemate.view.custom.pulltorefresh.PullRefreshView
+            android:id="@+id/prfv_deivice_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@color/transparent"
+            android:fadingEdge="none"
+            android:listSelector="@color/transparent"
+            android:divider="@null"
+            app:has_header="false"
+            app:has_footer="false"/>
+
+        <com.orvibo.homemate.view.custom.pulltorefresh.ErrorMaskView
+            android:id="@+id/maskView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/prfv_deivice_list"
+            android:background="@color/divide_line_color"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:layout="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_image_item_height"
+    android:background="@drawable/tran"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:background="@drawable/item_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.orvibo.homemate.view.custom.DeviceCustomView
+            android:id="@+id/deviceCustomView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ctrl_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:paddingLeft="@dimen/padding_x4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/device_on" />
+    </LinearLayout>
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@id/deviceName_tv"
+        android:background="@color/black"/>-->
+
+
+</RelativeLayout>

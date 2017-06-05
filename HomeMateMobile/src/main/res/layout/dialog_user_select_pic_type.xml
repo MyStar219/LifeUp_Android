@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/select_pic_popup"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:id="@+id/btn_camera"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/list_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/camera_photo"
+            android:textSize="@dimen/text_normal"
+            android:gravity="center"
+            android:textColor="@color/blue"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d1cece"/>
+
+    <LinearLayout
+        android:id="@+id/btn_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/list_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/user_pic_select_from_phone_album"
+            android:textSize="@dimen/text_normal"
+            android:gravity="center"
+            android:textColor="@color/blue"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d1cece"/>
+
+    <LinearLayout
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/list_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/cancel"
+            android:textSize="@dimen/text_normal"
+            android:gravity="center"
+            android:textColor="@color/blue"/>
+
+    </LinearLayout>
+
+</LinearLayout>

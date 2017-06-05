@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:irButton="http://schemas.android.com/apk/res-auto"
+              xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:right_text="@string/save"
+        navigationBar:text="@string/device_set_panel_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ir_learn_tips"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_bar_height"
+                android:background="@color/hint_background"
+                android:gravity="center"
+                android:text="@string/device_set_self_remote_buttons_tips"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_x4">
+
+                    <com.orvibo.homemate.view.custom.IrButton
+                        android:id="@+id/btnOpen"
+                        android:layout_width="@dimen/tv_button_wh"
+                        android:layout_height="@dimen/tv_button_wh"
+                        irButton:checkedBg="@drawable/icon_off_pressed"
+                        irButton:command="311011"
+                        irButton:keyName="@string/conditioner_open"
+                        irButton:learnedBg="@drawable/bg_ac_onoff_on_selector"
+                        irButton:unLearnedBg="@drawable/icon_on_off_disable"/>
+
+                    <com.orvibo.homemate.view.custom.IrButton
+                        android:id="@+id/btnShutdown"
+                        android:layout_width="@dimen/tv_button_wh"
+                        android:layout_height="@dimen/tv_button_wh"
+                        android:layout_alignParentRight="true"
+                        irButton:checkedBg="@drawable/icon_lock_pressed"
+                        irButton:command="311004"
+                        irButton:keyName="@string/conditioner_close"
+                        irButton:learnedBg="@drawable/bg_ac_lockunlock_unlock_selector"
+                        irButton:unLearnedBg="@drawable/icon_lock_disable"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/margin_x9"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/circularSeekBar_bg"
+                        android:layout_width="@dimen/conditioner_wh"
+                        android:layout_height="@dimen/conditioner_wh"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ac_controller_scale_on"/>
+
+                    <com.orvibo.homemate.view.custom.ACPanelCircularSeekBar
+                        android:id="@+id/circularSeekBar"
+                        android:layout_width="@dimen/conditioner_wh"
+                        android:layout_height="@dimen/conditioner_wh"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        irButton:height="@dimen/conditioner_wh"
+                        irButton:width="@dimen/conditioner_wh"/>
+
+                    <TextView
+                        android:id="@+id/temperatureTips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_x10"
+                        android:text="@string/conditioner_current_temperature"
+                        android:textColor="@color/font_learned_white"
+                        android:textSize="@dimen/text_tinny"/>
+
+                    <TextView
+                        android:id="@+id/tvSetTemperature"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="230℃"
+                        android:textColor="@color/font_white_255"
+                        android:textSize="48sp"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/currentStateLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.orvibo.homemate.view.custom.IrButton
+                            android:id="@+id/tvTemperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:clickable="true"
+                            android:text="25℃"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="72sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x2"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ivModel"
+                                android:layout_width="@dimen/notification_ic_wh"
+                                android:layout_height="@dimen/notification_ic_wh"
+                                android:background="@drawable/pic_cooling_off"/>
+
+                            <ImageView
+                                android:id="@+id/ivSpeed"
+                                android:layout_width="@dimen/notification_ic_wh"
+                                android:layout_height="@dimen/notification_ic_wh"
+                                android:layout_marginLeft="@dimen/margin_x4"
+                                android:background="@drawable/pic_weak_wind_off"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+
+                    android:id="@+id/model_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_x2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.orvibo.homemate.view.custom.IrButton
+                            android:id="@+id/btnCold"
+                            android:layout_width="@dimen/tv_button_wh"
+                            android:layout_height="@dimen/tv_button_wh"
+                            android:tag="0"
+                            irButton:checkedBg="@drawable/icon_cooling_pressed"
+                            irButton:command="311000"
+                            irButton:keyName="@string/conditioner_cold"
+                            irButton:learnedBg="@drawable/bg_ac_cool_selector"
+                            irButton:unLearnedBg="@drawable/icon_cooling_disable"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x1"
+                            android:gravity="center"
+                            android:text="@string/conditioner_cold"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_small"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.orvibo.homemate.view.custom.IrButton
+                            android:id="@+id/btnHot"
+                            android:layout_width="@dimen/tv_button_wh"
+                            android:layout_height="@dimen/tv_button_wh"
+                            android:tag="1"
+                            irButton:checkedBg="@drawable/icon_heating_pressed"
+                            irButton:command="311003"
+                            irButton:keyName="@string/conditioner_hot"
+                            irButton:learnedBg="@drawable/bg_ac_heat_selector"
+                            irButton:unLearnedBg="@drawable/icon_heating_disable"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x1"
+                            android:text="@string/conditioner_hot"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_small"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.orvibo.homemate.view.custom.IrButton
+                            android:id="@+id/btnDehumidifier"
+                            android:layout_width="@dimen/tv_button_wh"
+                            android:layout_height="@dimen/tv_button_wh"
+                            android:tag="2"
+                            irButton:checkedBg="@drawable/icon_exhaust_pressed"
+                            irButton:command="311001"
+                            irButton:keyName="@string/conditioner_dehumidifier"
+                            irButton:learnedBg="@drawable/bg_ac_exhaust_selector"
+                            irButton:unLearnedBg="@drawable/icon_exhaust_disable"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x1"
+                            android:text="@string/conditioner_wind"
+                            android:gravity="center"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_small"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mode_auto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.orvibo.homemate.view.custom.IrButton
+                            android:id="@+id/btnAuto"
+                            android:layout_width="@dimen/tv_button_wh"
+                            android:layout_height="@dimen/tv_button_wh"
+                            android:tag="3"
+                            irButton:checkedBg="@drawable/icon_auto_pressed"
+                            irButton:command="311005"
+                            irButton:keyName="@string/conditioner_low"
+                            irButton:learnedBg="@drawable/bg_ac_auto_selector"
+                            irButton:unLearnedBg="@drawable/icon_auto_disable"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x1"
+                            android:text="@string/conditioner_auto"
+                            android:gravity="center"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/wind_level_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/model_button"
+                    android:layout_marginLeft="@dimen/margin_x8"
+                    android:layout_marginRight="@dimen/margin_x8"
+                    android:background="@drawable/pic_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wind_level_button"
+                    android:layout_margin="@dimen/margin_x4"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.orvibo.homemate.view.custom.IrButton
+                            android:id="@+id/btnLow"
+                            android:layout_width="@dimen/tv_button_wh"
+                            android:layout_height="@dimen/tv_button_wh"
+                            android:tag="3"
+                            irButton:checkedBg="@drawable/icon_weak_wind_pressed"
+                            irButton:command="311005"
+                            irButton:keyName="@string/conditioner_low"
+                            irButton:learnedBg="@drawable/bg_ac_weak_selector"
+                            irButton:unLearnedBg="@drawable/icon_weak_wind_disable"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x1"
+                            android:text="@string/conditioner_low_wind"
+                            android:gravity="center"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_small"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.orvibo.homemate.view.custom.IrButton
+                            android:id="@+id/btnMiddle"
+                            android:layout_width="@dimen/tv_button_wh"
+                            android:layout_height="@dimen/tv_button_wh"
+                            android:tag="4"
+                            irButton:checkedBg="@drawable/icon_medium_wind_pressed"
+                            irButton:command="311006"
+                            irButton:keyName="@string/conditioner_middle"
+                            irButton:learnedBg="@drawable/bg_ac_medium_selector"
+                            irButton:unLearnedBg="@drawable/icon_medium_wind_disable"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x1"
+                            android:gravity="center"
+                            android:text="@string/conditioner_middle_wind"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_small"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.orvibo.homemate.view.custom.IrButton
+                            android:id="@+id/btnHigh"
+                            android:layout_width="@dimen/tv_button_wh"
+                            android:layout_height="@dimen/tv_button_wh"
+                            android:tag="5"
+                            irButton:checkedBg="@drawable/icon_strong_wind_pressed"
+                            irButton:command="311007"
+                            irButton:keyName="@string/conditioner_high"
+                            irButton:learnedBg="@drawable/bg_ac_strong_selector"
+                            irButton:unLearnedBg="@drawable/icon_strong_wind_disable"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x1"
+                            android:text="@string/conditioner_high_wind"
+                            android:gravity="center"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_small"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.orvibo.homemate.view.custom.IrButton
+                            android:id="@+id/btnAutoWind"
+                            android:layout_width="@dimen/tv_button_wh"
+                            android:layout_height="@dimen/tv_button_wh"
+                            android:tag="6"
+                            irButton:checkedBg="@drawable/icon_auto_wind_pressed"
+                            irButton:command="311009"
+                            irButton:keyName="@string/conditioner_sweep"
+                            irButton:learnedBg="@drawable/bg_ac_wind_auto_selector"
+                            irButton:unLearnedBg="@drawable/icon_auto_wind_disable"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_x1"
+                            android:text="@string/conditioner_auto"
+                            android:gravity="center"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_small"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="@dimen/ys_camera_definition_width"
+    android:background="@drawable/bg_definition"
+    android:paddingTop="@dimen/padding_x2"
+    android:paddingBottom="@dimen/padding_x2"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/definitionLow"
+        android:layout_width="match_parent"
+        android:text="@string/ys_definition_low"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_x2"
+        android:paddingBottom="@dimen/padding_x2"
+        android:textSize="@dimen/text_normal"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/definitionNormal"
+        android:layout_width="match_parent"
+        android:text="@string/ys_definition_normal"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_x2"
+        android:paddingBottom="@dimen/padding_x2"
+        android:textSize="@dimen/text_normal"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/definitionHigh"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:text="@string/ys_definition_high"
+        android:textColor="@color/gray"
+        android:paddingTop="@dimen/padding_x2"
+        android:paddingBottom="@dimen/padding_x2"
+        android:textSize="@dimen/text_normal"
+        android:layout_height="wrap_content" />
+</LinearLayout>

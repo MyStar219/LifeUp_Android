@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:timingTwoTab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/bar_ic_wh"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.orvibo.homemate.view.custom.TimingCountdownTab
+        android:id="@+id/timingTopTab"
+        timingTwoTab:timingTabName="@string/timing"
+        timingTwoTab:timingTabNormalBg="@drawable/icon_tab_left_normal"
+        timingTwoTab:timingTabSelectedBg="@drawable/icon_tab_left_checked"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"/>
+
+    <com.orvibo.homemate.view.custom.TimingCountdownTab
+        android:id="@+id/countdownTopTab"
+        timingTwoTab:timingTabName="@string/countdown_"
+        timingTwoTab:timingTabNormalBg="@drawable/icon_tab_right_normal"
+        timingTwoTab:timingTabSelectedBg="@drawable/icon_tab_right_checked"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"/>
+</LinearLayout>

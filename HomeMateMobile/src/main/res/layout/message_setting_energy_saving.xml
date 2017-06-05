@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:background="@drawable/list_item"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:layout_height="@dimen/list_item_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="@string/message_energy"
+            android:textSize="@dimen/text_big" />
+
+</RelativeLayout>

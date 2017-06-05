@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/margin_x8"
+    android:layout_marginRight="@dimen/margin_x8"
+    android:paddingTop="@dimen/margin_x4"
+    android:background="@drawable/dialog_bg">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/bg_smoke_sensor" />
+
+    <TextView
+        android:id="@+id/tipTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:textColor="@color/black"
+        android:text="@string/device_add_sensor_guide_text"
+        android:textSize="@dimen/text_normal" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:textSize="@dimen/text_big"
+        android:text="@string/device_add_zigbee_tip_confirm"
+        android:textColor="@color/white"
+        android:background="@drawable/button_green" />
+
+</LinearLayout>

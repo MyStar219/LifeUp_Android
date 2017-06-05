@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/barRelativeLayout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/green"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        >
+
+        <TextView
+            android:id="@+id/leftTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_x1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_x4"
+            android:paddingRight="@dimen/margin_x4"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal"/>
+
+        <TextView
+            android:id="@+id/centerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_x32"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/identity"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large"/>
+
+        <TextView
+            android:id="@+id/rightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_x1"
+            android:gravity="center|right"
+            android:paddingLeft="@dimen/margin_x4"
+            android:paddingRight="@dimen/margin_x4"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal"/>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/progress_swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_swiperefresh_hgith"
+        android:layout_centerHorizontal="true"/>
+</LinearLayout>

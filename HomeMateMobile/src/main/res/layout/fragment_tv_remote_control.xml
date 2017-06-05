@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:irKey="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomRelativeLayout">
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x8"
+                android:layout_marginRight="@dimen/margin_x8"
+                android:layout_marginTop="@dimen/margin_x6"
+                android:orientation="horizontal">
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/irKeyButtonPower"
+                    style="@style/text_style_allone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:scaleType="fitCenter"
+                    android:text="@string/allone_electric_source"
+                    irKey:fid="1"
+                    irKey:learnTopBg="@drawable/icon_allone2_electric_replace_selector"
+                    irKey:learnedTopBg="@drawable/icon_allone2_electric_source_selector" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/irKeyButtonInput"
+                    style="@style/text_style_allone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:scaleType="fitCenter"
+                    android:text="@string/allone_signal_source"
+                    irKey:fid="111"
+                    irKey:learnTopBg="@drawable/icon_allone2_signal_source_replace_selector"
+                    irKey:learnedTopBg="@drawable/icon_allone2_signal_source_selector" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/irKeyButtonMenu"
+                    style="@style/text_style_allone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:scaleType="fitCenter"
+                    android:text="@string/allone_menu"
+                    irKey:fid="45"
+                    irKey:learnTopBg="@drawable/icon_allone2_electric_replace_selector"
+                    irKey:learnedTopBg="@drawable/icon_allone2_menu_selector" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/irKeyButtonBack"
+                    style="@style/text_style_allone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:scaleType="fitCenter"
+                    android:text="@string/allone_back"
+                    irKey:fid="116"
+                    irKey:learnTopBg="@drawable/icon_allone2_back_replace_selector"
+                    irKey:learnedTopBg="@drawable/icon_allone2_back_selector" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/topFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_x8"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1" />
+
+                        <com.orvibo.homemate.view.custom.IrKeyButton
+                            android:id="@+id/irKeyButtonHomepage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_normal"
+                            irKey:fid="136"
+                            irKey:learnBg="@drawable/icon_allone2_home_replace_selector"
+                            irKey:learnedBg1="@drawable/icon_allone2_home_selector" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1" />
+
+                        <include layout="@layout/view_allone_voice" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1" />
+
+                        <com.orvibo.homemate.view.custom.IrKeyButton
+                            android:id="@+id/irKeyButtonMute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:textColor="@color/font_white_gray"
+                            android:textSize="@dimen/text_normal"
+                            irKey:fid="106"
+                            irKey:learnBg="@drawable/icon_allone2_mute_replace_selector"
+                            irKey:learnedBg1="@drawable/icon_allone2_mute_selector" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <include layout="@layout/view_allone_direction" />
+
+                </LinearLayout>
+
+                <include layout="@layout/view_allone_digit" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_allone_gridview" />
+
+    <include layout="@layout/view_allone_morekey_tips"/>
+
+    <include layout="@layout/view_allone_bottom" />
+</RelativeLayout>

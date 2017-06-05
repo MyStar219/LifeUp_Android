@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical" >
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigation:text="@string/time_zone_tips" />
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/font_white_gray"
+        android:textSize="@dimen/text_small"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:text="@string/time_zone_tips"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+    </ListView>
+    <TextView
+        android:layout_width="match_parent"
+        android:drawableRight="@drawable/device_on"
+        android:text="@string/time_zone_daylight_saving_time"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_x4"
+        android:textSize="@dimen/text_big"
+        android:textColor="@color/font_black"
+        android:layout_height="@dimen/list_image_item_height" />
+</LinearLayout>

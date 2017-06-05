@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中样式 -->
+    <item android:drawable="@drawable/bt_white_pause_pressed" android:state_pressed="true"/>
+    <!-- 未选中样式 -->
+    <item android:drawable="@drawable/bt_white_pause_normal" android:state_pressed="false"/>
+</selector>

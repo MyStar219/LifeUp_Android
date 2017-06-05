@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/main_bar_title"
+            android:layout_centerInParent="true"
+            android:text="@string/bind_select_delay_time_title" />
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left|center_vertical"
+            android:background="@null"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:gravity="center_vertical"
+            android:onClick="cancel"
+            android:paddingLeft="@dimen/padding_x2"
+            android:paddingRight="@dimen/padding_x2"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:id="@+id/save_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="save"
+            android:paddingLeft="@dimen/padding_x2"
+            android:paddingRight="@dimen/padding_x2"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal" />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/wheelViewFragment"
+        class="com.orvibo.homemate.view.custom.WheelViewFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

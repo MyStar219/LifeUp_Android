@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/common_background"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/emptyImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_timing"
+        android:layout_marginBottom="@dimen/margin_x8"/>
+
+    <TextView
+        android:id="@+id/textViewAction"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/text_small"
+        android:text="@string/device_timing_list_empty"
+        android:layout_gravity="center"
+        android:textColor="@color/font_white_gray"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tvAddTimer"
+        android:layout_width="200dip"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:layout_marginLeft="@dimen/margin_x2"
+        android:layout_marginRight="@dimen/margin_x2"
+        android:text="@string/device_timing_add"
+        android:padding="@dimen/margin_x2"
+        android:textSize="@dimen/text_big"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:clickable="true"
+        android:background="@drawable/button_green"
+        android:layout_height="wrap_content" />
+</LinearLayout>

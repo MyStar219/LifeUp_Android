@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+
+    >
+
+    <com.orvibo.homemate.view.custom.DragOrClickItemView
+        android:id="@+id/dragorclickitemview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="50dp"
+        android:layout_gravity="center"
+     />
+
+   <RelativeLayout
+       android:id="@+id/title_layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_horizontal"
+
+       >
+       <RelativeLayout
+           android:id="@+id/title"
+           android:layout_width="match_parent"
+           android:layout_height="50dp">
+           <ImageView
+               android:id="@+id/setting_right_img"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_marginTop="@dimen/margin_x2"
+               android:layout_marginRight="@dimen/margin_x2"
+               android:layout_centerVertical="true"
+               android:src="@drawable/setting_white_selector"/>
+       </RelativeLayout>
+
+       <TextView
+           android:id="@+id/security_status_title"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center_horizontal"
+           android:textSize="@dimen/text_big"
+           android:textColor="@color/white"
+           android:layout_below="@id/title"
+           android:layout_marginTop="@dimen/margin_x4"
+           />
+       <TextView
+           android:id="@+id/security_status_msg"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center_horizontal"
+           android:layout_below="@id/security_status_title"
+           android:layout_marginTop="@dimen/margin_x2"
+           android:textSize="@dimen/text_small"
+           android:textColor="@color/white"
+           />
+   </RelativeLayout>
+</FrameLayout>

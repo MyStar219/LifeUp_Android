@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/common_background"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:text="@string/device_set_self_remote_add_button_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/text_normal"
+        android:layout_marginTop="@dimen/margin_x16"
+        android:textColor="@color/font_white_gray"
+        android:text="@string/selfDefine_empty"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvAddButton"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_normal"
+        android:background="@drawable/button_green"
+        android:text="@string/device_set_self_remote_add_button"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:clickable="true"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:layout_height="@dimen/button_height" />
+</LinearLayout>

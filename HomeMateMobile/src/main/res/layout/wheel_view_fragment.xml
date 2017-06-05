@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/first_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="@dimen/bar_height"
+            android:paddingBottom="@dimen/padding_x8"
+            android:paddingTop="@dimen/padding_x4"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/second_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="@dimen/bar_height"
+            android:paddingBottom="@dimen/padding_x8"
+            android:paddingTop="@dimen/padding_x4"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_normal" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/device_set_select_room_wheel_middle_bg"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/first_ll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.orvibo.homemate.view.custom.wheelview3d.LoopView
+                    android:id="@+id/firstWheelView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wheel_height" />
+            </LinearLayout>
+            <!--<LinearLayout-->
+            <!--android:id="@+id/first_ll"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@null"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<com.orvibo.homemate.view.custom.wheelview.WheelView-->
+            <!--android:id="@+id/firstWheelView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/wheel_height" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/second_ll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.orvibo.homemate.view.custom.wheelview3d.LoopView
+                    android:id="@+id/secondWheelView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wheel_height" />
+                <!--<com.orvibo.homemate.view.custom.wheelview.WheelView-->
+                <!--android:id="@+id/secondWheelView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/wheel_height" />-->
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>
+

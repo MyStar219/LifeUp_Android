@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:text="@string/device_set_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_bar_height"
+                android:background="@color/hint_background"
+                android:gravity="center"
+                android:text="@string/device_set_remote_tips"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/text_small"/>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:columnCount="2">
+                <!--style="@style/remote_btn_style"-->
+                <TextView
+                    android:id="@+id/remote_on_tv"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x8"
+                    android:text="@string/device_set_remote_all_on"/>
+
+                <TextView
+                    android:id="@+id/remote_off_tv"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:layout_marginLeft="@dimen/margin_x8"
+                    android:text="@string/device_set_remote_off"/>
+
+                <TextView
+                    android:id="@+id/remote_at_home_tv"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x8"
+                    android:text="@string/device_set_remote_at_home"/>
+
+                <TextView
+                    android:id="@+id/remote_leave_home_tv"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:layout_marginLeft="@dimen/margin_x8"
+                    android:text="@string/device_set_remote_leave"/>
+
+                <TextView
+                    android:id="@+id/remote_sleep_tv"
+                    style="@style/remote_btn_style"
+                    android:layout_marginRight="@dimen/margin_x8"
+                    android:text="@string/device_set_remote_rest"/>
+
+                <TextView
+                    android:id="@+id/remote_fun_tv"
+                    style="@style/remote_btn_style"
+                    android:layout_marginLeft="@dimen/margin_x8"
+                    android:text="@string/device_set_remote_movie"/>
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:columnCount="4">
+
+                <TextView
+                    android:id="@+id/remote_tv1"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="1"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv2"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="2"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv3"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="3"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv4"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:text="4"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv5"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="5"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv6"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="6"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv7"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="7"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv8"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:text="8"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv1_plus"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="1+"
+                    android:textColor="@color/font_offline"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv9"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="9"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv0"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="0"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_tv2_plus"
+                    style="@style/remote_btn_style"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:text="2+"
+                    android:textColor="@color/font_offline"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_lock"
+                    style="@style/remote_btn_style"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="@string/device_set_remote_lock"
+                    android:textColor="@color/font_offline"/>
+
+                <TextView
+                    android:id="@+id/remote_plus"
+                    style="@style/remote_btn_style"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="+"
+                    android:textColor="@color/font_offline"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_minus"
+                    style="@style/remote_btn_style"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:text="-"
+                    android:textColor="@color/font_offline"
+                    android:textSize="@dimen/text_large"/>
+
+                <TextView
+                    android:id="@+id/remote_set"
+                    style="@style/remote_btn_style"
+                    android:text="@string/device_set_remote_setting"
+                    android:textColor="@color/font_offline"/>
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

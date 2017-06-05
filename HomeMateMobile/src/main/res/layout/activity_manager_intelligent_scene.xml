@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:mXmln="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/green"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/main_bar_title"
+            android:layout_centerInParent="true"
+            android:text="@string/intelligent_scene_add"/>
+
+        <com.orvibo.homemate.view.custom.TimingCountdownTabView
+            android:id="@+id/topSecurityId"
+            android:layout_width="200dip"
+            android:layout_height="@dimen/bar_ic_wh"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+        </com.orvibo.homemate.view.custom.TimingCountdownTabView>
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:onClick="leftTitleClick"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/saveTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_x6"
+            android:paddingRight="@dimen/padding_x2"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal"/>
+        <!--android:textColor="@drawable/device_bar_select_room_check"-->
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topBar"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/scenename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x4"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:text="@string/intelligent_scene_name"
+                android:textColor="@color/font_learned_white"
+                android:textSize="@dimen/text_small"
+                android:visibility="visible"/>
+
+            <com.orvibo.homemate.view.custom.EditTextWithCompound
+                android:id="@+id/intelligentSceneNameEditText"
+                style="@style/et_common"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:paddingRight="@dimen/padding_x4"
+                android:background="@drawable/item_selector"
+                android:hint="@string/intelligent_scene_input_hint"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x4"
+                android:layout_marginTop="@dimen/margin_x2"
+                android:text="@string/intelligent_scene_if"
+                android:textColor="@color/font_learned_white"
+                android:textSize="@dimen/text_small"
+                android:visibility="visible"/>
+
+            <RelativeLayout
+                android:id="@+id/addConditionRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <TextView
+                    android:id="@+id/addConditionTextView"
+                    style="@style/et_common"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/item_selector"
+                    android:drawablePadding="@dimen/padding_x4"
+                    android:drawableRight="@drawable/device_item_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/padding_x2"
+                    android:paddingRight="@dimen/padding_x4"
+                    android:paddingTop="@dimen/padding_x2"
+                    android:text="@string/intelligent_scene_add_condition"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/margin_x18"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/deviceNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="欧瑞博门锁"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_normal"/>
+
+                    <TextView
+                        android:id="@+id/roomTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小欧家"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_small"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/deleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@drawable/item_selector"
+        android:gravity="center"
+        android:text="@string/intelligent_scene_delete"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_normal"/>
+</LinearLayout>

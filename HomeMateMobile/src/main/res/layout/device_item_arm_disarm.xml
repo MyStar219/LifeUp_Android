@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/security_image_item_height"
+    android:gravity="center_vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/security_image_item_height"
+        android:gravity="center_vertical"
+        android:background="@drawable/item_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_x4"
+        android:paddingRight="@dimen/margin_x4">
+
+        <RelativeLayout
+            android:layout_width="@dimen/button_height"
+            android:layout_height="@dimen/button_height"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/deviceIcon_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:src="@drawable/device_type_lighting" />
+
+            <include layout="@layout/offline"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/deviceName_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="device name"
+                android:textColor="@color/navigation_text_color"
+                android:textSize="@dimen/text_big" />
+            <TextView
+                android:id="@+id/deviceLocation_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_x1"
+                android:singleLine="true"
+                android:text="device location"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:paddingLeft="@dimen/padding_x1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/device_offline"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ctrl_tv"
+            android:layout_width="wrap_content"
+            android:text="@string/security_arm"
+            android:gravity="center"
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/font_black"
+            android:layout_height="wrap_content"
+            android:background="@drawable/security_disarm_small_btn"
+            android:onClick="control" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/tvAlarming"
+            android:layout_width="match_parent"
+            android:background="@drawable/security_alarm_bg"
+            android:visibility="gone"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tvAlarmingTips"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            android:text="@string/security_alarming"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_tinny"
+            android:layout_height="wrap_content" />
+
+</RelativeLayout>

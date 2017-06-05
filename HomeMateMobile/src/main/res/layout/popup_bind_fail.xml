@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/popup_bg"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@null"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dialog_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                android:paddingTop="@dimen/padding_x2">
+
+                <TextView
+                    android:id="@+id/tip_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/padding_x2"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:gravity="center"
+                    android:text="@string/add_device_fail_again"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_normal"/>
+
+                <ListView
+                    android:id="@+id/bind_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scene_bind_faile_listview_heigth"
+                    android:layout_below="@+id/tip_tv"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/padding_x4"
+                    android:layout_marginBottom="@dimen/padding_x4"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/reason_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bind_lv"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:text="@string/scene_set_bind_fail_reason"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/text_normal"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/confirmAndCancel_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_small"
+                    android:layout_above="@+id/bind_lv"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:background="@null"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/cancel_tv"
+                        style="@style/view_horizontal"
+                        android:layout_weight="3"
+                        android:background="@drawable/cancel_selector"
+                        android:gravity="center"
+                        android:text="@string/cancel"
+                        android:textColor="@color/font_white_gray"
+                        android:textSize="@dimen/text_normal"/>
+
+                    <View
+                        style="@style/view_horizontal"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/confirm_tv"
+                        style="@style/view_horizontal"
+                        android:layout_weight="3"
+                        android:background="@drawable/button_green"
+                        android:gravity="center"
+                        android:text="@string/retry"
+                        android:textColor="@color/font_white_255"
+                        android:textSize="@dimen/text_normal"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ok_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height_small"
+                    android:layout_above="@+id/bind_lv"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:background="@drawable/button_green"
+                    android:gravity="center"
+                    android:minWidth="@dimen/button_width_min"
+                    android:paddingLeft="@dimen/padding_x12"
+                    android:paddingRight="@dimen/padding_x12"
+                    android:text="@string/confirm"
+                    android:textColor="@color/white"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

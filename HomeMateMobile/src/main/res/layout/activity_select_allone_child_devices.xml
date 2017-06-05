@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/nav_background_color"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="50"
+            android:contentDescription="@null"
+            android:onClick="leftTitleClick"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back_green"/>
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/select_remote"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/nav_line"/>
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rv_alloneChildDevice"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="gone"/>-->
+
+    <ListView
+        android:id="@+id/devices_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/common_line"
+        android:dividerHeight="0.2dp"
+        android:listSelector="@drawable/list_item"/>
+
+    <LinearLayout
+        android:id="@+id/deviceEmptyLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/deviceEmptyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_no_device"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/deviceEmptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deviceEmptyImageView"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:paddingBottom="@dimen/margin_x4"
+            android:text="@string/device_add_tip"
+            android:textColor="@color/gray_white"
+            android:textSize="@dimen/text_big"/>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+</LinearLayout>

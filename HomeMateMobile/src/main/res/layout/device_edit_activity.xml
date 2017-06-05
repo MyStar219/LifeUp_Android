@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:leftDrawableLeft="@drawable/back"/>
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:text="@string/device_name"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small" />-->
+
+    <!--<TextView
+        android:id="@+id/deviceNameTextView"
+        android:hint="@string/device_name"
+        android:drawableRight="@drawable/arrow_right_small"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/gray"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_big"
+        android:background="@drawable/bg_list_device_single_default"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+
+        android:layout_marginTop="@dimen/margin_x2"
+        android:layout_height="@dimen/list_item_height" />-->
+
+    <LinearLayout
+        android:id="@+id/deviceName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:background="@drawable/bg_list_device_single_default"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_name"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_big"/>
+
+        <TextView
+            android:id="@+id/deviceNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right_small"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/gray_white"/>
+
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:text="@string/message_setting"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small" />-->
+
+    <!-- <TextView
+         android:id="@+id/messageSettingTextView"
+         android:text="@string/message_setting_coco"
+         android:layout_width="match_parent"
+         android:background="@drawable/bg_list_device_single_default"
+         android:paddingLeft="@dimen/padding_x4"
+         android:paddingRight="@dimen/padding_x4"
+         android:textColor="@color/gray"
+         android:drawableRight="@drawable/arrow_right_small"
+
+         android:layout_marginTop="@dimen/margin_x2"
+         android:gravity="center_vertical"
+         android:textSize="@dimen/text_big"
+         android:layout_height="@dimen/list_item_height" />-->
+    <LinearLayout
+        android:id="@+id/messageSettingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@drawable/list_item"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_x2"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:layout_toRightOf="@id/deviceImageView"
+            android:layout_weight="1"
+            android:text="@string/message_setting_coco"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_big"/>
+
+        <ImageView
+            android:id="@+id/ctrl_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:onClick="control"
+            android:paddingLeft="@dimen/padding_x1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/socket_switch"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/messageSettingView"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/gray_white"
+        android:visibility="gone"/>
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:text="@string/device_info"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small" />-->
+
+    <TextView
+        android:id="@+id/deviceInfoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:background="@drawable/bg_list_device_single_default"
+        android:drawableRight="@drawable/arrow_right_small"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_x4"
+
+        android:paddingRight="@dimen/padding_x4"
+        android:text="@string/device_info"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_big"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/gray_white"/>
+
+    <TextView
+        android:id="@+id/faq_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:background="@drawable/bg_list_device_single_default"
+        android:drawableRight="@drawable/arrow_right_small"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:text="@string/faq_coco"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_big"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/faq_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/gray_white"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:background="@drawable/button_white"
+        android:text="@string/delete"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_normal"/>
+</LinearLayout>

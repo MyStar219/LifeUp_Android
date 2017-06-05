@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:background="@color/common_background"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBG"
+            android:layout_width="@dimen/curtain_bg_width"
+            android:layout_centerInParent="true"
+            android:background="@drawable/curtain_bg"
+            android:layout_height="@dimen/curtain_bg_height" />
+
+
+        <com.orvibo.homemate.view.custom.CurtainOutsideView
+            android:id="@+id/curtainOutsideView"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/curtain_outside_width"
+            android:layout_marginTop="@dimen/margin_x6"
+            android:layout_height="@dimen/curtain_outside_height" />
+    </RelativeLayout>
+</RelativeLayout>

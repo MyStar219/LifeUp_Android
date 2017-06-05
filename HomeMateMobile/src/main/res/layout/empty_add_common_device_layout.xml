@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/empty_ll"
+    android:layout_below="@+id/navigationBar"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:src="@drawable/add_common_device_empty"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/common_device_add_tips"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_marginLeft="@dimen/margin_x12"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_big" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/common_device_add_tip1"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_marginLeft="@dimen/margin_x12"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_normal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/common_device_add_tip2"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_marginLeft="@dimen/margin_x12"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_normal" />
+
+    <TextView
+        android:id="@+id/empty_add_common_device"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/padding_x4"
+        android:layout_marginBottom="@dimen/margin_x8"
+        android:background="@drawable/button_green"
+        android:gravity="center"
+        android:text="@string/common_device_add_text"
+        android:layout_marginLeft="@dimen/margin_x12"
+        android:layout_marginRight="@dimen/margin_x12"
+        android:clickable="true"
+        android:textColor="@color/font_white_255"
+        android:textSize="@dimen/text_big" />
+</LinearLayout>

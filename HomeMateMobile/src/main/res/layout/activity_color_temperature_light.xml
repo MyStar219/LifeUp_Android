@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_x14"
+                    android:paddingRight="@dimen/padding_x14">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/color_temperture_status_top_height"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin_x30"
+                        android:background="@drawable/color_temperture_status_top2"
+                        android:contentDescription="@null"
+                        android:scaleType="fitCenter" />
+
+                    <com.orvibo.homemate.view.custom.ColorTempertureView
+                        android:id="@+id/circleColorView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/tran" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/notification_ic_wh"
+                        android:layout_height="@dimen/notification_ic_wh"
+                        android:background="@drawable/color_temp_light_white" />
+
+                    <SeekBar
+                        android:id="@+id/color_seekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_x4"
+                        android:layout_marginTop="@dimen/margin_x4"
+                        android:layout_weight="1"
+                        android:max="216"
+                        android:maxHeight="@dimen/rgb_seek_bar_height"
+                        android:minHeight="@dimen/rgb_seek_bar_height"
+                        android:paddingLeft="@dimen/padding_x4"
+                        android:paddingRight="@dimen/padding_x4"
+                        android:progressDrawable="@drawable/color_temp_light_seekbar"
+                        android:thumb="@drawable/conditioner_thumb_yellow" />
+
+                    <ImageView
+                        android:layout_width="@dimen/notification_ic_wh"
+                        android:layout_height="@dimen/notification_ic_wh"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/color_temp_light_yellow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_x6"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/notification_ic_wh"
+                        android:layout_height="@dimen/notification_ic_wh"
+                        android:background="@drawable/dimming_dark" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_x4"
+                        android:layout_marginTop="@dimen/margin_x4"
+                        android:layout_weight="1"
+                        android:max="255"
+                        android:maxHeight="@dimen/rgb_seek_bar_height"
+                        android:minHeight="@dimen/rgb_seek_bar_height"
+                        android:paddingLeft="@dimen/padding_x4"
+                        android:paddingRight="@dimen/padding_x4"
+                        android:progressDrawable="@drawable/dimming_seekbar"
+                        android:thumb="@drawable/dimming_thumb" />
+
+                    <ImageView
+                        android:layout_width="@dimen/notification_ic_wh"
+                        android:layout_height="@dimen/notification_ic_wh"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/dimming_bright" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/view_ligth_alpha_50" />
+
+        <include layout="@layout/view_ligth_on_off_btn" />
+        <include layout="@layout/view_ligth_action" />
+    </FrameLayout>
+</LinearLayout>

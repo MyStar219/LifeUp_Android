@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pullrefresh="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.pulltorefresh.PullRefreshView
+        android:id="@+id/prfv_program_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        pullrefresh:has_footer="false"
+        pullrefresh:has_header="true"
+        android:overScrollMode="never"/>
+
+    <include
+        android:id="@+id/emptyView"
+        layout="@layout/view_allone_data_load" />
+
+    <com.orvibo.homemate.view.custom.pulltorefresh.ErrorMaskView
+        android:id="@+id/maskView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

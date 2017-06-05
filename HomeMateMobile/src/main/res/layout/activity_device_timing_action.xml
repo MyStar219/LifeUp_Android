@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/common_background"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:text="@string/device_timing_set_action"/>
+
+    <RadioGroup
+        android:id="@+id/rgAction"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_open"
+            android:layout_width="match_parent"
+            android:text="@string/device_timing_action_open"
+            android:background="@drawable/item_selector"
+            android:button="@null"
+            android:paddingLeft="@dimen/padding_x8"
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/font_black"
+            android:drawableRight="@drawable/radio_button"
+            android:paddingRight="@dimen/padding_x8"
+            android:layout_height="@dimen/bar_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/bg_divider" />
+
+        <RadioButton
+            android:id="@+id/rb_close"
+            android:layout_width="match_parent"
+            android:text="@string/device_timing_action_shutdown"
+            android:background="@drawable/item_selector"
+            android:button="@null"
+            android:textSize="@dimen/text_normal"
+            android:paddingLeft="@dimen/padding_x8"
+            android:textColor="@color/font_black"
+            android:drawableRight="@drawable/radio_button"
+            android:paddingRight="@dimen/padding_x8"
+            android:layout_height="@dimen/bar_height" />
+    </RadioGroup>
+</LinearLayout>

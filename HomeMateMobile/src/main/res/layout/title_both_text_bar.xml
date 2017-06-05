@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/background_layout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/green"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin_x4"
+            android:paddingRight="@dimen/margin_x4"
+            android:clickable="true"
+            android:gravity="center|left"
+            android:onClick="leftTitleClick"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"/>
+
+        <TextView
+            android:id="@+id/titlebar_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_x32"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="@string/identity"
+            android:textColor="@color/white"
+            android:textSize="@dimen/navigation_textsize"/>
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/margin_x4"
+            android:paddingRight="@dimen/margin_x4"
+            android:clickable="true"
+            android:gravity="center|right"
+            android:onClick="rightTitleClick"
+            android:src="@drawable/bg_green_arrow_selector"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"/>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/progress_swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_swiperefresh_hgith"
+        android:layout_centerHorizontal="true"/>
+</LinearLayout>

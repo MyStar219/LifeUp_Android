@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/item_selector"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/text_big"/>
+
+            <TextView
+                android:id="@+id/tvPeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x1"
+                android:layout_toRightOf="@+id/tvTime"
+                android:text="AM"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_tinny"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_x1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/bindaction_color_wh"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAction_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_small"/>
+
+            <com.orvibo.homemate.view.custom.ActionView
+                android:id="@+id/av_bindaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_x1"
+            android:text="周一，周二，周三，周四，周五，周六"
+            android:textColor="@color/font_white_gray"
+            android:textSize="@dimen/text_small"/>
+    </LinearLayout>
+
+    <com.orvibo.homemate.view.custom.OnOffCheckbox
+        android:id="@+id/cbIsPaused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/switch_selector"
+        android:focusable="false"/>
+</LinearLayout>

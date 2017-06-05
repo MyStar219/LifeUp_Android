@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.orvibo.homemate.view.custom.NavigationGreenBar
+            android:id="@+id/nbTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            navigationBar:right_text="@string/device_timing" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x8">
+
+            <ImageView
+                android:id="@+id/ivBG2"
+                android:layout_width="@dimen/curtain_bg_width"
+                android:layout_height="@dimen/curtain_bg_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/curtain_roller_bg2" />
+
+            <ImageView
+                android:id="@+id/ivBG"
+                android:layout_width="@dimen/curtain_bg_width"
+                android:layout_height="@dimen/curtain_bg_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/curtain_roller_bg1" />
+
+
+            <com.orvibo.homemate.view.custom.CurtainRollerView
+                android:id="@+id/curtainDropdownView"
+                android:layout_width="@dimen/curtain_roller_width"
+                android:layout_height="@dimen/curtain_roller_height"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_x4" />
+
+        </RelativeLayout>
+
+        <com.orvibo.homemate.view.custom.CurtainControlOldView
+            android:id="@+id/curtainControlOldView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x8"
+            android:layout_marginRight="@dimen/margin_x8"
+            android:gravity="center" />
+        <LinearLayout
+            android:id="@+id/curtainWindowShadesBottom"
+            android:layout_width="@dimen/curtain_2halves_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_x1"
+            >
+
+            <TextView
+                android:id="@+id/pageUpTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:drawableTop="@drawable/curtain_two_half_page_up"
+                android:clickable="true"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/curtain_page_up"
+                android:textColor="@color/gray_white_color"/>
+
+            <TextView
+                android:id="@+id/pageDownTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableTop="@drawable/curtain_two_half_page_down"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:text="@string/curtain_page_down"
+                android:gravity="center"
+                android:textColor="@color/gray_white_color"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

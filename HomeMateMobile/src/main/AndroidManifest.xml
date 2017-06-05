@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smartgateway.app">
+    <!--com.orvibo.homemate-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 摄像头与可视对讲使用冲突，等待解决 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 判断activity是否处于前台需要加这个权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- sip uses-permission start -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- GPS定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission
+        android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- OneSignal remove badge access Permissions -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" tools:node="remove" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" tools:node="remove" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" tools:node="remove" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" tools:node="remove" />
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" tools:node="remove" />
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" tools:node="remove" />
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" tools:node="remove" />
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" tools:node="remove" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" tools:node="remove"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" tools:node="remove" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" tools:node="remove" />
+    <uses-permission android:name="android.permission.READ_APP_BADGE" tools:node="remove" />
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" tools:node="remove" />
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" tools:node="remove" />
+    <!-- End of OneSignal permissions removal -->
+
+    <!-- GCM requires a Google account. -->
+    <!--<uses-permission android:name="android.permission.GET_ACCOUNTS"/>-->
+    <!-- Creates a custom permission so only this app can receive its messages. NOTE: APP_PACKAGE.permission.C2D_MESSAGE -->
+    <!--<permission-->
+    <!--android:name="com.videogo.open.permission.C2D_MESSAGE"-->
+    <!--android:protectionLevel="signature"/>-->
+    <!-- This app has permission to register and receive data message. -->
+    <!--<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>-->
+    <!-- <uses-permission android:name="com.videogo.open.permission.C2D_MESSAGE" /> -->
+    <!-- <uses-permission android:name="android.permission.VIBRATE"/> -->
+    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+    <!-- <uses-feature 	 android:name="android.hardware.camera" android:required="false" /> -->
+    <!-- sip uses-permission end -->
+    <!--申请大内存-->
+    <application
+        android:name="com.orvibo.homemate.common.ViHomeProApp"
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:icon="@mipmap/ic_sg_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"
+        tools:replace="android:theme">
+
+        <!-- common.launch.LaunchActivity -->
+        <!-- device.smartlock.SmartLockActivity -->
+        <!-- android:theme="@style/Theme.Launcher" -->
+        <activity
+            android:name="com.orvibo.homemate.common.launch.LaunchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Launcher">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
+
+            <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.orvibo.homemate"
+                    android:scheme="homemate" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.ClassificationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.infrareddevice.ChuangweiConditionerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.TemperatureAndHumidityActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.ap.ApConfig1Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.DeviceScannedResultActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.ZigBeeDeviceAddActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.ZigBeeSensorDeviceAddActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.DeviceAddTwoPageActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.DeviceAddGasFailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.DeviceAddGasFailTryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.ap.ApConfig1TipsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.SocketStatusActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.timing.TimingCountdownActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name="com.orvibo.homemate.device.timing.TimingAddActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.orvibo.homemate.device.timing.TimingRepeatActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="com.orvibo.homemate.device.ap.ApConfig2Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.ap.ApBindActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.ys.YsAdd1Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.ys.YsAdd2Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.ys.YsAdd3Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.ys.YsAdd4Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.ys.YsAdd5Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.ys.YsCameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViHomeThemeHolo" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.DeviceSettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.common.launch.LauncherGuideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.common.launch.GuideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.orvibo.homemate.common.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.room.RenameFloorNameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.room.RenameRoomNameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.room.RoomManagerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.room.AddNewRoomActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.common.SetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.DeviceManageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.AddDeviceSuccessActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.room.AllHomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.room.SetFloorAndRoomActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.room.ModifyRoomActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.infrareddevice.ConditionerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.infrareddevice.ACPanelActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.orvibo.homemate.device.timing.DeviceTimingCreateActivity" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.SetDeviceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.BaseDeviceSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.bind.SelectDeviceTypeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucentTheme" />
+        <!-- <activity -->
+        <!-- android:name="com.orvibo.homemate.device.manage.add.AddDeviceFailActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="com.orvibo.homemate.device.action.infrareddevice.ActionConditionerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.ActionLightActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.timing.DeviceTimingRepeatActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.infrareddevice.ActionTVControllerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.ActionSwitchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.ActionSecurityActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.timing.DeviceTimingListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.timing.DeviceTimingAddActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.timing.ModeTimingListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.timing.ModeTimingCreateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.infrareddevice.TVControllerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.infrareddevice.STBControllerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.ActionCurtainRollerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.family.FamilyActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.family.FamilyInviteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.family.FamilyInviteDialogActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivity" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.SensorDialogActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivity" />
+        <activity
+            android:name="com.orvibo.homemate.user.family.FamilyInviteResponseDialogActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivity" />
+        <activity
+            android:name="com.orvibo.homemate.common.WheelViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.bind.SelectDeviceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.bind.SelectAllone2ChildDeviceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.bind.SelectSingleDeviceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.SceneSelectPicActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.DeviceSetIrRepeaterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.room.ModifyFloorActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.orvibo.homemate.device.action.ActionCurtain2HalvesActivity" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.ActionCurtain2HalvesOldActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.ActionCurtainOutsideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.infrareddevice.ActionSelfRemoteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.DeviceSetSceneButtonActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.DeviceSetRemoteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.DeviceSetJiyueRemoteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.ActionCurtainRollerOldActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.infrareddevice.DeviceSetSelfRemoteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.bind.SelectSceneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.infrareddevice.ActionSTBControllerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.irlearn.ConditionerIrLearnActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.irlearn.STBIrLearnActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.irlearn.TVIrLearnActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!--
+                  <activity
+                  android:name=".smartscene.manager.SecurityActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait" />
+        -->
+
+        <activity
+            android:name="com.orvibo.homemate.device.control.CameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.DeviceSetSelfRemoteAddButtonActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.DeviceSetSelfRemoteButtonNameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.irlearn.DeviceSetSelfRemoteIrLearnActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.CurtainWindowShadesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.Curtain2HalvesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.CurtainRollerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name="com.orvibo.homemate.device.control.CurtainOutsideActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.orvibo.homemate.device.control.Curtain2HalvesOldActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.orvibo.homemate.device.control.CurtainWindowShadesOldActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.orvibo.homemate.device.control.CurtainRollerOldActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.DeviceSetSelfRemoteEditActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.ModifySelfRemoteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.common.crash.CrashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.RegisterPasswordSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.RegisterEmailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserAgreementActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.common.TranActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.orvibo.homemate.device.bind.SelectBindTypeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.AddVicenterTipActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserNicknameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserPhoneInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserPhoneIdentifyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserPhoneBindActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserEmailInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserEmailBindActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserEmailIdentifyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserPasswordChangeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.password.PasswordForgotActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.password.PasswordForgotSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.password.PasswordSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.DeviceAddActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.DeviceAddListActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.DeviceEditActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.SensorDeviceEditActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.DeviceTimingInfoPushSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.SensorMessageSettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.SensorDevicePositionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.DeviceInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.DeviceNameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.SceneDeviceEditActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.AboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.AddVicenterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.AddUnbindDeviceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.add.AddUnbindHubActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.messagepush.MessageActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucentTheme" />
+        <activity
+            android:name="com.orvibo.homemate.messagepush.SensorMessageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.messagepush.MessageSettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.messagepush.SensorStatusRecordActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.IntelligentSceneSelectTimeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.IntelligentSceneManagerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.IntelligentSceneSelectConditionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.SensorStatusActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.NewSensorStatusActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.DeviceSetFiveKeySceneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.ClotheShorseActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.ClotheShorseDeviceEditActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.DeviceSetSevenKeySceneActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.common.launch.EggsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.weather.LocationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.CocoFAQActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.SensorFAQActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.CocoDeviceOfflineTipsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.PercentCurtainSetDeviceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.PercentCurtainSetPercentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.timing.DeviceCountdownCreateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.smartlock.AuthLockActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.smartlock.AuthLockResultActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.smartlock.UnlockActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.CommonDeviceActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.energyremind.DeviceEnergySettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.energyremind.DeviceEnergyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.room.SelectRoomTypeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.CurtainOldActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.bind.SelectDelayTimeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.SecurityManagerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.SecuritySelectConditionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.SecurityWarningActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.SecurityWarningContactActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.SecurityWarningAddContactActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.SecurityWarningEditContactActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.manage.edit.DeviceMoreActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.action.infrareddevice.ActionAcPanelActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.common.LoadDataActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivity" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.EnergyStatisticActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.orvibo.homemate.camera.CallbackService"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <service
+            android:name="com.orvibo.homemate.service.ViCenterService"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter android:priority="1000">
+                <action android:name="com.vihome.service" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.orvibo.homemate.service.InfoPushService"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter android:priority="1000">
+                <action android:name="com.homemate.pushService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.orvibo.homemate.service.LocationService"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter android:priority="1000">
+                <action android:name="com.homemate.locationService" />
+            </intent-filter>
+        </service>
+
+        <!-- 友盟升级 -->
+        <!-- 564012a167e58edb6c000c5d 测试用 -->
+        <!-- 5608d75167e58eefa90013bd 发布用 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5608d75167e58eefa90013bd" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+
+        <!-- <receiver android:name="com.orvibo.homemate.broadcastreceiver.ScreenReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.USER_PRESENT" /> -->
+        <!-- &lt;!&ndash;<action android:name="android.intent.action.SCREEN_ON" />&ndash;&gt; -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- <activity -->
+        <!-- android:name=".wxapi.WXEntryActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="com.orvibo.homemate.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.google.zxing.client.android.RobotActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.google.zxing.client.android.RobotQrActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 高德定位 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="${AMAP_KEY}" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name="com.orvibo.homemate.device.smartlock.LockMemberListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.smartlock.LockTimingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.smartlock.LockRecordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.smartlock.LockMemberSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.smartlock.GestureManageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.light.SingleLightActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.light.MultipleLightActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.light.action.SingleActionLightActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.light.action.MultipleActionLightActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.orvibo.homemate.broadcastreceiver.HomeMateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.orvibo.homemate.HOMEMATE_REPEATE_ALARM" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.add.RemoteAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.AlloneUserGuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.add.DeviceBrandListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.RemoteControlActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.AlloneControlActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.epg.ProgramGuidesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.epg.ProgramChannelsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.epg.ChangeChennalTableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.epg.ChannelDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.epg.ProgramDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.epg.ProgramSubscribeActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucentTheme" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.epg.ProgramInfoPushDialogActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivity" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.add.StbBrandListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.add.IPTVListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.irlearn.RemoteLearnActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.irlearn.IrLearnActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.irlearn.EditIrButtonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.add.RemoteMatchOrCopyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.allone2.add.RemoteNameAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.smartlock.GestureActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 大拿sdk授权 -->
+        <meta-data
+            android:name="app_key"
+            android:value="x2u/5IECPZZuotMsWnWKJm0DU1MVS04F1STfk0Ukm0n9/Nw077D2LAhyRBTShzVO" />
+
+        <!-- 必须要注册以下DanaleService，否则大拿SDK将无法正常工作 -->
+        <!--<service android:name="com.danale.video.sdk.service.DanaleService" />-->
+
+        <activity
+            android:name="com.orvibo.homemate.device.danale.DanaleDeviceVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViHomeThemeHolo" />
+        <activity
+            android:name="com.orvibo.homemate.device.danale.DanaleSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.danale.DanaleSecurityVideoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.danale.DanaleVideoRecordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/ViHomeThemeHolo" />
+        <activity
+            android:name="com.orvibo.homemate.device.danale.DanaleSecurityVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/ViHomeThemeHolo" />
+        <activity
+            android:name="com.orvibo.homemate.device.danale.ScanAndLinkDanaleCameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.danale.DanaleAddDeviceFailActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.orvibo.homemate.device.danale.DanaleFirmWareUpgradeService"
+            android:label="@string/app_name" />
+        <!-- 小欧摄像头一级添加界面 -->
+        <activity
+            android:name="com.orvibo.homemate.device.danale.secondstage.DanaleAddFirstLevelPageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 小欧摄像头扫码结果界面 -->
+        <activity
+            android:name="com.orvibo.homemate.device.danale.secondstage.DanaleScanResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.smartscene.manager.IntelligentSceneSelectLockMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.TemperatureUnitSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.security.SecuritySettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.security.SecurityTimeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.security.SecurityTimeCreateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.HopeMusic.AddHopeMusicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.device.control.AcPanelActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- *******************version1.7start****************************** -->
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 start############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent1104800362" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.orvibo.homemate.device.HopeMusic.MusicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.common.appwidget.WidgetSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucentTheme" />
+        <activity
+            android:name="com.orvibo.homemate.common.appwidget.WidgetSceneEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucentTheme" />
+        <activity
+            android:name="com.orvibo.homemate.common.appwidget.WidgetIconEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucentTheme" />
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 end############ -->
+        <activity
+            android:name="com.orvibo.homemate.user.UserThirdActivity"
+            android:label="HomeMate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orvibo.homemate.user.UserThirdInfoActivity"
+            android:label="HomeMate"
+            android:screenOrientation="portrait" />
+        <!-- 友盟配置5.0 -->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+
+        <!-- 主机固件升级页面，全屏显示 -->
+        <activity
+            android:name="com.orvibo.homemate.device.hub.HubUpdateActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <!-- 微博配置 -->
+        <!--
+        <activity
+            android:name="weibo.WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <receiver
+            android:name="com.orvibo.homemate.broadcastreceiver.MoonReceiver"
+            android:process=":homemate_moon">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 参考腾讯信鸽sdk -->
+                <!-- 【必须】 系统广播：开屏和网络切换 android N无效(未测试) -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <!-- 蓝牙模块被打开或者关闭 -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.orvibo.homemate.service.MoonService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":homemate_moon" />
+        <service
+            android:name="com.orvibo.homemate.service.TempService"
+            android:process=":homemate_moon" />
+        <!-- <service android:name=".update.DownloadService"/> -->
+        <!-- <service -->
+        <!-- android:name=".update.UpdataService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"/> -->
+
+        <activity
+            android:name="com.orvibo.homemate.user.UserFeedBackActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <receiver android:name="com.orvibo.homemate.common.appwidget.SmartWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_config" />
+        </receiver>
+
+        <service android:name="com.orvibo.homemate.common.appwidget.WidgetManageService" />
+        <service android:name="com.orvibo.homemate.update.UpdataService" />
+
+        <!-- sg -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChildActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.orvibo.homemate.common.ChildActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weiju.ScanCaptureActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".service.BackgroundService" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d042d95ca30e38d4ef83b4bdd9961745d505dc23" />
+
+        <activity
+            android:name=".weiju.InCallActivity"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name="com.evideo.voip.sdk.EVVoipService"/>
+
+        <!-- OneSignal -->
+        <meta-data android:name="com.onesignal.BadgeCount" android:value="DISABLE" />
+    </application>
+</manifest>

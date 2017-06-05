@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:centerText="@string/intelligent_scene_condition_time"
+        navigationBar:leftDrawableLeft="@drawable/back" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+    <TextView
+        android:id="@+id/timeIntervalTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:text="@string/intelligent_scene_condition_time2"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_big" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+    <LinearLayout
+        android:id="@+id/timeIntervalLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/timeStartLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/timeStartTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:text="00:00"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_huge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_x4"
+                android:layout_marginTop="@dimen/margin_x1"
+                android:text="@string/time_begin"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <LinearLayout
+            android:id="@+id/timeEndLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/timeEndTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:text="00:00"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_huge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_x4"
+                android:layout_marginTop="@dimen/margin_x1"
+                android:text="@string/time_end"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:background="@drawable/line_divide" />
+
+    <TextView
+        android:id="@+id/timeRepeatTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:text="@string/intelligent_scene_condition_week"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_big" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+    <LinearLayout
+        android:id="@+id/timeRepeatLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/timeRepeatSunCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/time_repeat_sun"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatMonCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/time_repeat_mon"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatTuesCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/time_repeat_tues"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatWedCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/time_repeat_wed"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatThurCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/time_repeat_thur"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatFriCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/time_repeat_fri"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatSatCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/time_repeat_sat"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+</LinearLayout>

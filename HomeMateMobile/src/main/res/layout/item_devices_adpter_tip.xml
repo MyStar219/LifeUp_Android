@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/commonDeviceView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <include layout="@layout/view_header_placeholder" />
+
+    <LinearLayout
+        android:id="@+id/energyRemindView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@color/orange"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/energyRemindText"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="6"
+            android:drawableLeft="@drawable/icon_remind"
+            android:drawablePadding="@dimen/padding_x2"
+            android:paddingLeft="@dimen/padding_x4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal" />
+
+        <RelativeLayout
+            android:id="@+id/deleteEnergyRemind"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_close_selector" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/commonDeviceAdd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/normal_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:drawableLeft="@drawable/icon_add_s_normal"
+            android:drawablePadding="@dimen/padding_x4"
+            android:text="@string/common_device_add_text1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/line_divide" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/deviceGirdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/small_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_bar_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/padding_x4"
+            android:gravity="center"
+            android:text="@string/personal_common_device" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_divide" />
+
+        <GridView
+            android:id="@+id/commonDeviceGrid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_x2"
+            android:layout_marginTop="@dimen/margin_x2"
+            android:gravity="center"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/margin_x4"></GridView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_divide" />
+    </LinearLayout>
+
+</LinearLayout>

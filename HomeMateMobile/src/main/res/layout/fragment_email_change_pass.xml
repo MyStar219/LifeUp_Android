@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/double_padding">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:gravity="center"
+        android:textColor="?android:textColorPrimaryInverse"
+        android:text="@string/enter_received_code"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_padding"
+        android:text="@string/code"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:drawableLeft="@drawable/field_pass"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/code_forgot"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:text="@string/new_password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/field_pass"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/pass_forgot"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:text="@string/confirm_password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/field_pass"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/passConfirm_forgot"
+        />
+
+    <Button
+        android:visibility="gone"
+        style="?borderlessButtonStyle"
+        android:id="@+id/resent"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_padding"
+        android:textColor="?android:textColorPrimaryInverse"
+        android:text="@string/resend_code"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="@dimen/double_padding"
+        android:text="@string/confirm"
+        android:textSize="18sp"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+
+</LinearLayout>

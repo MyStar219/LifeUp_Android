@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.orvibo.homemate.view.custom.IrButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:textColor="@color/black"
+    android:textSize="@dimen/text_normal"
+    android:background="@drawable/conditioner_wind_learn"
+    android:text="@string/device_set_self_remote_add_button"
+    android:gravity="center"
+    android:layout_height="wrap_content" />
+
+

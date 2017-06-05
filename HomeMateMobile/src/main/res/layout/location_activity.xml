@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/rootLinearLayout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/searchBoxCollapsedLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="92dip"
+        android:background="@drawable/bg_weather_background_middle"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/titleRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4">
+
+            <ImageView
+                android:id="@+id/closeImageView"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_close"/>
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="@string/current_city_unknow"
+                android:textColor="@color/font_white_255"
+                android:textSize="@dimen/navigation_textsize"/>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dip">
+
+            <RelativeLayout
+                android:id="@+id/searchBoxExpandedRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:id="@+id/cancelSearchTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_x1"
+                    android:singleLine="true"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal"/>
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bar_ic_wh"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:background="@drawable/edit_text_bg"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:drawablePadding="@dimen/padding_x2"
+                    android:hint="@string/city_location_hint"
+                    android:paddingLeft="@dimen/padding_x2"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_normal"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/searchBoxCollapsedRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/searchTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bar_ic_wh"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:background="@drawable/edit_text_bg"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/searchTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:gravity="center"
+                    android:text="@string/city_location_hint"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal"/>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cityContainerRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/cityContainerLinearLayoutCN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x6"
+                android:layout_marginRight="@dimen/margin_x6"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/cityContainer1"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:text="@string/location_city"
+                    android:textColor="@color/hint_background"
+                    android:textSize="@dimen/text_big"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/city_heigth"
+                    android:layout_marginBottom="@dimen/margin_x4"
+                    android:background="@drawable/button_white_city"
+                    android:gravity="left|center_vertical"
+                    android:minWidth="@dimen/city_width"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/locationImageViewCN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_x2"
+                        android:layout_marginRight="@dimen/margin_x2"
+                        android:background="@drawable/icon_location_success"/>
+
+                    <TextView
+                        android:id="@+id/locationTextViewCN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/city_heigth"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/location"
+                        android:textSize="@dimen/text_normal"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/hotCityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/cityContainer1"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:text="@string/hot_city"
+                    android:textColor="@color/hint_background"
+                    android:textSize="@dimen/text_big"/>
+
+                <LinearLayout
+                    android:id="@+id/cityContainer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hotCityTextView"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/shanghaiTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/shanghai"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/shenzhenTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/shenzhen"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/nanjingTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/nanjing"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/wuhanTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/wuhan"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/zhengzhouTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/zhengzhou"
+                            android:textSize="@dimen/text_normal"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="@dimen/city_heigth"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/beijingTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/beijing"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/hangzhouTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/hangzhou"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/suzhouTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/suzhou"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/chongqingTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/chongqing"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/fuzhouTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/fuzhou"
+                            android:textSize="@dimen/text_normal"/>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="@dimen/city_heigth"
+                        android:layout_weight="1"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/guangzhouTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/guangzhou"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/wenzhouTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/wenzhou"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/chengduTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/chengdu"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/tianjinTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/tianjin"
+                            android:textSize="@dimen/text_normal"/>
+
+                        <TextView
+                            android:id="@+id/changshaTextView"
+                            android:layout_width="@dimen/city_width"
+                            android:layout_height="@dimen/city_heigth"
+                            android:layout_marginBottom="@dimen/margin_x4"
+                            android:background="@drawable/button_white_city"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/changsha"
+                            android:textSize="@dimen/text_normal"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/cityContainerLinearLayoutEN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_x8"
+                android:layout_marginTop="@dimen/margin_x8"
+                android:background="@drawable/bg_cartoon_location"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/cityContainer1"
+                android:layout_marginBottom="@dimen/margin_x2"
+                android:text="@string/location_city"
+                android:textColor="@color/hint_background"
+                android:textSize="@dimen/text_big"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/city_heigth"
+                android:layout_marginBottom="@dimen/margin_x4"
+                android:background="@drawable/button_white_city"
+                android:gravity="left|center_vertical"
+                android:minWidth="@dimen/city_width"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/locationImageViewEN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:background="@drawable/icon_location_success"/>
+
+                <TextView
+                    android:id="@+id/locationTextViewEN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/city_heigth"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="@string/location"
+                    android:textSize="@dimen/text_normal"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/topBgImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/popup_bg"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/cityListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/tran"
+        android:dividerHeight="0dp"
+        android:listSelector="@drawable/tran"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/deviceEmptyLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/searchTipsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:text="@string/get_weatherInfo_tips"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal"/>
+
+        <LinearLayout
+            android:id="@+id/searchEmptyLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/deviceEmptyImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_nosearch"/>
+
+            <TextView
+                android:id="@+id/deviceEmptyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x4"
+                android:layout_marginRight="@dimen/margin_x4"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:paddingBottom="@dimen/margin_x4"
+                android:text="@string/get_weatherInfo_error"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="2"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

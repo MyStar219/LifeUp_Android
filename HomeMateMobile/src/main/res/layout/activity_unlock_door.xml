@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/navigationGreenBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/device_add_iintelligent_door_lock" />
+
+    <Button
+        android:id="@+id/unlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/unlock_at_once"
+        android:textColor="@color/green"
+        android:background="@drawable/five_key_scene_btn_five_bind"
+        android:onClick="onClick" />
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/gray_background"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:centerText="@string/ap_config_title"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/green"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_x8">
+
+        <com.orvibo.homemate.view.custom.TimingCountdownTabView
+            android:id="@+id/remote_select"
+            android:layout_width="200dip"
+            android:layout_height="@dimen/bar_ic_wh"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/green"
+            android:visibility="gone">
+        </com.orvibo.homemate.view.custom.TimingCountdownTabView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_x8">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/blueGrayImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:src="@drawable/ap_blue_gray"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tipTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:gravity="center"
+        android:text="@string/ap_config_tip1"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_normal"/>
+
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_x8"
+        android:background="@drawable/button_green"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"/>
+
+</LinearLayout>

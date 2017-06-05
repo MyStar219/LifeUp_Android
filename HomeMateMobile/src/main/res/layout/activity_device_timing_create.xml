@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:navigationTextBar="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/contentView"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationTextBar:left="@string/cancel"
+        navigationTextBar:middle="@string/device_timing_add"
+        navigationTextBar:right="@string/save"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/item_selector"/>
+
+            <LinearLayout
+                android:id="@+id/llAction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/item_selector"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:text="@string/device_timing_action"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_big"/>
+
+                <com.orvibo.homemate.view.custom.ActionView
+                    android:id="@+id/av_bindaction"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <!--<TextView-->
+                <!--android:id="@+id/textViewAction"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="right"-->
+                <!--android:paddingRight="@dimen/margin_x4"-->
+                <!--android:text="@string/device_timing_action_set"-->
+                <!--android:textColor="@color/font_white_gray"-->
+                <!--android:textSize="@dimen/text_small"/>-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/color_ll"-->
+                <!--android:layout_width="21dp"-->
+                <!--android:layout_height="21dp"-->
+                <!--android:layout_marginLeft="@dimen/margin_x2"-->
+                <!--android:layout_marginRight="@dimen/margin_x2"-->
+                <!--android:background="@color/rgb_bg"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="vertical"-->
+                <!--android:visibility="gone">-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/colorView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="1dp"-->
+                <!--android:background="@color/rgb_bg"/>-->
+                <!--</LinearLayout>-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/bg_arrow_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llActionSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/item_selector"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:text="@string/device_timing_action"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_big"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <com.orvibo.homemate.view.custom.SwitchView
+                    android:id="@+id/switchView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="@dimen/margin_x4"/>
+
+            </LinearLayout>
+
+            <com.orvibo.homemate.view.custom.SelectRepeatView
+                android:id="@+id/selectRepeatView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@color/white">
+            </com.orvibo.homemate.view.custom.SelectRepeatView>
+
+            <TextView
+                android:id="@+id/alloneTimingTips"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:layout_marginLeft="@dimen/margin_x4"
+                android:layout_marginRight="@dimen/margin_x4"
+                android:visibility="gone"
+                android:text="@string/allone_fan_timing_tips"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:layout_marginBottom="@dimen/margin_x8"
+                android:layout_marginTop="@dimen/margin_x8"
+                android:background="@drawable/list_item"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_big"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

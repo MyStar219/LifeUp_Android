@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/navigationGreenBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:bg_color="@color/white"
+        navigationBar:ng_left_img="@drawable/bg_green_arrow_selector"
+        navigationBar:right_img="@drawable/setting_green_selector" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_divide" />
+
+        <TextView
+            android:id="@+id/contentTip"
+            style="@style/small_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_x4"
+            android:text="@string/conditioner_current_temperature" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_x6">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/tmpImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_x6"
+                    android:layout_marginTop="@dimen/margin_x8"
+                    android:src="@drawable/pic_temperature" />
+
+                <TextView
+                    android:id="@+id/currentData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:textColor="@color/yellow"
+                    android:textSize="100dip" />
+
+                <TextView
+                    android:id="@+id/currentUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conditioner_temperature_unit"
+                    android:textColor="@color/yellow"
+                    android:textSize="50dip" />
+
+            </LinearLayout>
+
+            <com.orvibo.homemate.view.custom.TipsLayout
+                android:id="@+id/tipsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_x4"></com.orvibo.homemate.view.custom.TipsLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:background="@color/common_background"></View>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_x2"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/small_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x4"
+                android:gravity="center"
+                android:text="@string/sensor_detailed_data" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal" />
+
+            <ImageView
+                android:id="@+id/leftImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_x6"
+                android:layout_toLeftOf="@+id/dateTextView"
+                android:background="@drawable/btn_left"
+                android:onClick="onClick" />
+
+            <ImageView
+                android:id="@+id/rightImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x6"
+                android:layout_toRightOf="@+id/dateTextView"
+                android:background="@drawable/btn_right"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/btnToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_x4"
+                android:background="@drawable/btn_today"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/padding_x2"
+                android:paddingRight="@dimen/padding_x2"
+                android:text="@string/message_record_today"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_normal" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/unitTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:text="@string/temperature_tip"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_tinny"
+            android:visibility="gone" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/noDataTip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/common_no_data"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_huge"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>

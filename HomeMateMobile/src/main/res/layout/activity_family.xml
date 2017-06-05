@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/common_background"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:layout_width="match_parent"
+        app:leftDrawableLeft="@drawable/back"
+        app:centerText="@string/personal_family_member"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:id="@+id/memberListView"
+        android:layout_width="match_parent"
+        android:divider="@null"
+        android:listSelector="@null"
+        android:cacheColorHint="@color/transparent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@drawable/line_divide"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/addTextView"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_big"
+        android:textColor="@color/green"
+        android:background="@drawable/list_item"
+        android:text="@string/scene_add_action_continue"
+        android:layout_height="@dimen/list_item_height" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="@drawable/line_divide"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:layout_height="wrap_content" />
+</LinearLayout>

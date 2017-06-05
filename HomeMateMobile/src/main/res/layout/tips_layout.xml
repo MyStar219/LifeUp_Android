@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tipsContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/clickMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/pic_guide"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tipsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_above="@+id/clickMe"
+            android:layout_marginBottom="-12dp"
+            android:layout_toLeftOf="@id/clickMe"
+            android:background="@drawable/bg_bubble_prompt"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small"
+            android:padding="@dimen/padding_x4"
+            android:visibility="gone" />
+
+    </RelativeLayout>

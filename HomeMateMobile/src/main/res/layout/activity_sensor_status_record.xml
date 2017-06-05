@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical"
+    tools:context="com.orvibo.homemate.messagepush.SensorStatusRecordActivity">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/statusRecordNavigationGreenBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:right_text="@string/message_clear"></com.orvibo.homemate.view.custom.NavigationGreenBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.orvibo.homemate.view.custom.PinnedSectionListView
+            android:id="@+id/statusRecordListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:fastScrollEnabled="true"
+            android:listSelector="@color/transparent"
+            android:overScrollMode="never"
+            android:scrollbarStyle="outsideOverlay"/>
+
+        <com.orvibo.homemate.view.custom.pulltorefresh.ErrorMaskView
+            android:id="@+id/maskView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

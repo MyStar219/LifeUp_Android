@@ -1,0 +1,124 @@
+package com.orvibo.homemate.device.HopeMusic.widget;
+
+/**
+ * Created by wuliquan on 2016/5/17.
+ */
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.LinearLayout;
+
+import com.smartgateway.app.R;
+import com.orvibo.homemate.device.HopeMusic.Bean.Song;
+import com.orvibo.homemate.device.HopeMusic.listener.OnCmdSendListener;
+
+import cn.nbhope.smarthomelib.app.enity.DevicePlayState;
+import cn.nbhope.smarthomelib.app.type.HopeCommandType;
+
+public class SelectEffectPopupWindow extends BasePopupWindow implements View.OnClickListener{
+    private View mMenuView;
+    private LinearLayout style_ll;
+    private DevicePlayState devicePlayState;
+    private OnCmdSendListener onCmdSendListener;
+    public SelectEffectPopupWindow(Activity context, DevicePlayState devicePlayState, OnCmdSendListener onCmdSendListener) {
+        super(context);
+        this.devicePlayState = devicePlayState;
+        this.onCmdSendListener = onCmdSendListener;
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mMenuView = inflater.inflate(R.layout.pop_set_style_bottom, null);
+        style_ll = (LinearLayout)mMenuView.findViewById(R.id.style_ll);
+
+        setListener(style_ll);
+        //设置SelectPicPopupWindow的View
+        this.setContentView(mMenuView);
+        //设置SelectPicPopupWindow弹出窗体的宽
+        this.setWidth(LayoutParams.FILL_PARENT);
+        //设置SelectPicPopupWindow弹出窗体的高
+        this.setHeight(LayoutParams.WRAP_CONTENT);
+        //设置SelectPicPopupWindow弹出窗体可点击
+        this.setFocusable(true);
+        //设置SelectPicPopupWindow弹出窗体动画效果
+        this.setAnimationStyle(R.style.take_photo_anim);
+        //实例化一个ColorDrawable颜色为半透明
+        ColorDrawable dw = new ColorDrawable(0xb0000000);
+        //设置SelectPicPopupWindow弹出窗体的背景
+        this.setBackgroundDrawable(dw);
+
+        if (devicePlayState!=null) {
+            initEffect(devicePlayState.getEffect());
+        }
+
+    }
+    @Override
+    public void onClick(View view) {
+
+        if(onCmdSendListener!=null&&devicePlayState!=null){
+            String tag =(String) view.getTag();
+            Song song = new Song();
+            song.setDeviceId(devicePlayState.getDeviceId());
+            song.setEffect(tag);
+            onCmdSendListener.sendCmd(HopeCommandType.HOPECOMMAND_TYPE_MUSIC_SOUND_EFFECT, false, song);
+        }
+
+    }
+
+    @Override
+    public void initEffect(String effect) {
+        setImgSelect(effect);
+    }
+
+    public void setSelectIndex(int index){
+        setImgSelect(index+"");
+    }
+    private void setListener(LinearLayout viewGroup){
+        if(viewGroup!=null){
+            int size = viewGroup.getChildCount();
+            for(int i=0;i<size;i++){
+                View child= viewGroup.getChildAt(i);
+                if(child instanceof LinearLayout){
+                     int childCount = ((LinearLayout) child).getChildCount();
+                    for(int j=0;j<childCount;j++){
+                        View view= ((LinearLayout)child).getChildAt(j);
+                        if (view instanceof LinearLayout)
+                            ((LinearLayout) view).getChildAt(0).setOnClickListener(this);
+                  }
+                }
+            }
+        }
+    }
+    private void setImgSelect(String index){
+        if(index==null){
+            return;
+        }
+        if(style_ll!=null){
+            int size = style_ll.getChildCount();
+            for(int i=0;i<size;i++){
+                   View child= style_ll.getChildAt(i);
+                if(child instanceof LinearLayout){
+                    int childCount = ((LinearLayout) child).getChildCount();
+                    for(int j=0;j<childCount;j++) {
+                        View view= ((LinearLayout)child).getChildAt(j);
+                        View img = ((LinearLayout) view).getChildAt(0);
+                        if (img instanceof SelectImageView) {
+                            String tag= (String) img.getTag();
+                            if (tag!=null) {
+                                if (tag.equals(index)) {
+                                    ((SelectImageView) img).setCheck(true);
+                                } else {
+                                    ((SelectImageView) img).setCheck(false);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

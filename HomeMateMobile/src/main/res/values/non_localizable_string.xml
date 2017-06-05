@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+	<string name="pref_debug_key">pref_debug_key</string>
+	
+	<string name="pref_ipv6_key">pref_ipv6_key</string>
+	
+	<string name="pref_transport_key">pref_transport_key</string>
+	<string name="pref_transport_key_udp">UDP</string>
+    <string name="pref_transport_key_tcp">TCP</string>
+    <string name="pref_transport_key_tls">TLS</string>
+	<string name="pref_transport_use_random_ports_key">pref_transport_use_random_ports_key</string>
+	<string name="pref_sip_port_key">pref_sip_port_key</string>
+	
+	<string name="pref_media_encryption_key">pref_media_encryption_key</string>
+	<string name="pref_media_encryption_key_none">none</string>
+    <string name="pref_media_encryption_key_srtp">srtp</string>
+    <string name="pref_media_encryption_key_zrtp">zrtp</string>
+    
+    <string name="pref_video_enable_key">pref_video_enable_key</string>
+    <string name="pref_video_automatically_accept_video_key">pref_video_automatically_accept_video_key</string>
+    <string name="pref_video_initiate_call_with_video_key">pref_video_initiate_call_with_video_key</string>
+    <string name="pref_video_codecs_key"></string>
+    
+    <string name="pref_video_port_key">pref_video_port_key</string>
+    <string name="pref_audio_port_key">pref_audio_port_key</string>
+    
+    <string name="pref_incoming_call_timeout_key">pref_incoming_expire_key</string>
+    
+    <string name="pref_audio_codecs_key">pref_audio_codecs_key</string>
+    <string name="pref_codec_speex8_key">pref_codec_speex8_key</string>
+    <string name="pref_codec_speex16_key">pref_codec_speex16_key</string>
+    <string name="pref_codec_speex32_key">pref_codec_speex32_key</string>
+    <string name="pref_codec_pcma_key">pref_codec_pcma_key</string>
+    <string name="pref_codec_pcmu_key">pref_codec_pcmu_key</string>
+    <string name="pref_codec_gsm_key">pref_codec_gsm_key</string>
+    <string name="pref_codec_g722_key">pref_codec_g722_key</string>
+    <string name="pref_codec_g729_key">pref_codec_g729_key</string>
+    <string name="pref_codec_amr_key">pref_codec_amr_key</string>
+    <string name="pref_codec_amrwb_key">pref_codec_amrwb_key</string>
+    <string name="pref_codec_ilbc_key">pref_codec_ilbc_key</string>
+    <string name="pref_codec_silk8_key">pref_codec_silk8_key</string>
+    <string name="pref_codec_silk12_key">pref_codec_silk12_key</string>
+    <string name="pref_codec_silk16_key">pref_codec_silk16_key</string>
+    <string name="pref_codec_silk24_key">pref_codec_silk24_key</string>
+    
+    <string name="pref_video_codec_h263_key">pref_video_codec_h263_key</string>
+    <string name="pref_video_codec_mpeg4_key">pref_video_codec_mpeg4_key</string>
+    <string name="pref_video_codec_h264_key">pref_video_codec_h264_key</string>
+    <string name="pref_video_codec_vp8_key">pref_video_codec_vp8_key</string>
+    
+    <string name="pref_echo_cancellation_key">pref_echo_cancellation_key</string>
+    <string name="pref_echo_canceller_calibration_key">pref_echo_canceller_calibration_key</string>
+    
+    <string name="pref_stun_server_key">pref_stun_server_key</string>
+    <string name="pref_ice_enable_key">pref_ice_enable_key</string>
+    
+    <string name="pref_rfc2833_dtmf_key">pref_rfc2833_dtmf_key</string>
+	<string name="pref_sipinfo_dtmf_key">pref_sipinfo_dtmf_key</string>
+	
+	<string name="pref_expire_key">pref_expire_key</string>
+	<string name="pref_display_name_key">pref_display_name_key</string>
+    <string name="pref_user_name_key">pref_user_name_key</string>
+    
+    <string name="pref_wifi_only_key">pref_wifi_only_key</string>
+    
+    <string name="pref_prefix_key">pref_prefix_key</string>
+    <string name="pref_escape_plus_key">pref_escape_plus_key</string>
+    
+    <string name="pref_video_use_front_camera_key">pref_video_use_front_camera_key</string>
+	
+    <string name="pref_background_mode_key">pref_background_mode_key</string>
+    
+     <string name="pref_autostart_key">pref_autostart_key</string>
+     
+     <string name="pref_sdk_version_key">pref_sdk_version_key</string>
+</resources>

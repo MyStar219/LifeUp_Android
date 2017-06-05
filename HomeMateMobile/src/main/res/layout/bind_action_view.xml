@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@null"
+              android:gravity="center_vertical|right"
+              android:orientation="horizontal"
+              android:paddingRight="@dimen/padding_x2">
+    <!--颜色-->
+    <LinearLayout
+        android:id="@+id/ll_color"
+        android:layout_width="@dimen/bindaction_color_wh"
+        android:layout_height="@dimen/bindaction_color_wh"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_x2"
+        android:background="@drawable/bind_action_color_stroke"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="@color/black"/>
+    </LinearLayout>
+    <!--动作名称-->
+    <TextView
+        android:id="@+id/tv_action"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/device_set_bind_type_action_right"
+        android:textColor="@color/font_black"
+        android:textSize="@dimen/text_normal"/>
+</LinearLayout>

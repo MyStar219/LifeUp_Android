@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+    <TextView
+        android:id="@+id/timeRepeatTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:text="@string/time_repeat"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_big" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:background="@drawable/line_divide" />
+
+    <LinearLayout
+        android:id="@+id/timeRepeatLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatSunCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/week_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/time_repeat_sun"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatMonCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/week_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/time_repeat_mon"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatTuesCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/week_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/time_repeat_tues"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatWedCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/week_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/time_repeat_wed"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatThurCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/week_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/time_repeat_thur"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatFriCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/week_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/time_repeat_fri"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+
+        <CheckBox
+            android:id="@+id/timeRepeatSatCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/week_height"
+            android:layout_weight="1"
+            android:background="@drawable/time_repeat_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/time_repeat_sat"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/line_vertical_divide" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:background="@drawable/line_divide"
+        android:layout_marginBottom="@dimen/margin_x4" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide" />
+
+</LinearLayout>

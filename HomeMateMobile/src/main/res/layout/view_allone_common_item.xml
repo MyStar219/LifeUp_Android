@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:irKey="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selector"
+    android:onClick="onClick"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_allone_item" />
+
+    <LinearLayout
+        android:id="@+id/controlView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_marginLeft="@dimen/margin_x6"
+        android:layout_marginRight="@dimen/margin_x6"
+        android:gravity="center_vertical"
+        android:onClick="onClick"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/btnPower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_home_on"
+                    irKey:fid="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/btnTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/btnThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/btnFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tempView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_x2"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/margin_x2"
+                android:layout_marginLeft="@dimen/margin_x4"
+                android:textSize="40sp" />
+
+            <com.orvibo.homemate.device.allone2.view.RulerWheel
+                android:id="@+id/rulerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_x6"
+                android:layout_marginRight="@dimen/margin_x4"
+                app:MaxBarSize="1dp"
+                app:MidBarSize="0.8dp"
+                app:MinBarSize="0.8dp"
+                app:lineColorMax="@color/gray"
+                app:lineColorMid="@color/gray"
+                app:lineColorMin="@color/gray"
+                app:line_divider="@dimen/allone_ac_tmp_line_divider"
+                app:mask_bg="@drawable/icon_pointer_normal"
+                app:max_value="100"
+                app:min_value="0"
+                app:mode="SCALE"
+                app:scaleWidth="1dp"
+                app:showGradient="false"
+                app:showScaleValue="true"
+                app:text_Size="15"
+                app:text_color="#999999" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

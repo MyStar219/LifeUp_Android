@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/et_hint_font"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/bt_remote_control_left"
+            style="@style/remote_control_bottom_btn_style"
+            android:drawableLeft="@drawable/remote_control_bottom_left_selector"
+            android:background="@null"
+            android:textColor="@color/green"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/bt_remote_control_right"
+            style="@style/remote_control_bottom_btn_style"
+            android:drawableRight="@drawable/remote_control_bottom_right_selector"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/green"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/bt_remote_control_middle"
+            style="@style/remote_control_bottom_btn_style"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/remote_control_bottom_middle_selector"
+            android:drawableLeft="@drawable/btn_radio_white_checked"
+            android:textColor="@color/white"
+            android:text="@string/use_this_one"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+</LinearLayout>

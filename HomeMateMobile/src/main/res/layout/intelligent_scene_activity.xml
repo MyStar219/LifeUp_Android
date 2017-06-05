@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_gravity="center"
+        android:background="@color/nav_background_color"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/intelligent_scene"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big"/>
+
+        <ImageView
+            android:id="@+id/add_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_x2"
+            android:paddingTop="@dimen/margin_x2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_add_selector"/>
+
+    </RelativeLayout>
+
+
+    <!--<ListView
+        android:id="@+id/intelligentSceneListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/margin_x4"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:scrollbarStyle="outsideOverlay" />-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/nav_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/intelligentSceneListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/common_line"
+            android:dividerHeight="@dimen/line_height"
+            android:listSelector="@drawable/list_item"
+            android:scrollbarStyle="outsideOverlay"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+
+        <include
+            layout="@layout/progress_swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_swiperefresh_hgith"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+    <!--android:layout_marginLeft="@dimen/margin_x4"
+    android:layout_marginRight="@dimen/margin_x4"-->
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popup_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <View
+        style="@style/view_vertical"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:background="@drawable/bg_toast_not_operate"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_x4" >
+
+        <ImageView
+            android:id="@+id/progress_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null"
+            android:paddingRight="8dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/progress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/binding_progress"
+            android:textColor="@color/bind_bind"
+            android:textSize="@dimen/text_big" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_vertical"
+        android:layout_weight="1.2" />
+
+</LinearLayout>

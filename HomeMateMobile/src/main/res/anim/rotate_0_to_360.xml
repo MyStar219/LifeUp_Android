@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--  android:interpolator="@android:anim/linear_interpolator" 匀速效果设置无效，需要通过代码设置才有效-->
+
+    <rotate
+        android:fromDegrees="0"
+        android:toDegrees="360"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="1000"
+        android:repeatCount="infinite"
+        android:repeatMode="restart"
+        android:fillAfter="true" />
+</set>

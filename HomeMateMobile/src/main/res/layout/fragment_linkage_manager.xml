@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/addTimeRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                style="@style/et_common"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/item_selector"
+                android:drawableLeft="@drawable/icon_execution_time"
+                android:drawablePadding="@dimen/padding_x4"
+                android:drawableRight="@drawable/device_item_arrow_right"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/padding_x2"
+                android:paddingRight="@dimen/padding_x4"
+                android:paddingTop="@dimen/padding_x2"
+                android:text="@string/intelligent_scene_condition_time"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/margin_x10"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/timeIntervalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:text="21:00至次日07:00"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_tinny"/>
+
+                <TextView
+                    android:id="@+id/timeRepeatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:text="每天"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_tinny"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addUserRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:id="@+id/addUserTextView"
+                style="@style/et_common"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/item_selector"
+                android:drawableLeft="@drawable/icon_member"
+                android:drawablePadding="@dimen/padding_x4"
+                android:drawableRight="@drawable/device_item_arrow_right"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/padding_x2"
+                android:paddingRight="@dimen/padding_x4"
+                android:paddingTop="@dimen/padding_x2"
+                android:text="@string/intelligent_scene_user"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/margin_x10"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/allMemberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:text="@string/intelligent_scene_custom"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_tinny"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/customTextView"
+                    android:layout_width="200dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="@string/intelligent_scene_custom"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_tinny"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x2"
+
+            android:text="@string/intelligent_scene_then"
+            android:textColor="@color/font_learned_white"
+            android:textSize="@dimen/text_small"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/addBindTextView"
+            style="@style/et_common"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/item_selector"
+            android:drawableLeft="@drawable/icon_add_disablerd"
+            android:drawablePadding="@dimen/padding_x4"
+            android:drawableRight="@drawable/device_item_arrow_right"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/padding_x2"
+            android:paddingRight="@dimen/padding_x4"
+            android:paddingTop="@dimen/padding_x2"
+            android:text="@string/intelligent_scene_add_output"
+            android:textColor="@color/font_white_gray"/>
+
+        <ListView
+            android:id="@+id/linkageBindListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:divider="@null"
+            android:dividerHeight="@dimen/margin_x6"
+            android:listSelector="@null"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnAddAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x2"
+            android:background="@drawable/item_selector"
+            android:text="@string/scene_add_action_continue"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_normal"/>
+    </LinearLayout>
+</LinearLayout>

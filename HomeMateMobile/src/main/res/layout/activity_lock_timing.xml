@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/lock_set_timing_tip1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/itemLock"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/bg_list_device_single_default"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_x4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/lock_set_timing_tip1"
+                    android:textColor="@color/font_learned_white"
+                    android:textSize="@dimen/text_normal" />
+
+                <ImageView
+                    android:id="@+id/imageLockCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/socket_switch" />
+            </LinearLayout>
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/item_selector" />
+
+
+            <com.orvibo.homemate.view.custom.SelectRepeatView
+                android:id="@+id/selectRepeatView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@color/white"></com.orvibo.homemate.view.custom.SelectRepeatView>
+
+
+            <LinearLayout
+                android:id="@+id/itemLocked"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/bg_list_device_single_default"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_x4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/lock_set_timing_tip3"
+                    android:textColor="@color/font_learned_white"
+                    android:textSize="@dimen/text_normal" />
+
+                <ImageView
+                    android:id="@+id/imageLockedCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/socket_switch" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_x4"
+                android:text="@string/lock_set_timing_tip4"
+                android:textColor="@color/font_learned_white"
+                android:textSize="@dimen/text_normal" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

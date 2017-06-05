@@ -1,0 +1,233 @@
+<resources>
+    <dimen name="seekbar_radius">5dip</dimen>
+
+    <!-- 字体大小 -->
+    <dimen name="text_offline">10sp</dimen>
+    <dimen name="text_tinny">12sp</dimen>
+    <dimen name="text_13sp">13sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_normal">16sp</dimen>
+    <dimen name="text_big">18sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_great">22sp</dimen>
+    <dimen name="text_huge">24sp</dimen>
+
+    <dimen name="text_focus_delta">2sp</dimen>
+
+    <!-- 内边距 -->
+    <dimen name="margin_x0">1dp</dimen>
+    <dimen name="margin_x1">4dp</dimen>
+    <dimen name="margin_x2">8dp</dimen>
+    <dimen name="margin_x4">16dp</dimen>
+    <dimen name="margin_x6">24dp</dimen>
+    <dimen name="margin_x7">28dp</dimen>
+    <dimen name="margin_x8">32dp</dimen>
+    <dimen name="margin_x9">36dp</dimen>
+    <dimen name="margin_x10">40dp</dimen>
+    <dimen name="margin_x11">44dp</dimen>
+    <dimen name="margin_x12">48dp</dimen>
+    <dimen name="margin_x14">56dp</dimen>
+    <dimen name="margin_x16">64dp</dimen>
+    <dimen name="margin_x18">72dp</dimen>
+    <dimen name="margin_x30">120dp</dimen>
+    <dimen name="margin_x32">128dp</dimen>
+
+    <!-- 外边距 -->
+    <dimen name="padding_x0">1dp</dimen>
+    <dimen name="padding_x1">4dp</dimen>
+    <dimen name="padding_x2">8dp</dimen>
+    <dimen name="padding_x4">16dp</dimen>
+    <dimen name="padding_x6">24dp</dimen>
+    <dimen name="padding_x8">32dp</dimen>
+    <dimen name="padding_x12">48dp</dimen>
+    <dimen name="padding_x14">56dp</dimen>
+    <dimen name="padding_x16">64dp</dimen>
+
+
+    <dimen name="color_temperture_status_top_height">85dip</dimen>
+    <dimen name="color_temperture_status_height">180dip</dimen>
+    <dimen name="color_temperture_status_middle_height">70dip</dimen>
+    <dimen name="color_temperture_status_bottom_height">30dip</dimen>
+    <dimen name="color_temperture_status_top_radius">14dip</dimen>
+    <dimen name="color_temperture_status_middle_bottom_radius">10dip</dimen>
+
+    <dimen name="line_height">1px</dimen>
+
+    <!--进度条高度-->
+    <dimen name="progress_swiperefresh_hgith">3dp</dimen>
+
+    <!-- 导航栏高度 -->
+    <dimen name="bar_height">48dp</dimen>
+    <!-- 导航栏图标大小 -->
+    <dimen name="bar_ic_wh">32dp</dimen>
+    <!-- 通知栏图标大小 -->
+    <dimen name="notification_ic_wh">24dp</dimen>
+    <!-- 纯文字栏高度 -->
+    <dimen name="text_bar_height">40dp</dimen>
+    <!-- 普通按钮高度 -->
+    <dimen name="button_height">48dp</dimen>
+    <!-- 长按钮宽度 -->
+    <dimen name="button_width_long">200dp</dimen>
+    <!-- 小按钮高度 -->
+    <dimen name="button_height_small">40dp</dimen>
+    <!-- 按钮最小宽度 -->
+    <dimen name="button_width_min">56dp</dimen>
+    <!--  文字输入框高度 -->
+    <dimen name="et_height">56dp</dimen>
+    <!-- 圆形按钮高度 -->
+    <dimen name="button_circle_height">50dp</dimen>
+    <!-- 主界面的菜单高度 -->
+    <dimen name="main_tag_height">56dp</dimen>
+    <!-- 滚轮选择器高度 -->
+    <dimen name="wheel_height">256dp</dimen>
+    <!-- 列表分组间隔 -->
+    <dimen name="list_item_empty_height">16dp</dimen>
+    <!-- 列表项高度 -->
+    <dimen name="list_item_height">48dp</dimen>
+    <!-- item 高度 -->
+    <dimen name="list_image_item_height">60dp</dimen>
+    <!-- 安防item 高度 -->
+    <dimen name="security_image_item_height">72dp</dimen>
+    <dimen name="security_image_item_height1">50dp</dimen>
+
+    <!-- 个人帐户 -->
+    <dimen name="account_item_height">100dp</dimen>
+    <dimen name="account_icon_wh">72dp</dimen>
+    <!--绑定设备动作-->
+    <dimen name="bindaction_color_wh">21dp</dimen>
+
+    <!-- 电视遥控器 -->
+    <dimen name="tv_button_wh">48dp</dimen>
+    <dimen name="tv_button_wh_small">48dp</dimen>
+    <dimen name="tv_voice_width">56dp</dimen>
+    <dimen name="tv_voice_height">125dp</dimen>
+
+    <!-- 空调 -->
+    <dimen name="conditioner_wh">260dp</dimen>
+    <dimen name="conditioner_wh_bg">264dp</dimen>
+
+    <!-- rgb灯 -->
+    <dimen name="rgb_color_view">300dp</dimen>
+    <dimen name="rgb_palette">235dp</dimen>
+    <dimen name="rgb_aim">36dp</dimen>
+    <dimen name="rgb_seek_bar_height">5dp</dimen>
+    <dimen name="rgb_thumb_offset">2dp</dimen>
+
+    <!-- 开关 -->
+    <dimen name="switch_button_width">192dp</dimen>
+    <dimen name="switch_button_height">96dp</dimen>
+    <dimen name="coco_popup_width">160dp</dimen>
+    <dimen name="coco_popup_margin">72dp</dimen>
+
+    <!-- 窗帘 -->
+    <dimen name="curtain_bg_width">300dp</dimen>
+    <dimen name="curtain_bg_height">350dp</dimen>
+    <dimen name="curtain_roller_width">268dp</dimen>
+    <dimen name="curtain_roller_height">310dp</dimen>
+    <dimen name="curtain_outside_width">245dp</dimen>
+    <dimen name="curtain_outside_height">290dp</dimen>
+    <dimen name="curtain_2halves_width">265dp</dimen>
+    <dimen name="curtain_2halves_height">290dp</dimen>
+    <dimen name="curtain_bar_width">224dp</dimen>
+    <dimen name="curtain_bar_height">6dp</dimen>
+
+    <!-- 安防 -->
+    <dimen name="security_switch_width">226dp</dimen>
+    <dimen name="scene_bind_faile_listview_heigth">180dp</dimen>
+
+    <dimen name="swipe_button_width">90dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="right_panel_margin_left">0dip</dimen>
+    <dimen name="right_panel_margin_vertical">0dip</dimen>
+    <dimen name="right_panel_fading_edge">50px</dimen>
+
+    <!-- Dialer -->
+    <integer name="dialpad_layout_weight_dialpad">65</integer>
+    <integer name="dialpad_layout_weight_additional_buttons">15</integer>
+    <integer name="dialpad_layout_weight_digits">20</integer>
+    <integer name="dialpad_layout_weight_autocomplete_list">40</integer>
+
+    <dimen name="dialpad_vertical_margin">2dip</dimen>
+    <dimen name="dialpad_digits_text_size">35sp</dimen>
+
+    <!-- 波纹动画半径 -->
+    <dimen name="ripple_radius">36dp</dimen>
+
+    <!-- 添加设备icon -->
+    <dimen name="device_add_icon_wh">40dp</dimen>
+    <dimen name="socket_item_wh">96dp</dimen>
+    <dimen name="socket_icon_wh">72dp</dimen>
+
+    <dimen name="login_popup_height">160dp</dimen>
+    <dimen name="login_popup_height_unfocus">160dp</dimen>
+
+    <!-- 定时 -->
+    <dimen name="timing_wheel_view_height">240dp</dimen>
+    <dimen name="timing_countdown_bar_height">32dp</dimen>
+    <dimen name="make_sure_dialog_height">150dp</dimen>
+    <dimen name="ap_config_dialog_height">250dp</dimen>
+
+    <!-- 个人中心 -->
+    <dimen name="personal_user_height">150dp</dimen>
+
+    <dimen name="vihome_personal_user_height">100dp</dimen>
+
+    <!-- 个人信息 -->
+    <dimen name="identify_send_button_width">96dp</dimen>
+    <dimen name="pic_list_item_height">80dp</dimen>
+
+    <!-- Coco背景 -->
+    <dimen name="coco_image_background">250dp</dimen>
+
+    <!-- 天气模块城市textview -->
+    <dimen name="city_width">90dp</dimen>
+    <dimen name="city_heigth">40dp</dimen>
+
+    <dimen name="ys_camera_min_height">160dp</dimen>
+    <dimen name="ys_camera_definition_width">64dp</dimen>
+
+    <!--大拿播放器高度-->
+    <dimen name="danale_player_heigh">250dp</dimen>
+
+    <!-- 天气模块主界面 -->
+    <dimen name="header_height">155dp</dimen>
+    <dimen name="header_logo_size">100dp</dimen>
+    <dimen name="temp_size">24dp</dimen>
+
+    <!-- 星期选择 -->
+    <dimen name="week_height">32dp</dimen>
+
+    <!-- allone电视 -->
+    <dimen name="allone_tv_button_width">107dp</dimen>
+    <dimen name="allone_tv_button_height">53dp</dimen>
+    <dimen name="allone_tv_circle_width">150dp</dimen>
+    <dimen name="allone_tv_circle_height">150dp</dimen>
+    <dimen name="allone_tv_voice_height">145dp</dimen>
+    <dimen name="allone_tv_key_height">54dp</dimen>
+    <dimen name="allone_tv_bottom_height">76dp</dimen>
+
+    <dimen name="timeline_view_height">74dp</dimen>
+    <dimen name="play_time_text_bottom_margin">10dp</dimen>
+
+    <dimen name="allone_ac_tmp_line_divider">4.5dp</dimen>
+
+    <dimen name="empty_list_item_padding">120dp</dimen>
+
+    <!--sg-->
+    <dimen name="top_inset">8dp</dimen>
+    <dimen name="image_height">120dp</dimen>
+
+    <dimen name="calendar_header_text_size">14sp</dimen>
+    <dimen name="calendar_legend_text_size">11sp</dimen>
+    <dimen name="calendar_legend_tag_size">24dp</dimen>
+    <dimen name="calendar_month_text_size">24sp</dimen>
+    <dimen name="state_tag_size">120dp</dimen>
+
+    <dimen name="profile_image_size">60dp</dimen>
+    <dimen name="profile_image_padding">20dp</dimen>
+
+</resources>

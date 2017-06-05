@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:text="@string/device_timing_repeat" />
+
+    <RelativeLayout
+        android:id="@+id/rlMonday"
+        android:layout_width="match_parent"
+        android:background="@drawable/item_selector"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:clickable="true"
+        android:layout_height="@dimen/bar_height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_normal"
+            android:text="@string/device_timing_repeat_monday"
+            android:textColor="@color/font_black"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cbMonday"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_box"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTuesday"
+        android:layout_width="match_parent"
+        android:background="@drawable/item_selector"
+        android:layout_height="@dimen/bar_height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_normal"
+            android:text="@string/device_timing_repeat_tuesday"
+            android:textColor="@color/font_black"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cbTuesday"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_box"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlWednesday"
+        android:layout_width="match_parent"
+        android:background="@drawable/item_selector"
+        android:layout_height="@dimen/bar_height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_normal"
+            android:text="@string/device_timing_repeat_wednesday"
+            android:textColor="@color/font_black"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cbWednesday"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_box"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlThursday"
+        android:layout_width="match_parent"
+        android:background="@drawable/item_selector"
+        android:layout_height="@dimen/bar_height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_normal"
+            android:text="@string/device_timing_repeat_thursday"
+            android:textColor="@color/font_black"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cbThursday"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_box"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFriday"
+        android:layout_width="match_parent"
+        android:background="@drawable/item_selector"
+        android:layout_height="@dimen/bar_height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_normal"
+            android:text="@string/device_timing_repeat_friday"
+            android:textColor="@color/font_black"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cbFriday"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_box"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSaturday"
+        android:layout_width="match_parent"
+        android:background="@drawable/item_selector"
+        android:layout_height="@dimen/bar_height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_normal"
+            android:text="@string/device_timing_repeat_saturday"
+            android:textColor="@color/font_black"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cbSaturday"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_box"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSunday"
+        android:layout_width="match_parent"
+        android:background="@drawable/item_selector"
+        android:layout_height="@dimen/bar_height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_normal"
+            android:text="@string/device_timing_repeat_sunday"
+            android:textColor="@color/font_black"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cbSunday"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check_box"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

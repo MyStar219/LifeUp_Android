@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_background"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_x2"
+    android:paddingRight="@dimen/padding_x2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_green">
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+
+            android:layout_margin="@dimen/margin_x2"
+            android:text="二楼客厅 顶灯"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_tinny" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:padding="@dimen/padding_x1"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/scene_delete" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/security_image_item_height"
+        android:background="@null">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/item_selector"
+            android:drawableRight="@drawable/device_item_arrow_right"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x6"
+            android:text="@string/scene_action_time"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_normal" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/security_image_item_height"
+            android:background="@color/gray_white" />
+
+        <!--<TextView
+            android:id="@+id/tvAction"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_selector"
+            android:textColor="@color/font_black"
+            android:gravity="center"
+            android:text="@string/scene_action_on"
+            android:textSize="@dimen/text_normal"
+            android:paddingRight="@dimen/padding_x8"
+            android:paddingLeft="@dimen/padding_x4"
+            android:drawableRight="@drawable/device_item_arrow_right"
+            android:layout_height="match_parent" />-->
+
+        <LinearLayout
+            android:id="@+id/linearAction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/item_selector"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/padding_x6">
+            <TextView
+                android:id="@+id/tvAction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/scene_action_on"
+                android:singleLine="true"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/text_normal" />
+
+            <LinearLayout
+                android:id="@+id/color_ll"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:background="@color/rgb_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/colorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/rgb_bg"
+                    android:layout_margin="1dp" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x2"
+                android:src="@drawable/device_item_arrow_right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

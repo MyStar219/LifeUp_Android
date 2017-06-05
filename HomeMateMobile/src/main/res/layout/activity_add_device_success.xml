@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/navigation_background"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/main_bar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/add_device_success" />
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:onClick="leftTitleClick"
+            android:paddingRight="@dimen/padding_x4"
+            android:paddingLeft="@dimen/padding_x4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/index_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="toIndex"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:singleLine="true"
+            android:text="@string/add_device_index"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/addDeviceTip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:drawableLeft="@drawable/icon_right_normal"
+        android:drawablePadding="@dimen/padding_x2"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:text="@string/add_device_tip" />
+
+    <ListView
+        android:id="@+id/newDevice_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/tran"
+        android:dividerHeight="0dp"
+        android:listSelector="@drawable/item_selector" />
+
+</LinearLayout>

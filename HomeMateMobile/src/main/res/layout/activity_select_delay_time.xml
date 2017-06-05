@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/main_bar_title"
+            android:layout_centerInParent="true"
+            android:text="@string/bind_select_delay_time_title" />
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:onClick="leftTitleClick"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/selectTimeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/zeroSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/zero_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/oneSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/one_sce"
+                android:textSize="@dimen/text_normal" />
+            <RadioButton
+                android:id="@+id/twoSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/two_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/threeSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/three_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/fourSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/four_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/fiveSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/five_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/sixSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/six_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/sevenSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/seven_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/eightSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/eight_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/nineSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/nine_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/tenSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/ten_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/thirtySecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/thirty_sce"
+                android:textSize="@dimen/text_normal" />
+
+            <RadioButton
+                android:id="@+id/customSecRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dip"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@drawable/item_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/delay_time_check_selector"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:text="@string/custom_time"
+                android:textSize="@dimen/text_normal" />
+        </RadioGroup>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/button"
+        style="?borderlessButtonStyle"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:gravity="left|center_vertical"
+        android:drawableLeft="@drawable/dummy_bbq"
+        android:drawablePadding="@dimen/half_padding"
+        android:text="BBQ"
+        />
+    <ImageView
+        android:id="@+id/imgTick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/double_padding"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        android:src="@drawable/tick"/>
+</RelativeLayout>

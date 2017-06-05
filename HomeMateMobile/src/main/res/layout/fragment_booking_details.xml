@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_booking" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding">
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:id="@+id/payment_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:drawableStart="@drawable/gl_deposit"
+            android:drawableLeft="@drawable/gl_deposit"
+            android:drawablePadding="@dimen/default_padding"
+            android:gravity="center_vertical|start"
+            android:text="@string/deposit_deducted"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:id="@+id/deposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_inset"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_dimmed"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.smartgateway.app.views.AvenirRomanTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_padding"
+                android:drawableStart="@drawable/bubble_icon"
+                android:drawableLeft="@drawable/bubble_icon"
+                android:drawablePadding="@dimen/default_padding"
+                android:gravity="center_vertical|start"
+                android:text="@string/reason"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <com.smartgateway.app.views.AvenirRomanTextView
+                android:id="@+id/reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_inset"
+                android:fontFamily="fonts/Avenir-Black.ttf"
+                android:text="1. Chairs were damaged by burnt cigarettes\n2. 3 drinking glasses were broken"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/text_dimmed" />
+        </LinearLayout>
+
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:drawableLeft="@drawable/gl_time"
+            android:drawableStart="@drawable/gl_time"
+            android:drawablePadding="@dimen/default_padding"
+            android:gravity="center_vertical|start"
+            android:text="@string/time_booking"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:id="@+id/bookingTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_inset"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_dimmed" />
+
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:drawableLeft="@drawable/gl_time"
+            android:drawableStart="@drawable/gl_time"
+            android:drawablePadding="@dimen/default_padding"
+            android:gravity="center_vertical|start"
+            android:text="@string/time_confirmed"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:id="@+id/confirmedTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_inset"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_dimmed" />
+
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:drawableLeft="@drawable/gl_time"
+            android:drawableStart="@drawable/gl_time"
+            android:drawablePadding="@dimen/default_padding"
+            android:gravity="center_vertical|start"
+            android:text="@string/time_refunded"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <com.smartgateway.app.views.AvenirRomanTextView
+            android:id="@+id/refundedTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_inset"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_dimmed" />
+
+    </LinearLayout>
+</LinearLayout>

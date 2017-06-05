@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="82dp">
+
+        <ImageView
+            android:id="@+id/iv_camera_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/device_120_xiaoou"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="44dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_add_xiaoou_selector"
+            android:text="@string/danale_add"
+            android:textColor="@color/green"
+            android:gravity="center"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_camera_logo"
+            android:layout_toLeftOf="@id/tv_add"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_deviceid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_add_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/gray"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divideLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/iv_camera_logo"
+            android:layout_marginLeft="10dp"
+            android:background="@color/divide_line_color"/>
+    </RelativeLayout>
+</RelativeLayout>

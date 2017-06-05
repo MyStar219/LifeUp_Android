@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dash"
+            android:title="@string/nav_dashboard"/>
+        <item
+            android:id="@+id/nav_smart_life"
+            android:icon="@drawable/icon_nav_smart_life"
+            android:title="@string/nav_smart_life"/>
+        <item
+            android:id="@+id/nav_personal_center"
+            android:icon="@drawable/ic_personal"
+            android:title="@string/nav_personal_center"/>
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_item_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/nav_item_settings"/>
+        <item
+            android:id="@+id/nav_item_about"
+            android:icon="@drawable/ic_about"
+            android:title="@string/nav_item_about"/>
+        <item
+            android:id="@+id/nav_item_agreement"
+            android:icon="@drawable/ic_agreement"
+            android:title="@string/nav_item_agreement"/>
+        <item
+            android:id="@+id/nav_item_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/nav_item_logout"/>
+    </group>
+
+</menu>

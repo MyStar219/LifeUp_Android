@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ItemButton">
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:padding">@dimen/default_padding</item>
+        <item name="android:drawablePadding">@dimen/default_padding</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="MyCustomTextAppearance">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

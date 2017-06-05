@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/empty_ll"
+    android:layout_below="@+id/navigationBar"
+    android:background="@color/common_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_yes"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/energy_remind_empty_text"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_normal" />
+
+</LinearLayout>

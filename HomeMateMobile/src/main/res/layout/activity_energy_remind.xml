@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/common_background"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:right_text="@string/energy_remind_set"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/register_next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@drawable/button_green"
+        android:text="@string/energy_remind_shutdown"
+        android:layout_marginLeft="@dimen/margin_x2"
+        android:layout_marginRight ="@dimen/margin_x2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/energy_remind_ok_tips"
+        android:gravity="center"
+        android:textSize="@dimen/text_normal"
+        android:drawableTop="@drawable/energy_remind_ok"
+        android:drawablePadding="@dimen/padding_x8"
+        android:textColor="@color/font_white_gray"
+        android:layout_marginTop="@dimen/margin_x32"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

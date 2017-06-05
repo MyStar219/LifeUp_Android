@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    android:background="@color/time_line_view_bg">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.5"
+        android:textColor="@android:color/black"
+        android:visibility="gone"/>
+
+    <com.orvibo.homemate.device.danale.timeview.CustomerScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_below="@+id/time"
+        android:scrollbars="none"
+        android:background="@color/time_line_view_bg"
+        android:layout_centerVertical="true"/>
+
+    <View
+        android:id="@+id/time_select_line"
+        android:layout_width="3px"
+        android:layout_height="match_parent"
+        android:layout_below="@id/time"
+        android:layout_centerHorizontal="true"
+        android:background="@color/green" />
+
+</RelativeLayout>

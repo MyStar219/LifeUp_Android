@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/danale_activity_bg_color">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:right_img="@drawable/icon_full_screenlt_normal"/>
+
+    <RelativeLayout
+        android:id="@+id/surfaceView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar">
+
+        <com.danale.video.view.opengl.DanaleGlSurfaceView
+            android:id="@+id/gl_sv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+
+        <SurfaceView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer"
+        android:background="@drawable/bg_time"
+        android:layout_below="@+id/titleBar"
+        android:drawableLeft="@drawable/pic_video_tips"
+        android:paddingLeft="@dimen/padding_x2"
+        android:text="00:00"
+        android:textSize="@dimen/text_small"
+        android:visibility="gone"
+        android:gravity="center"
+        android:drawablePadding="@dimen/padding_x1"
+        android:textColor="@color/black"
+        android:paddingRight="@dimen/padding_x2"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/titleBarLS"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:background="@color/white_alpha70"
+        android:layout_height="@dimen/button_height_small">
+
+        <com.videogo.widget.CheckTextButton
+            android:id="@+id/fullScreenIVLS"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:background="@drawable/back_green"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_play_speed_state_LS"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:layout_below="@id/surfaceView_layout"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_start_time_LS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark"
+                android:text="09:00:00"/>
+
+            <TextView
+                android:id="@+id/tv_end_time_LS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/dark"
+                android:text="09:10:10"/>
+
+            <ProgressBar
+                android:id="@+id/pb_play_speed_LS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_end_time_LS"
+                android:layout_toRightOf="@id/tv_start_time_LS"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:progress="30"
+                style="?android:attr/progressBarStyleHorizontal"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:paddingRight="5dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/playLS"
+                android:layout_width="wrap_content"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:src="@drawable/icon_play_transverse_selector"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/soundLS"
+                android:layout_width="wrap_content"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:src="@drawable/icon_voice"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/talkLS"
+                android:layout_width="wrap_content"
+                android:src="@drawable/icon_talk_cross"
+                android:visibility="gone"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/recordLS"
+                android:layout_width="wrap_content"
+                android:src="@drawable/icon_record_ls"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/photoLS"
+                android:layout_width="wrap_content"
+                android:src="@drawable/icon_photograph_cross"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/definitionLS"
+            android:layout_width="@dimen/ys_camera_definition_width"
+            android:background="@drawable/btn_high_definition"
+            android:text="@string/ys_definition_high"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:textColor="@color/gray_green_text"
+            android:textSize="@dimen/text_normal"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_play_speed_state"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/surfaceView_layout"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark"
+            android:text="00:00:00"/>
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/dark"
+            android:text="00:00:00"/>
+
+        <ProgressBar
+            android:id="@+id/pb_play_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_end_time"
+            android:layout_toRightOf="@id/tv_start_time"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:progress="30"
+            style="?android:attr/progressBarStyleHorizontal"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_operation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_play_speed_state"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/icon_play_selector"
+            android:drawablePadding="9dp"
+            android:text="@string/play"
+            android:textColor="@color/gray_black_text"
+            android:textSize="@dimen/text_normal"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_play"
+            android:layout_marginRight="@dimen/margin_x6"
+            android:drawableTop="@drawable/icon_record"
+            android:drawablePadding="9dp"
+            android:text="@string/camera_video"
+            android:textColor="@color/gray_black_text"
+            android:textSize="@dimen/text_normal"
+            android:gravity="center"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_play"
+            android:layout_marginLeft="@dimen/margin_x6"
+            android:drawableTop="@drawable/icon_photograph"
+            android:drawablePadding="9dp"
+            android:text="@string/camera_photo"
+            android:textColor="@color/gray_black_text"
+            android:textSize="@dimen/text_normal"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:visibility="visible"/>
+    </RelativeLayout>
+</RelativeLayout>

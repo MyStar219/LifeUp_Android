@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/personal_user_feedback"
+        app:right_text="@string/send"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/leftTextView"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_x12"
+                android:background="@color/danale_activity_bg_color"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="@string/feedback_content"
+                android:textSize="@dimen/text_big"
+                android:textColor="@color/dark"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/feedback_divide_line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x4"
+                android:layout_marginRight="@dimen/margin_x4"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/inputcontent_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:background="@null"
+                    android:hint="@string/user_feedback_content_tips"
+                    android:maxLength="500"
+                    android:gravity="top"
+                    android:textSize="@dimen/text_big"/>
+
+                <GridView
+                    android:id="@+id/pic_gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@color/transparent"
+                    android:cacheColorHint="@color/transparent"
+                    android:columnWidth="@dimen/margin_x2"
+                    android:focusable="false"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="5"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="none"/>
+
+                <TextView
+                    android:id="@+id/contentsize_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/gray"
+                    android:text="500"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/feedback_divide_line_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_x12"
+                android:background="@color/danale_activity_bg_color"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="@string/contact_information"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/text_big"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/feedback_divide_line_color"/>
+
+            <EditText
+                android:id="@+id/inputPhoneOrEmail_editText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_x12"
+                android:background="#ffffff"
+                android:hint="@string/contact_info_edittext_tips"
+                android:paddingLeft="16dp"
+                android:textColor="@color/font_black"
+                android:textColorHint="@color/feedback_edittext_hint_color"
+                android:textSize="@dimen/text_big"
+                android:inputType="textEmailAddress"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/feedback_divide_line_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_x12"
+                android:background="@color/danale_activity_bg_color"
+                android:paddingLeft="@dimen/padding_x2"
+                android:paddingRight="@dimen/padding_x2"
+                android:paddingTop="@dimen/padding_x1"
+                android:text="@string/contact_text_tips"
+                android:textColor="@color/feedback_c9c9c9"
+                android:textSize="@dimen/text_13sp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

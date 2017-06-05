@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/common_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        app:leftText="@string/cancel"
+        app:centerText="@string/user_phone_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tip1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:text="@string/user_phone_change_tip"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small" />
+
+    <TextView
+        android:id="@+id/tip2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x1"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:text="@string/user_phone_change_current"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small" />
+
+    <com.orvibo.homemate.view.custom.EditTextWithCompound
+        android:id="@+id/userPhoneEmailEditText"
+        android:hint="@string/user_phone"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/gray"
+        android:drawableRight="@drawable/edit_text_delete_icon"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_bg"
+        android:textSize="@dimen/text_big"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:layout_height="@dimen/list_item_height" />
+
+    <TextView
+        android:id="@+id/tip3TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_x4"
+        android:drawableLeft="@drawable/tip_icon"
+        android:drawablePadding="@dimen/padding_x1"
+        android:text="@string/user_phone_only_china"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:enabled="false"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"
+        android:background="@drawable/button_green"
+        android:layout_height="wrap_content" />
+</LinearLayout>

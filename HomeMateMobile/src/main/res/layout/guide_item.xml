@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/bg_guide"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/guide_pic_3"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x6"
+        android:text="TTTTTT"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_huge"/>
+
+    <TextView
+        android:gravity="center|top"
+        android:id="@+id/contentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x1"
+        android:text="TTTTTT"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_normal"/>
+
+    <ImageView
+        android:id="@+id/guideImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        />
+
+    <ImageView
+        android:layout_marginTop="@dimen/margin_x2"
+        android:id="@+id/indexImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_x30"
+        android:src="@drawable/pic_guide_indicate_1"/>
+</LinearLayout>

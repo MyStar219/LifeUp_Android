@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mainTwoTab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_tag_height"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.orvibo.homemate.view.custom.MainBottomTwoTab
+        android:id="@+id/deviceBottomTab"
+        mainTwoTab:twoTabName="@string/main_bottom_tab_device"
+        mainTwoTab:twoTabNormalIcon="@drawable/icon_equipment_normal"
+        mainTwoTab:twoTabSelectedIcon="@drawable/icon_equipment_checked"
+        mainTwoTab:twoTabNormalBg="@drawable/bottom_normal"
+        mainTwoTab:twoTabSelectedBg="@drawable/bottom_left_selected"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1" />
+
+    <com.orvibo.homemate.view.custom.MainBottomTwoTab
+        android:id="@+id/personalBottomTab"
+        mainTwoTab:twoTabName="@string/main_bottom_tab_personal"
+        mainTwoTab:twoTabNormalIcon="@drawable/icon_center_normal"
+        mainTwoTab:twoTabSelectedIcon="@drawable/icon_center_checked"
+        mainTwoTab:twoTabNormalBg="@drawable/bottom_normal"
+        mainTwoTab:twoTabSelectedBg="@drawable/bottom_right_selected"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1" />
+
+
+</LinearLayout>

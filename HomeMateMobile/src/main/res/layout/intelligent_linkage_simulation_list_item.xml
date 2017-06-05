@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlAccountName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_yellow"
+    android:gravity="center">
+
+    <com.orvibo.homemate.view.custom.OfflineView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_superscript"
+        android:gravity="center_horizontal"
+        android:padding="5dip"
+        android:text="@string/intelligent_scene_simulation"
+        android:textColor="#e2cf4f" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x8">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/securityNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:text="@string/intelligent_scene_open_light"
+                android:textColor="@color/font_white_255"
+                android:textSize="@dimen/text_big" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/securityDeviceIconImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_linkage_human" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:background="@drawable/icon_linkage_arrow" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x2"
+                    android:layout_marginRight="@dimen/margin_x2"
+                    android:background="@drawable/icon_scene_light1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/check"
+            android:background="@drawable/pic_dividing_line" />
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_x4"
+            android:background="@drawable/checkbox_style"
+            android:button="@null" />
+    </RelativeLayout>
+</FrameLayout>

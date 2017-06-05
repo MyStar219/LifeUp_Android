@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/common_background"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        navigationBar:leftDrawableLeft="@drawable/back"
+        navigationBar:text="@string/set_widget_title"
+        android:layout_height="wrap_content"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/navigationBar"
+    android:layout_above="@+id/bottom_layout"
+    android:orientation="vertical"
+    >
+    <com.orvibo.homemate.view.custom.SwipeItemMenuListView
+        android:layout_below="@+id/navigationBar"
+        android:id="@+id/lvWidgetDevice"
+        android:layout_width="match_parent"
+        style="@style/listview_vertical_style"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:id="@+id/deviceEmptyLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/deviceEmptyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_no_device"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/deviceEmptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deviceEmptyImageView"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:paddingBottom="@dimen/margin_x4"
+            android:text="@string/add_widget_tip"
+            android:textColor="@color/gray_white"
+            android:textSize="@dimen/text_big" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="2" />
+    </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+    <TextView
+        android:id="@+id/add_device"
+        android:text="@string/add_widget_device"
+        android:layout_width="0dp"
+        android:background="@drawable/bg_list_device_single_default"
+        android:textColor="@color/green"
+        android:gravity="center"
+        android:textSize="@dimen/text_big"
+        android:layout_weight="1"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginRight="1dp"
+        />
+        <TextView
+            android:id="@+id/add_scene"
+            android:text="@string/add_widget_scene"
+            android:layout_width="0dp"
+            android:background="@drawable/bg_list_device_single_default"
+            android:textColor="@color/green"
+            android:gravity="center"
+            android:textSize="@dimen/text_big"
+            android:layout_weight="1"
+            android:layout_height="@dimen/list_item_height"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

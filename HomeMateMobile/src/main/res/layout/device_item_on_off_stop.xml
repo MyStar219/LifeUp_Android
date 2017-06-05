@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_image_item_height"
+                android:background="@drawable/tran"
+                android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:background="@drawable/item_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/margin_x4">
+
+        <com.orvibo.homemate.view.custom.DeviceCustomView
+            android:id="@+id/deviceCustomView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/curtain_on"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_curtain_normal"
+            android:clickable="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/action_open"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_normal"/>
+
+        <TextView
+            android:id="@+id/curtain_stop_left"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_curtain_normal"
+            android:clickable="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/action_stop"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_normal"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/curtain_close"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:background="@drawable/btn_curtain_normal"
+            android:clickable="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/action_close"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_normal"/>
+
+        <TextView
+            android:id="@+id/curtain_stop_right"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:background="@drawable/btn_curtain_normal"
+            android:clickable="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/action_stop"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_normal"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</RelativeLayout>

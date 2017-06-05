@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:irKey="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin_x18"
+                android:layout_marginTop="@dimen/margin_x18"
+                android:src="@drawable/pic_fan" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_x4"
+                android:layout_marginRight="@dimen/margin_x4"
+                android:orientation="horizontal">
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/irKeyButtonPower"
+                    style="@style/text_style_allone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:scaleType="fitCenter"
+                    android:text="@string/allone_electric_source"
+                    irKey:fid="1"
+                    irKey:learnedTopBg="@drawable/icon_allone2_electric_source_selector" />
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/irKeyButtonFanSpeed"
+                    style="@style/text_style_allone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:scaleType="fitCenter"
+                    android:text="@string/allone_btn_fan_speed"
+                    irKey:fid="9367"
+                    irKey:learnedTopBg="@drawable/icon_allone2_weak_wind_selector" />
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/irKeyButtonSwing"
+                    style="@style/text_style_allone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:scaleType="fitCenter"
+                    android:text="@string/allone_btn_swing"
+                    irKey:fid="9362"
+                    irKey:learnedTopBg="@drawable/allone2_swept_wind_selector" />
+
+                <com.orvibo.homemate.view.custom.IrKeyButton
+                    android:id="@+id/irKeyButtonSwingMode"
+                    style="@style/text_style_allone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:scaleType="fitCenter"
+                    android:text="@string/allone_btn_swing_mode"
+                    irKey:fid="9372"
+                    irKey:learnedTopBg="@drawable/icon_allone2_auto_wind_selector" />
+
+
+            </LinearLayout>
+
+            <com.orvibo.homemate.view.custom.MyGridView
+                android:id="@+id/moreKeyGridView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/allone_tv_bottom_height"
+                android:background="@color/white"
+                android:listSelector="@color/tran"
+                android:numColumns="4"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/padding_x4"
+                android:paddingTop="@dimen/padding_x4"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/padding_x2"></com.orvibo.homemate.view.custom.MyGridView>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_allone_morekey_tips"/>
+
+</LinearLayout>

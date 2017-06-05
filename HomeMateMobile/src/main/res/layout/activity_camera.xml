@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:leftDrawableLeft="@drawable/back"
+        navigationBar:centerText="@string/device_add"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_x2">
+
+
+        <com.orvibo.homemate.camera.TouchedView
+            android:id="@+id/touchedView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/llDisconnectedTips"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@color/popup_bg"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDisconnect"
+                android:layout_width="wrap_content"
+                android:drawableTop="@drawable/camera_disconnected_tips"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="@string/camera_disconnected_tips"
+                android:drawablePadding="@dimen/padding_x2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivFullscreen"
+            android:layout_width="wrap_content"
+            android:background="@drawable/camera_fullscreen"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/ivNotFullscreen"
+            android:layout_width="wrap_content"
+            android:background="@drawable/camera_not_fullscreen"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/Fullscreen_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/camera_retangle_horizontal_bg"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tvConnectFullscreen"
+                android:drawableTop="@drawable/camera_disconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/camera_connect"
+                android:gravity="center"
+                android:drawablePadding="@dimen/padding_x1"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_tinny" />
+
+
+            <TextView
+                android:id="@+id/tvScreenshotFullscreen"
+                android:layout_width="wrap_content"
+                android:drawableTop="@drawable/camera_screenshot"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x6"
+                android:gravity="center"
+                android:drawablePadding="@dimen/padding_x1"
+                android:text="@string/camera_screenshot"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_tinny" />
+
+
+
+            <TextView
+                android:id="@+id/tvTalkFullscreen"
+                android:layout_width="wrap_content"
+                android:drawableTop="@drawable/camera_talk"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_x6"
+                android:drawablePadding="@dimen/padding_x1"
+                android:text="@string/camera_talk"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_tinny" />
+
+
+            <TextView
+                android:id="@+id/tvAudioFullscreen"
+                android:drawableTop="@drawable/camera_audio"
+                android:layout_marginTop="@dimen/margin_x6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:drawablePadding="@dimen/padding_x1"
+                android:text="@string/camera_audio"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_tinny" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/control_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:layout_marginLeft="@dimen/margin_x2"
+        android:layout_marginRight="@dimen/margin_x2"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/camera_square_bg">
+
+            <ImageView
+                android:id="@+id/ivCircle"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/camera_circle" />
+
+
+            <ImageView
+                android:id="@+id/ivUp"
+                android:layout_alignTop="@+id/ivCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_x6"
+                android:layout_centerHorizontal="true"
+                android:focusable="true"
+                android:src="@drawable/camera_up" />
+
+            <ImageView
+                android:id="@+id/ivLeft"
+                android:layout_alignLeft="@+id/ivCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_x6"
+                android:focusable="true"
+                android:src="@drawable/camera_left" />
+
+            <ImageView
+                android:id="@+id/ivRight"
+                android:layout_alignRight="@+id/ivCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_x6"
+                android:focusable="true"
+                android:src="@drawable/camera_right" />
+
+            <ImageView
+                android:id="@+id/ivDown"
+                android:layout_alignBottom="@+id/ivCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/padding_x6"
+                android:focusable="true"
+                android:src="@drawable/camera_down" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/camera_retangle_vertical"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvConnect"
+                android:drawableTop="@drawable/camera_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/camera_connect"
+                android:gravity="center"
+                android:drawablePadding="@dimen/padding_x1"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/text_tinny" />
+
+
+            <TextView
+                android:id="@+id/tvScreenshot"
+                android:layout_width="wrap_content"
+                android:drawableTop="@drawable/camera_screenshot"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x6"
+                android:gravity="center"
+                android:drawablePadding="@dimen/padding_x1"
+                android:text="@string/camera_screenshot"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/text_tinny" />
+
+
+
+            <TextView
+                android:id="@+id/tvTalk"
+                android:layout_width="wrap_content"
+                android:drawableTop="@drawable/camera_talk"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_x6"
+                android:drawablePadding="@dimen/padding_x1"
+                android:text="@string/camera_talk"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/text_tinny" />
+
+
+            <TextView
+                android:id="@+id/tvAudio"
+                android:drawableTop="@drawable/camera_audio"
+                android:layout_marginTop="@dimen/margin_x6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:drawablePadding="@dimen/padding_x1"
+                android:text="@string/camera_audio"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/text_tinny" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/coco_popup_width"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_x6"
+        android:background="@drawable/coco_device_popup_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/settingsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/icon_settings"
+            android:drawablePadding="@dimen/padding_x2"
+            android:gravity="center_vertical"
+            android:text="@string/setting"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:background="@drawable/line_divide"/>
+
+        <TextView
+            android:id="@+id/shareTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@drawable/icon_share"
+            android:drawablePadding="@dimen/padding_x2"
+            android:gravity="center_vertical"
+            android:text="@string/family_share"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal"/>
+
+        <ImageView
+            android:id="@+id/timingModeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:background="@drawable/line_divide"/>
+
+        <TextView
+            android:id="@+id/timingModeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:drawableLeft="@drawable/icon_share"
+            android:drawablePadding="@dimen/padding_x2"
+            android:gravity="center_vertical"
+            android:text="@string/mode_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal"/>
+
+    </LinearLayout>
+</LinearLayout>

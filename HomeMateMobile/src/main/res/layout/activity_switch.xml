@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:irButton="http://schemas.android.com/apk/res-auto"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:right_text="@string/save"
+        navigationBar:text="@string/device_timing_set_action" />
+
+    <RelativeLayout
+        android:id="@+id/rlAction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green">
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/btnSwitchOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            irButton:checkedBg="@drawable/socket_open"
+            irButton:command="off"
+            irButton:keyName="@string/device_timing_action_shutdown"
+            irButton:unLearnedBg="@drawable/socket_open" />
+
+        <com.orvibo.homemate.view.custom.IrButton
+            android:id="@+id/btnSwitchOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            irButton:checkedBg="@drawable/socket_close"
+            irButton:command="on"
+            irButton:keyName="@string/device_timing_action_open"
+            irButton:unLearnedBg="@drawable/socket_close" />
+
+        <ImageView
+            android:id="@+id/statusImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/socket_open_background" />
+    </RelativeLayout>
+</LinearLayout>

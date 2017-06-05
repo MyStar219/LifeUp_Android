@@ -1,0 +1,489 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/scene_bar_background"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/personal"
+            android:textSize="@dimen/text_big"/>
+
+        <com.orvibo.homemate.view.custom.InfoPushTopView
+            android:id="@+id/infoPushCountView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bar_height"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/padding_x2"
+            app:typeBg="0"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/nav_line"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@color/common_line"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_userInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/vihome_personal_user_height"
+                android:visibility="gone"
+                android:background="@drawable/list_item">
+
+                <ImageView
+                    android:id="@+id/userIcon"
+                    android:layout_width="@dimen/account_icon_wh"
+                    android:layout_height="@dimen/account_icon_wh"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:src="@drawable/login_user_big_icon"/>
+
+                <TextView
+                    android:id="@+id/userNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:layout_toLeftOf="@+id/userInfoArrow"
+                    android:layout_toRightOf="@id/userIcon"
+                    android:text="@string/user_nickname_no"
+                    android:textSize="@dimen/text_big"/>
+
+                <ImageView
+                    android:id="@+id/userInfoArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/device_item_arrow_right"/>
+
+                <ImageView
+                    android:id="@+id/userInfoImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/line_divide"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/userLoginLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/vihome_personal_user_height"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/userLoginIcon"
+                    android:layout_width="@dimen/account_icon_wh"
+                    android:layout_height="@dimen/account_icon_wh"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:src="@drawable/login_user_big_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_toRightOf="@id/userLoginIcon"
+                    android:text="@string/personal_login"
+                    android:textSize="@dimen/text_big"/>
+
+                <ImageView
+                    android:id="@+id/userLoginImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/line_divide"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/common_line"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@color/common_line"/>
+
+
+            <RelativeLayout
+                android:id="@+id/allSet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/list_item">
+
+                <ImageView
+                    android:id="@+id/allSetImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/personal_set"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/allSetImageView"
+                    android:text="@string/personal_all_set_title"
+                    android:textSize="@dimen/text_big"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/device_item_arrow_right"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/allSetImageView"
+                    android:background="@color/common_line"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/familyMember"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/list_item"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/familyMemberImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/personal_family"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/familyMemberImageView"
+                    android:text="@string/personal_family_member"
+                    android:textSize="@dimen/text_big"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/device_item_arrow_right"/>
+
+                <ImageView
+                    android:id="@+id/familyMemberLineImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/familyMemberImageView"
+                    android:background="@color/common_line"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/commonDevice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/list_item"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/commonDeviceImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/personal_common_device"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/commonDeviceImageView"
+                    android:text="@string/personal_common_device"
+                    android:textSize="@dimen/text_big"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/device_item_arrow_right"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/commonDeviceImageView"
+                    android:background="@color/common_line"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/messageSetting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/list_item">
+
+                <ImageView
+                    android:id="@+id/messageSettingImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/personal_message"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/messageSettingImageView"
+                    android:text="@string/message_setting"
+                    android:textSize="@dimen/text_big"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/device_item_arrow_right"/>
+
+                <ImageView
+                    android:id="@+id/messageSettingLineImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/messageSettingImageView"
+                    android:background="@color/common_line"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/myHost"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/list_item">
+
+                <ImageView
+                    android:id="@+id/myHostImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/personal_my_host"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/myHostImageView"
+                    android:text="@string/personal_my_host"
+                    android:textSize="@dimen/text_big"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/device_item_arrow_right"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/widgetSetting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/list_item">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/myWidgetImageView"
+                    android:background="@drawable/line_divide"/>
+                <ImageView
+                    android:id="@+id/myWidgetImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/icon_settings"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/myWidgetImageView"
+                    android:text="@string/set_widget_title"
+                    android:textSize="@dimen/text_big"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/device_item_arrow_right"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/common_line"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginTop="@dimen/margin_x4"
+                android:background="@color/common_line"/>
+
+            <RelativeLayout
+                android:id="@+id/user_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/list_item">
+
+                <ImageView
+                    android:id="@+id/user_feedback_ImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/bg_feedback"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/user_feedback_ImageView"
+                    android:text="@string/personal_user_feedback"
+                    android:textSize="@dimen/text_big"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/device_item_arrow_right"/>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/user_feedback_ImageView"
+                    android:background="@color/common_line"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height"
+                android:background="@drawable/list_item">
+
+                <ImageView
+                    android:id="@+id/aboutImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/personal_about"/>
+
+                <ImageView
+                    android:id="@+id/findNewVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_x8"
+                    android:layout_marginTop="@dimen/margin_x1"
+                    android:src="@drawable/find_new_version"
+                    android:visibility="gone"/>
+
+
+                <TextView
+                    android:id="@+id/aboutTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/aboutImageView"
+                    android:text="@string/personal_about"
+                    android:textSize="@dimen/text_big"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:src="@drawable/device_item_arrow_right"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/common_line"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

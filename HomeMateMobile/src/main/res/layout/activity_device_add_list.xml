@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:centerText="@string/device_add"
+        navigationBar:leftDrawableLeft="@drawable/back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/unbindDeviceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:background="@color/orange"
+            android:drawableLeft="@drawable/icon_equipment"
+            android:drawablePadding="@dimen/padding_x2"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_x4"
+            android:text="发现"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/deviceListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:divider="@null" />
+
+</LinearLayout>

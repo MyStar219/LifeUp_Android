@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+   >
+
+    <com.orvibo.homemate.view.custom.IrKeyButton
+        android:id="@+id/irKeyButtonMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/margin_x4"
+        android:background="@drawable/icon_allone2_more_selector"
+        android:scaleType="fitCenter"
+        android:textColor="@color/font_white_gray"
+        android:textSize="@dimen/text_normal" />
+
+    <com.orvibo.homemate.view.custom.IrKeyButton
+        android:id="@+id/irKeyButtonDigit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_x4"
+        android:background="@drawable/icon_bg_green_selector"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        android:text="123"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_normal" />
+</RelativeLayout>

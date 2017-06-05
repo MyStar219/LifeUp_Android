@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/common_background"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:right_text="@string/device_timing"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/nbTitle"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:background="@color/common_background"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBG"
+            android:layout_width="@dimen/curtain_bg_width"
+            android:layout_centerInParent="true"
+            android:background="@drawable/curtain_bg"
+            android:layout_height="@dimen/curtain_bg_height" />
+
+
+        <ImageView
+            android:id="@+id/curtainOutsideView"
+            android:layout_width="@dimen/curtain_outside_width"
+            android:src="@drawable/curtain_outside_off"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_x6"
+            android:layout_height="@dimen/curtain_outside_height" />
+    </RelativeLayout>
+
+
+    <com.orvibo.homemate.view.custom.CurtainControlOldView
+        android:id="@+id/curtainControlOldView"
+        android:layout_below="@+id/relativeLayout"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout></ScrollView>

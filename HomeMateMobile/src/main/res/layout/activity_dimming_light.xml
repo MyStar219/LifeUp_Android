@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rlAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rgAction">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_marginBottom="@dimen/margin_x4"
+                        android:layout_marginTop="@dimen/margin_x4"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/dimming_light_bg1"/>
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/dimming_light_bg"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView5"
+                            android:layout_marginTop="@dimen/margin_x4"
+                            android:background="@drawable/dimming_light_bottom"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_x4"
+                        android:layout_marginRight="@dimen/margin_x4"
+                        android:paddingBottom="@dimen/padding_x12">
+
+                        <ImageView
+                            android:layout_width="@dimen/notification_ic_wh"
+                            android:layout_height="@dimen/notification_ic_wh"
+                            android:background="@drawable/dimming_dark"/>
+
+                        <SeekBar
+                            android:id="@+id/seekBarLight"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="255"
+                            android:maxHeight="@dimen/rgb_seek_bar_height"
+                            android:minHeight="@dimen/rgb_seek_bar_height"
+                            android:paddingLeft="@dimen/padding_x4"
+                            android:paddingRight="@dimen/padding_x4"
+                            android:progressDrawable="@drawable/dimming_seekbar"
+                            android:thumb="@drawable/dimming_thumb"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/notification_ic_wh"
+                            android:layout_height="@dimen/notification_ic_wh"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/dimming_bright"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/view_ligth_alpha_50"/>
+
+        <include layout="@layout/view_ligth_on_off_btn"/>
+
+        <!-- 开关翻转页面-->
+        <include layout="@layout/view_ligth_action"/>
+    </FrameLayout>
+</LinearLayout>

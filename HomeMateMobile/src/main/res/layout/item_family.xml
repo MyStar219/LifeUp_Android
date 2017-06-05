@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="?borderlessButtonStyle"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:baselineAligned="true">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:drawableLeft="@drawable/ic_family"
+        android:drawablePadding="@dimen/default_padding"
+        android:text="John Doe"
+        />
+
+    <TextView
+        android:id="@+id/relation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:text="(pet)"
+        />
+
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="@dimen/state_tag_size"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:padding="@dimen/half_padding"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="?android:textColorPrimaryInverse"
+        android:background="#999999"
+        android:text="pending"/>
+
+</LinearLayout>

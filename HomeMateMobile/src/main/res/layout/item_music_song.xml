@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130px"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingLeft="30px"
+    android:background="@drawable/list_item"
+    >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/song_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一路上有你"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:textColor="#333333"
+            />
+        <ImageView
+            android:id="@+id/animation_im"
+            android:layout_width="15dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="30px"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/singer_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#686868"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:text="张学友"
+        />
+</LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30px"
+
+        />
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="#d6d6d6"
+    android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="1dp"
+    android:background="@drawable/allone2_dialog_corner_bg">
+
+    <TextView
+        android:id="@+id/tv_allone2_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line_color"/>
+
+    <TextView
+        android:id="@+id/tv_btn_rightone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/allone2_dialog_tv_selector"
+        android:text="@string/the_right_one_ac"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line_color"/>
+
+    <TextView
+        android:id="@+id/tv_btn_another"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/dialog_bottom_tv_bg_selector"
+        android:text="@string/test_another_one"/>
+</LinearLayout>

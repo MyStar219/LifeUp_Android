@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@null"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/tran"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:onClick="leftTitleClick"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/padding_x4"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal"/>
+
+        <com.orvibo.homemate.view.custom.TimingCountdownTabView
+            android:id="@+id/topTimingCountdownTabView"
+            android:layout_width="200dip"
+            android:layout_height="@dimen/bar_ic_wh"
+            android:layout_centerInParent="true"
+            >
+
+        </com.orvibo.homemate.view.custom.TimingCountdownTabView>
+
+        <ImageView
+            android:id="@+id/confirmImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:background="@drawable/white_add_selector"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:onClick="rightTitleClick"
+            android:padding="@dimen/padding_x4"/>
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:clickable="true"
+            android:src="@drawable/setting_white_selector"
+            android:visibility="gone"/>
+
+<!--        <ImageView
+            android:id="@+id/iv_full_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:clickable="true"
+            android:src="@drawable/icon_full_screenlt_selector"
+            android:visibility="gone"/>-->
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@null"/>
+</LinearLayout>

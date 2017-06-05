@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.orvibo.homemate.view.custom.OfflineView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/offline_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    android:contentDescription="@null"
+    android:text="@string/offline"
+    android:padding="@dimen/padding_x1"
+    android:textColor="@color/dark"
+    android:textSize="8dip"/>

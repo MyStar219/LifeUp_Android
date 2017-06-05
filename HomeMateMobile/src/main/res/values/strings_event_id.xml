@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="MTAClick_MyDeviceBigAddBtn" translatable="false">首次添加设备</string>
+    <string name="MTAClick_MyDeviceSmallAddBtn" translatable="false">添加设备</string>
+    <string name="MTAClick_MyDevice_COCOIcon" translatable="false">COCO</string>
+    <string name="MTAClick_PersonalCenter" translatable="false">个人中心</string>
+    <string name="MTAClick_AddDevice_COCOSmartSocket" translatable="false">添加设备-COCO</string>
+    <string name="MTAClick_AddDevice_ViHomeProSmartHomeSystem" translatable="false">添加设备-300主机</string>
+    <string name="MTAClick_AddDevice_S20Socket" translatable="false">添加设备-S20智能插座</string>
+    <string name="MTAClick_AddDevice_TianlongSwitch" translatable="false">添加设备-天朗开关</string>
+    <string name="MTAClick_AddDevice_JinliSwitch" translatable="false">添加设备-锦力开关</string>
+    <string name="MTAClick_AddDevice_FluoriteCamera" translatable="false">添加设备-萤石摄像机</string>
+    <string name="MTAClick_AddDeviceBack" translatable="false">添加设备-返回</string>
+    <string name="MTAClick_GreenFlashes_theNextBtn" translatable="false">添加COCO-绿灯闪烁-下一步</string>
+    //
+    <string name="MTAClick_GreenFlashes_ConnectServerFail" translatable="false">添加COCO-绿灯闪烁-连接服务器失败</string>
+    <string name="MTAClick_GreenFlashes_NoNetwork" translatable="false">添加COCO-手机无网络</string>
+    //
+    <string name="MTAClick_GreenFlashes_FindDeviceFail" translatable="false">添加COCO-绿灯闪烁-未找到设备</string>
+    <string name="MTAClick_GreenFlashes_Back" translatable="false">添加COCO-绿灯闪烁-返回</string>
+    <string name="MTAClick_AddCoCo_ConnectionGuide_ToConnect" translatable="false">添加COCO-连接向导-去连接</string>
+    <string name="MTAClick_AddCoCo_ConnectionGuide_Back" translatable="false">添加COCO-连接向导-返回</string>
+    <string name="MTAClick_AddCoCo_WiFi_SelectWiFi" translatable="false">添加COCO-选择WiFi</string>
+    //
+    <string name="MTAClick_AddCoCo_WiFi_RefreshWiFi" translatable="false">添加COCO-选择WiFi-刷新</string>
+    //
+    <string name="MTAClick_AddCoCo_WiFi_Back" translatable="false">添加COCO-选择WiFi-返回</string>
+    //
+    <string name="MTAClick_AddCoCo_WiFi_CheckPwdLength" translatable="false">添加COCO-检查密码长度</string>
+    <string name="MTAClick_AddCoCo_WiFi_SendPwdFail" translatable="false">添加COCO-发送WiFi密码失败</string>
+    <string name="MTAClick_AddCoCo_WiFi_StartAdd" translatable="false">添加COCO-开始添加</string>
+    <string name="MTAClick_AddCoCo_WiFi_Cancel" translatable="false">添加COCO-开始添加-取消</string>
+    <string name="MTAClick_AddCoCo_BeingAdded_Confirm_PsdError" translatable="false">添加COCO-连接路由器失败</string>
+    <string name="MTAClick_AddCoCo_BeingAdded_Confirm_ConnectError" translatable="false">添加COCO-连接服务器失败</string>
+    <string name="MTAClick_AddCoCo_BeingAdded_Cancel" translatable="false">添加COCO-取消添加</string>
+    <string name="MTAClick_AddCoCo_ToConnect" translatable="false">添加COCO-手动连接-去连接</string>
+    <string name="MTAClick_AddCoCo_BeingAdded_PopViewCancel" translatable="false">添加COCO-取消去连接</string>
+    <string name="MTAClick_AddCoCo_AddSuccessfully_Save" translatable="false">添加COCO-添加成功</string>
+    <string name="MTAClick_COCO_Open" translatable="false">COCO-开</string>
+    <string name="MTAClick_COCO_Close" translatable="false">COCO-关</string>
+    //
+    <string name="MTAClick_COCO_NoAuthority" translatable="false">COCO-无操作权限</string>
+    <string name="MTAClick_COCO_Timer" translatable="false">COCO-定时</string>
+    //COCO-菜单
+    <string name="MTAClick_COCO_Settings" translatable="false">COCO-设置</string>
+    //COCO-分享
+    //COCO-分享-添加-通讯录
+    //COCO-分享-添加-添加
+    //COCO-分享-添加-返回
+    //COCO-分享-添加-未注册
+    //COCO-分享-列表-删除
+    //COCO-分享-列表-添加
+    //COCO-分享-列表-返回
+    //接受家人邀请
+    //拒绝家人邀请
+    <string name="MTAClick_COCO_Back" translatable="false">COCO-返回</string>
+    <string name="MTAClick_COCOTimerList_Edit" translatable="false">COCO-定时列表-编辑</string>
+    <string name="MTAClick_COCOTimerList_Switch" translatable="false">COCO-定时列表-开关</string>
+    <string name="MTAClick_COCOTimerList_Add" translatable="false">COCO-定时列表-添加</string>
+    //COCO-定时列表-时间冲突
+    <string name="MTAClick_COCOTimerList_Back" translatable="false">COCO-定时列表-返回</string>
+    <string name="MTAClick_COCOEditTimer_Action" translatable="false">COCO-增改定时-动作</string>
+    <string name="MTAClick_COCOEditTimer_Repeat" translatable="false">COCO-增改定时-重复</string>
+    <string name="MTAClick_COCOEditTimer_Cancel" translatable="false">COCO-增改定时-取消</string>
+    <string name="MTAClick_COCOEditTimer_PopViewDoNotSave" translatable="false">COCO-增改定时-弹窗不保存</string>
+    <string name="MTAClick_COCOEditTimer_PopViewSave" translatable="false">COCO-增改定时-弹窗保存</string>
+    <string name="MTAClick_COCOEditTimer_Save" translatable="false">COCO-增改定时-保存</string>
+    <string name="MTAClick_COCOEditTimer_Delete" translatable="false">COCO-增改定时-删除</string>
+    //
+    <string name="MTAClick_COCOEditTimer_TimeConflict" translatable="false">COCO-增改定时-时间冲突</string>
+    <string name="MTAClick_SettingsCOCO_DeviceName" translatable="false">COCO-设备名称</string>
+    <string name="MTAClick_SettingsCOCO_DeviceInfo" translatable="false">COCO-设备信息</string>
+    //
+    <string name="MTAClick_SettingsCOCO_DeviceInfo_Back" translatable="false">COCO-设备信息-返回</string>
+    <string name="MTAClick_SettingsCOCO_Delete" translatable="false">COCO-尝试删除</string>
+    <string name="MTAClick_SettingsCOCO_ConfirmDelete" translatable="false">COCO-确定删除</string>
+    <string name="MTAClick_SettingsCOCO_CancelDelete" translatable="false">COCO-取消删除</string>
+    <string name="MTAClick_SettingCOCO_Back" translatable="false">COCO-设置返回</string>
+    <string name="MTAClick_SettingCOCO_DeviceName_Save" translatable="false">COCO-设备名称-保存</string>
+    <string name="MTAClick_SettingsCOCO_DeviceName_Back" translatable="false">COCO-设备名称-返回</string>
+    <string name="MTAClick_SettingsCOCO_AlertSettings" translatable="false">COCO-提醒设置</string>
+    //
+    <string name="MTAClick_SettingsCOCO_AlertSettings_Back" translatable="false">COCO-提醒设置-返回</string>
+    <string name="MTAClick_SettingsCOCO_AlertSettings_Switch" translatable="false">COCO-提醒设置-定时提醒开关</string>
+    <string name="MTAClick_PersonalCenter_Login" translatable="false">个人中心-登录</string>
+    <string name="MTAClick_PersonalCenter_personalInformation" translatable="false">个人中心-个人信息</string>
+    <string name="MTAClick_PersonalCenter_About" translatable="false">个人中心-关于</string>
+    //个人中心-家庭成员
+    //家庭成员-添加-通讯录
+    //家庭成员-添加-添加
+    //家庭成员-添加-返回
+    //家庭成员-添加-未注册
+    //家庭成员-列表-删除
+    //家庭成员-列表-添加
+    //家庭成员-列表-返回
+    <string name="MTAClick_PersonalCenter_MyDevices" translatable="false">我的设备</string>
+    <string name="MTAClick_Login_login" translatable="false">登录</string>
+    <string name="MTAClick_Login_Register" translatable="false">注册</string>
+    <string name="MTAClick_Login_ForgotPsd" translatable="false">登录-忘记密码</string>
+    <string name="MTAClick_Login_Back" translatable="false">登录-返回</string>
+    <string name="MTAClick_Register_Phome_Next" translatable="false">注册-手机-下一步</string>
+    <string name="MTAClick_Register_Phone_Agreement" translatable="false">注册-手机-用户协议</string>
+    <string name="MTAClick_Register_Phone_Email" translatable="false">注册-手机-切换邮箱</string>
+    <string name="MTAClick_Register_Phone_Back" translatable="false">注册-手机-返回</string>
+    //
+    <string name="MTAClick_Register_Phone_Login" translatable="false">注册-手机-登录</string>
+    <string name="MTAClick_Register_Phone_Agreement_Back" translatable="false">注册-用户协议-返回</string>
+    <string name="MTAClick_Register_PhoneVerificationCode_Resend" translatable="false">注册-手机-验证码-发送</string>
+    <string name="MTAClick_Register_PhoneVerificationCode_Next" translatable="false">注册-手机-验证码-下一步</string>
+    <string name="MTAClick_Register_PhoneVerificationCode_Back" translatable="false">注册-手机-验证码-返回</string>
+    <string name="MTAClick_Register_Phone_Psd_Finish" translatable="false">注册-手机-密码-完成[1.5]</string>
+    <string name="MTAClick_Register_Phone_Psd_Back" translatable="false">注册-手机-密码-返回</string>
+    <string name="MTAClick_Register_Phone_Success" translatable="false">注册-手机-注册成功[1.5]</string>
+    <string name="MTAClick_Register_Phone_Fail" translatable="false">注册-手机-注册失败[1.5]</string>
+    <string name="MTAClick_Register_Email_Register" translatable="false">注册-邮箱-注册</string>
+    //
+    <string name="MTAClick_Register_Email_Login" translatable="false">注册-邮箱-登录</string>
+    <string name="MTAClick_Register_Email_Continue" translatable="false">注册-邮箱-继续注册[1.5]</string>
+    //
+    <string name="MTAClick_Register_Email_Fix" translatable="false">注册-邮箱-返回修改</string>
+    <string name="MTAClick_Register_Email_Back" translatable="false">注册-邮箱-返回</string>
+    <string name="MTAClick_Register_Email_Success" translatable="false">注册-邮箱-注册成功[1.5]</string>
+    <string name="MTAClick_Register_Email_Fail" translatable="false">注册-邮箱-注册失败[1.5]</string>
+    <string name="MTAClick_Register_Email_Agreement" translatable="false">注册-邮箱-用户协议</string>
+    <string name="MTAClick_Register_Email_Phone" translatable="false">注册-邮箱-切换手机</string>
+    <string name="MTAClick_ForgotPsd_Next" translatable="false">忘记密码-下一步</string>
+    <string name="MTAClick_ForgotPsd_Back" translatable="false">忘记密码-返回</string>
+    <string name="MTAClick_ForgotPsd_Resend" translatable="false">忘记密码-验证码-发送</string>
+    <string name="MTAClick_ForgotPsd_VerificationCode_Next" translatable="false">忘记密码-验证码-下一步</string>
+    <string name="MTAClick_ForgotPsd_VerificationCode_Back" translatable="false">忘记密码-验证码-返回</string>
+    <string name="MTAClick_ForgotPsd_NewPsd_Finish" translatable="false">忘记密码-新密码-完成</string>
+    <string name="MTAClick_ForgotPsd_NewPsd_Bakc" translatable="false">忘记密码-新密码-返回</string>
+    <string name="MTAClick_UserInfo_nickName" translatable="false">个人信息-昵称</string>
+    <string name="MTAClick_UserInfo_Phone" translatable="false">个人信息-手机</string>
+    <string name="MTAClick_UserInfo_Email" translatable="false">个人信息-邮箱</string>
+    <string name="MTAClick_UserInfo_ModifyPsd" translatable="false">个人信息-修改密码</string>
+    <string name="MTAClick_UserInfo_Exit" translatable="false">个人信息-尝试退出</string>
+    <string name="MTAClick_UserInfo_ConfirmExit" translatable="false">个人信息-确定退出</string>
+    <string name="MTAClick_UserInfo_CancelExit" translatable="false">个人信息-取消退出</string>
+    <string name="MTAClick_UserInfo_Back" translatable="false">个人信息-返回</string>
+    <string name="MTAClick_ModifyNickName_Save" translatable="false">修改昵称-保存</string>
+    <string name="MTAClick_ModifyNickName_Back" translatable="false">修改昵称-返回</string>
+    <string name="MTAClick_ChangeBindedPhone_Change" translatable="false">换绑手机-更换</string>
+    <string name="MTAClick_ChangeBindedPhone_Back" translatable="false">换绑手机-返回</string>
+    <string name="MTAClick_ChangeBindedPhone_VerificationCode_Resend" translatable="false">换绑手机-验证码-发送</string>
+    <string name="MTAClick_ChangeBindedPhone_VerificaionCode_checking" translatable="false">换绑手机-验证码-验证</string>
+    <string name="MTAClick_ChangeBindedPhone_VerificationCode_Back" translatable="false">换绑手机-验证码-返回</string>
+    <string name="MTAClick_ChangeBindedPhone_NewPhone_Next" translatable="false">换绑手机-新手机-下一步</string>
+    <string name="MTAClick_ChangeBindedPhone_NewPhone_Back" translatable="false">换绑手机-新手机-返回</string>
+    <string name="MTAClick_ChangeBindedPhone_NewVerificaitonCode_Resend" translatable="false">换绑手机-新验证码-发送</string>
+    <string name="MTAClick_ChangeBindedPhone_NewVerificationCode_Finish" translatable="false">换绑手机-新验证码-完成</string>
+    <string name="MTAClick_ChangeBindedPhone_NewVerificationCode_Roger" translatable="false">换绑手机-新验证码-知道了</string>
+    <string name="MTAClick_ChangeBindedPhone_NewVerificationCode_Back" translatable="false">换绑手机-新验证码-返回</string>
+    <string name="MTAClick_ChangeBindedEmail_Change" translatable="false">换绑邮箱-更换</string>
+    <string name="MTAClick_ChangeBindedEmail_Back" translatable="false">换绑邮箱-返回</string>
+    <string name="MTAClick_ChangeBindedEmail_VerificationCode_Resend" translatable="false">换绑邮箱-验证码-发送</string>
+    <string name="MTAClick_ChangeBindedEmail_VerificationCode_checking" translatable="false">换绑邮箱-验证码-验证</string>
+    <string name="MTAClick_ChangeBindedEmail_VerificationCode_Back" translatable="false">换绑邮箱-验证码-返回</string>
+    <string name="MTAClick_ChangeBindedEmail_NewEmail_Next" translatable="false">换绑邮箱-新邮箱-下一步</string>
+    <string name="MTAClick_ChangeBindedEmail_NewEmail_Back" translatable="false">换绑邮箱-新邮箱-返回</string>
+    <string name="MTAClick_ChangeBindedEmail_NewVerificationCode_Resend" translatable="false">换绑邮箱-新验证码-发送</string>
+    <string name="MTAClick_ChangeBindedEmail_NewVerificationCode_Finish" translatable="false">换绑邮箱-新验证码-完成</string>
+    <string name="MTAClick_ChangeBindedEmail_NewVerificationCode_Roger" translatable="false">换绑邮箱-新验证码-知道了</string>
+    <string name="MTAClick_ChangeBindedEmail_NewVerificationCode_Back" translatable="false">换绑邮箱-新验证码-返回</string>
+    <string name="MTAClick_BindedPhone_Next" translatable="false">绑定手机-下一步</string>
+    <string name="MTAClick_BindedPhone_Back" translatable="false">绑定手机-返回</string>
+    <string name="MTAClick_BindedPhone_Resend" translatable="false">绑定手机-验证码-发送</string>
+    <string name="MTAClick_BindedPhone_VerificationCode_Finish" translatable="false">绑定手机-验证码-完成</string>
+    <string name="MTAClick_BindedPhone_VerificationCode_Roger" translatable="false">绑定手机-验证码-知道了</string>
+    <string name="MTAClick_BindedPhone_VerificationCode_Back" translatable="false">绑定手机-验证码-返回</string>
+    <string name="MTAClick_BindedEmail_Next" translatable="false">绑定邮箱-下一步</string>
+    <string name="MTAClick_BindedEmail_Back" translatable="false">绑定邮箱-返回</string>
+    <string name="MTAClick_BindedEmail_Verification_Resend" translatable="false">绑定邮箱-验证码-发送</string>
+    <string name="MTAClick_BindedEmail_Verification_Finish" translatable="false">绑定邮箱-验证码-完成</string>
+    <string name="MTAClick_BindedEmail_Verificaiton_Roger" translatable="false">绑定邮箱-验证码-知道了</string>
+    <string name="MTAClick_BindedEmail_Verification_Back" translatable="false">绑定邮箱-验证码-返回</string>
+    <string name="MTAClick_ModifyPsd_Finish" translatable="false">修改密码-完成</string>
+    <string name="MTAClick_ModifyPsd_ForgotPsd" translatable="false">修改密码-忘记密码</string>
+    <string name="MTAClick_ModifyPsd_Back" translatable="false">修改密码-返回</string>
+    <string name="MTAClick_About_CopyTheWechat" translatable="false">关于-复制微信</string>
+    <string name="MTAClick_About_Back" translatable="false">关于-返回</string>
+    <string name="MTAClick_About_CheckForUpdates" translatable="false">关于-检查更新</string>
+    //
+    <string name="MTAClick_AllMessage" translatable="false">消息中心</string>
+    <string name="MTAClick_AllMessage_Back" translatable="false">消息中心-返回</string>
+    <string name="MTAClick_AllMessage_Settings" translatable="false">消息中心-设置</string>
+    <string name="MTAClick_AllMessage_Settings_About" translatable="false">消息中心-设置-定时提醒分开关</string>
+    //
+    <string name="MTAClick_AllMessage_Settings_All" translatable="false">消息中心-设置-定时提醒总开关</string>
+    <string name="MTAClick_AllMessage_Settings_Back" translatable="false">消息中心-设置-返回</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/roomNameTextView"
+        android:layout_width="85dip"
+        android:layout_height="50dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_room_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="addRoom"
+        android:singleLine="true"
+        android:maxEms="3"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_normal" />
+
+    <ImageView
+        android:id="@+id/deleteRoomImageView"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right|top"
+        android:background="@drawable/bg_gray_delete_selector"
+        android:clickable="true"
+        android:onClick="deleteRoom"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:scaleType="fitCenter" />
+</RelativeLayout>

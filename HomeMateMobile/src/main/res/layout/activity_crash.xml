@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_x8">
+
+    <!-- 放大镜 -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/crash_icon" />
+
+    <TextView
+        android:id="@+id/aboutCrash"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/aboutError"
+        android:textColor="@color/font_black"
+        android:textIsSelectable="true"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/report_cb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:checked="true"
+        android:drawableLeft="@drawable/check_box"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/button_height"
+        android:onClick="reportCrash"
+        android:singleLine="true"
+        android:text="@string/report"
+        android:textColor="@color/font_black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/restart_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_circle_selector"
+        android:gravity="center"
+        android:minHeight="@dimen/button_height"
+        android:onClick="restartViHome"
+        android:text="@string/restart"
+        android:textColor="@color/font_black" />
+
+    <Button
+        android:id="@+id/close_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:visibility="invisible" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_white"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        navigationBar:rightText="@string/ap_config_scan_wifi"
+        navigationBar:centerText="@string/ap_config_wifi_list"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:id="@+id/wifiListView"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

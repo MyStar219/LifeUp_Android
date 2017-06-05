@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/title_bar_bg"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+        <ImageView
+            android:id="@+id/ivProgram"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="240dp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_mc"
+            android:layout_height="240dp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_mc_down"
+            android:layout_height="240dp" />
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigation:bg_color="@color/transparent"
+        navigation:right_img="@drawable/bt_nav_collection_normal"
+        navigation:ng_left_img="@drawable/back" />
+        <ImageView
+            android:id="@+id/ivCircleProgram"
+            android:layout_width="135dp"
+            android:paddingLeft="@dimen/padding_x4"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_x2"
+            android:layout_height="100dp" />
+        <TextView
+            android:id="@+id/tvChannel"
+            android:layout_width="wrap_content"
+            android:text="channel"
+            android:layout_alignBottom="@id/ivProgram"
+            android:layout_marginBottom="@dimen/margin_x1"
+            android:textColor="@color/common_line"
+            android:layout_toRightOf="@id/ivCircleProgram"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvProgram"
+            android:layout_width="wrap_content"
+            android:text="program"
+            android:textSize="@dimen/text_big"
+            android:textColor="@color/white"
+            android:layout_above="@id/tvChannel"
+            android:layout_toRightOf="@id/ivCircleProgram"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvChangeChannel"
+            android:layout_width="wrap_content"
+            android:background="@drawable/bt_order_big"
+            android:layout_alignParentBottom="true"
+            android:text="@string/change_channel"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/text_big"
+            android:layout_marginBottom="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/lvLivingTime"
+        android:layout_width="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:divider="@null"
+        android:layout_height="match_parent"/>
+</LinearLayout>

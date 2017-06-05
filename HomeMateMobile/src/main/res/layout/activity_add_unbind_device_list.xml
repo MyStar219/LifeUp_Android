@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:navigationTextBar="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/common_background"
+    android:orientation="vertical"
+    >
+
+    <com.orvibo.homemate.view.custom.NavigationTextBar
+        android:id="@+id/list_nbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:right_text="@string/unbind_add_wifi_device_finish"
+        navigationTextBar:left="@string/cancel"
+        navigationTextBar:middle="@string/device_add"
+        navigationTextBar:right="@string/unbind_add_wifi_device_finish"/>
+
+    <ListView
+        android:id="@+id/unbindDeviceListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>

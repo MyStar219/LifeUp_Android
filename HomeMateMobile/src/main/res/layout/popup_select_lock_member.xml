@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="50dip"
+        android:background="@drawable/dialog_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar_height"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/intelligent_scene_custom"
+            android:textSize="@dimen/text_big"/>
+
+        <ListView
+            android:id="@+id/lockMemberListView"
+            style="@style/listview_vertical_style"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dip"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar_height"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/cancelTextView"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:clickable="true"
+                android:textSize="@dimen/text_big"
+                android:gravity="center"
+                android:textColor="@color/green"/>
+
+            <TextView
+                android:id="@+id/confirmTextView"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:textColor="@color/green"
+                android:text="@string/confirm"
+                android:textSize="@dimen/text_big"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

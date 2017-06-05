@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_decode_1D_product" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_decode_1D_industrial" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_decode_QR" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_decode_Data_Matrix" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_decode_Aztec" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_decode_PDF417" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_play_beep" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_vibrate" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_copy_to_clipboard" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_auto_open_web" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_remember_duplicates" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_supplemental" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <ListPreference
+            android:defaultValue="OFF"
+            android:key="preferences_front_light_mode" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_auto_focus" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_invert_scan" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_bulk_mode" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_orientation" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <EditTextPreference android:key="preferences_custom_product_search" />
+        <ListPreference
+            android:defaultValue="-"
+            android:key="preferences_search_country" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_disable_continuous_focus" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_disable_exposure" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_disable_metering" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_disable_barcode_scene_mode" />
+    </PreferenceCategory>
+</PreferenceScreen>

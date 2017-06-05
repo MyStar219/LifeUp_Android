@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <bool name="pref_debug_default">false</bool>
+    
+    <bool name="pref_ipv6_default">false</bool>
+    
+    <bool name="pref_transport_use_random_ports_default">false</bool>
+    
+    <string name="pref_sip_port_default">5060</string>
+    
+    <bool name="pref_video_enable_key_default">true</bool>
+    <bool name="pref_video_automatically_accept_video_key_default">true</bool>
+    <bool name="pref_video_initiate_call_with_video_key_default">true</bool>
+    
+    <string name="default_audio_port">7078</string>
+	<string name="default_video_port">9078</string>
+	
+	<string name="pref_incoming_call_timeout_default">30</string>
+	
+	<!-- Audio codecs default-->
+    <bool name="pref_codec_speex16_default">false</bool>
+    <bool name="pref_codec_speex8_default">false</bool>
+    <bool name="pref_codec_ilbc_default">false</bool>
+    <bool name="pref_codec_amr_default">false</bool>
+    <bool name="pref_codec_g729_default">false</bool>
+    <bool name="pref_codec_amrwb_default">false</bool>
+    <bool name="pref_codec_gsm_default">false</bool>
+    <bool name="pref_codec_g722_default">false</bool>
+    <bool name="pref_codec_silk24_default">false</bool>
+    <bool name="pref_codec_silk16_default">false</bool>
+    <bool name="pref_codec_pcmu_default">true</bool>
+    <bool name="pref_codec_pcma_default">true</bool>
+    
+	<!-- Video codecs default -->
+	    <!-- Video -->
+    <bool name="pref_video_enable_default">true</bool>
+    <bool name="pref_video_use_front_camera_default">true</bool>
+    <bool name="pref_video_initiate_call_with_video_default">true</bool>
+    <bool name="pref_video_automatically_share_my_video_default">true</bool>
+    <bool name="pref_video_automatically_accept_video_default">true</bool>
+	
+	<bool name="pref_video_codec_vp8_default">false</bool>
+    <bool name="pref_video_codec_h264_default">true</bool>
+    <bool name="pref_video_codec_mpeg4_default">false</bool>
+    <bool name="pref_video_codec_h263_default">false</bool>
+    
+    <bool name="pref_echo_canceller_default">true</bool>
+    
+   	<string name="pref_stun_server_default"></string>
+    <bool name="pref_ice_enabled_default">false</bool>
+    
+    <bool name="pref_sipinfo_dtmf_default">false</bool>
+    <bool name="pref_rfc2833_dtmf_default">true</bool>
+    
+    <string name="pref_expire_default">3600</string>
+    <string name="pref_display_name_default">SipPhone</string>
+    <string name="pref_user_name_default">SipPhone</string>
+    
+    <bool name="pref_wifi_only_default">false</bool>
+    
+    <bool name="pref_background_mode_default">true</bool>
+    
+    <bool name="pref_autostart_default">false</bool>
+    
+</resources>

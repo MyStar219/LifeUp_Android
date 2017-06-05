@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_white"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:centerText="@string/device_add_success"
+        navigationBar:leftText=""/>
+
+    <LinearLayout
+        android:id="@+id/device_add_successfully_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_x8"
+        android:paddingLeft="@dimen/padding_x8"
+        android:paddingTop="@dimen/padding_x8">
+
+        <ImageView
+            android:id="@+id/socket_config_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/socket_config_success_ok"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding_x8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/socketConfigSuccessNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/device_setting_tips"
+                android:textSize="@dimen/text_big"/>
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="@dimen/text_normal"-->
+            <!--android:text="@string/socket_to_set"/>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divide"/>
+
+    <TextView
+        android:id="@+id/tv_deviceName_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:text="@string/device_name"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small"/>
+
+    <com.orvibo.homemate.view.custom.EditTextWithCompound
+        android:id="@+id/deviceNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/device_setting_name_hint"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:text="@string/device_setting_default_name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/text_big"/>
+
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/margin_x4"-->
+    <!--android:layout_marginRight="@dimen/margin_x4"-->
+    <!--android:layout_marginTop="@dimen/margin_x4"-->
+    <!--android:text="@string/device_icon"-->
+    <!--android:textColor="@color/gray"-->
+    <!--android:textSize="@dimen/text_small" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/deviceIconTextView"-->
+    <!--android:text="@string/device_icon_hint"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:background="@drawable/button_white"-->
+    <!--android:paddingLeft="@dimen/padding_x4"-->
+    <!--android:paddingRight="@dimen/padding_x4"-->
+    <!--android:textColor="@color/gray"-->
+    <!--android:drawableRight="@drawable/arrow_right_small"-->
+    <!--android:layout_marginLeft="@dimen/margin_x4"-->
+    <!--android:layout_marginRight="@dimen/margin_x4"-->
+    <!--android:layout_marginTop="@dimen/margin_x2"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:textSize="@dimen/text_big"-->
+    <!--android:layout_height="@dimen/list_item_height" />-->
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:background="@drawable/button_green"
+        android:onClick="save"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"/>
+
+
+    <!--<Button
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:text="@string/device_delete"
+        android:textColor="@color/red"
+        android:onClick="delete"
+        android:textSize="@dimen/text_normal"
+        android:background="@drawable/button_white"
+        android:layout_height="wrap_content" />-->
+</LinearLayout>

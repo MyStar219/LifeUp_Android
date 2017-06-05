@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/default_padding">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:text="@string/name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/field_activation_code"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/name_register"
+        android:inputType="textCapWords"
+        android:singleLine="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:drawableLeft="@drawable/field_phone"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/phone_register"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:text="@string/password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/field_pass"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/pass_register"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:text="@string/confirm_password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <EditText
+        style="@style/App_EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/field_pass"
+        android:drawablePadding="@dimen/default_padding"
+        android:id="@+id/passConfirm_register"
+        android:singleLine="true" />
+
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_padding"
+        android:text="@string/agree_to_terms"
+        android:id="@+id/checkBox"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="@dimen/double_padding"
+        android:text="@string/register"
+        android:textSize="18sp"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+</LinearLayout>

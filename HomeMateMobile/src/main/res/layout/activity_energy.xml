@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_background"
+                android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:leftDrawableLeft="@drawable/back"
+        navigationBar:right_img="@drawable/setting_white_selector"
+        navigationBar:text="@string/message_energy"/>
+
+    <!--<include-->
+        <!--android:id="@+id/srl_progress"-->
+        <!--layout="@layout/progress_swiperefresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/progress_swiperefresh_hgith"-->
+        <!--android:layout_below="@+id/navigationBar"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+
+    <TextView
+        android:id="@+id/energy_remind_close_all"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_list_device_single_default"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/energy_remind_close_all"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_big"
+        android:visibility="visible"/>
+
+    <com.orvibo.homemate.view.custom.swipemenulistview.SwipeMenuListView
+        android:id="@+id/devicesEnergyListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/energy_remind_close_all"
+        android:layout_below="@+id/navigationBar"
+        android:divider="@drawable/tran"
+        android:dividerHeight="0dp"
+        android:listSelector="@drawable/tran"/>
+
+    <include
+        layout="@layout/empty_device_energy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navigationBar"/>
+
+</RelativeLayout>

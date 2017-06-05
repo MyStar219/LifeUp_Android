@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/common_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        app:centerText="@string/user_identify_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/userContactTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:text="@string/user_identify_contact"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_small" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+    <com.orvibo.homemate.view.custom.EditTextWithCompound
+        android:id="@+id/codeEditText"
+        android:hint="@string/user_identify_code"
+        android:inputType="number"
+        android:drawableRight="@drawable/edit_text_delete_icon"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_big"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:layout_height="@dimen/list_item_height" />
+
+        <TextView
+            android:id="@+id/countdownTextView"
+            android:layout_width="@dimen/identify_send_button_width"
+            android:text="@string/user_identify_countdown"
+            android:background="@drawable/identify_send_button"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/error_icon"
+        android:text="@string/user_identify_check_code_error"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        android:textSize="@dimen/text_small" />
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="match_parent"
+        android:enabled="false"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"
+        android:background="@drawable/button_green"
+        android:layout_height="wrap_content" />
+</LinearLayout>

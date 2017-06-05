@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res-auto"
+    xmlns:pullrefresh="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/searchBoxCollapsedLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.orvibo.homemate.view.custom.NavigationGreenBar
+            android:id="@+id/nbTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            navigation:text="@string/program_channel_list" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:background="@color/green">
+
+            <RelativeLayout
+                android:id="@+id/searchBoxExpandedRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:id="@+id/cancelSearchTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_x1"
+                    android:singleLine="true"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal" />
+
+                <com.orvibo.homemate.view.custom.ClearEditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bar_ic_wh"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:background="@drawable/edittext_corner_white_bg"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:drawablePadding="@dimen/padding_x2"
+                    android:paddingLeft="@dimen/padding_x2"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/searchBoxCollapsedRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/searchTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bar_ic_wh"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_x4"
+                    android:layout_marginRight="@dimen/margin_x4"
+                    android:background="@drawable/edittext_corner_white_bg"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/searchTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:gravity="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_normal" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.orvibo.homemate.view.custom.pulltorefresh.PullRefreshView
+            android:id="@+id/ptrf_program_chennal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@color/transparent"
+            pullrefresh:has_footer="false"
+            pullrefresh:has_header="true"
+            android:overScrollMode="never"/>
+
+        <com.orvibo.homemate.view.custom.pulltorefresh.ErrorMaskView
+            android:id="@+id/maskView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</LinearLayout>

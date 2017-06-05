@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        navigationBar:centerText="@string/add"/>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/green"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_x8">
+
+        <ImageView
+            android:id="@+id/blueGrayImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_add_switch" />
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/green"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_x8">
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+           />
+
+        <ImageView
+            android:layout_weight="6"
+            android:id="@+id/blueGrayImageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_add_switch"/>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tipTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x8"
+            android:layout_marginRight="@dimen/margin_x8"
+            android:text="@string/device_add_switch_text"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_normal"/>
+
+        <TextView
+            android:id="@+id/tipTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tipTextView1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_x4"
+            android:text="@string/device_add_tipTextView2"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_small"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_x8"
+        android:background="@drawable/button_green"
+        android:text="@string/vicenter_add_btn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"/>
+
+    <TextView
+        android:id="@+id/tv_add_by_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:text="@string/danale_add_by_hand"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_normal"
+        android:visibility="gone"/>
+
+</LinearLayout>

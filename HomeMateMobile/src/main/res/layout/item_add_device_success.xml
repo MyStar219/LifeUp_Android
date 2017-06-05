@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_image_item_height"
+    android:background="@null"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/padding_x4"
+    android:paddingRight="@dimen/padding_x4" >
+
+    <ImageView
+        android:id="@+id/icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/deviceTypeName_tv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_x2"
+        android:textColor="@color/font_black" />
+
+    <TextView
+        android:id="@+id/set_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x2"
+        android:background="@drawable/button_green"
+        android:gravity="center"
+        android:minWidth="58dp"
+        android:clickable="true"
+        android:onClick="deviceSet"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/add_device_set"
+        android:textColor="@color/font_white_255" />
+
+</LinearLayout>

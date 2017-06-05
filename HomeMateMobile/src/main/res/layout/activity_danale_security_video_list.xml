@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pullrefresh="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.orvibo.homemate.view.custom.NavigationGreenBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="@dimen/bar_height"
+        pullrefresh:text="@string/security_video"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.orvibo.homemate.view.custom.pulltorefresh.PullRefreshView
+            android:id="@+id/prv_pushmsg_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:fadingEdge="none"
+            android:listSelector="@color/transparent"
+            android:divider="@null"
+            android:dividerHeight="15dp"
+            android:scrollbars="none"
+            pullrefresh:has_header="false"
+            pullrefresh:has_footer="true"/>
+
+        <com.orvibo.homemate.view.custom.pulltorefresh.ErrorMaskView
+            android:id="@+id/maskView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+</LinearLayout>

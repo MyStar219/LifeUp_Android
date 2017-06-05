@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:smagret="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_x12"
+        android:background="@drawable/about_logo"
+        android:contentDescription="@null"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        android:orientation="horizontal">
+
+        <com.orvibo.homemate.view.custom.EditTextWithCompound
+            android:id="@+id/userName_et"
+            style="@style/et_common"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_bg"
+            android:drawableLeft="@drawable/login_user_icon"
+            android:drawablePadding="@dimen/padding_x2"
+            android:drawableRight="@drawable/edit_text_delete_icon"
+            android:hint="@string/phone_number"
+            android:paddingRight="@dimen/padding_x12"
+            app:maxLenth="1000"/>
+
+        <ImageView
+            android:id="@+id/dropdownImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:padding="@dimen/padding_x1"
+            android:src="@drawable/arrow_down"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        android:orientation="horizontal">
+
+        <com.orvibo.homemate.view.custom.EditTextWithCompound
+            android:id="@+id/password_et"
+            style="@style/et_common"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_bg"
+            android:drawableLeft="@drawable/login_password_icon"
+            android:drawablePadding="@dimen/padding_x2"
+            android:drawableRight="@drawable/edit_text_delete_icon"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingRight="@dimen/padding_x12"/>
+
+        <ImageView
+            android:id="@+id/eyeNewPwdImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:padding="@dimen/padding_x1"
+            android:src="@drawable/password_show"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:background="@drawable/button_green"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/login_font"
+        android:textSize="@dimen/navigation_textsize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/forget_password_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:onClick="true"
+            android:paddingBottom="@dimen/padding_x4"
+            android:paddingTop="@dimen/padding_x4"
+            android:text="@string/forget_password"
+            android:textColor="@color/green"
+            android:textSize="@dimen/identity_textsize"/>
+
+        <View
+            android:layout_width="0.0dp"
+            android:layout_height="0.0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/register_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:onClick="true"
+            android:paddingBottom="@dimen/padding_x4"
+            android:paddingTop="@dimen/padding_x4"
+            android:text="@string/register"
+            android:textColor="@color/green"
+            android:textSize="@dimen/identity_textsize"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/thirdAuthTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_x8"
+        android:layout_marginRight="@dimen/margin_x8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"
+            android:background="@color/gray_white_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:layout_marginRight="@dimen/margin_x2"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="无需注册，第三方授权登录"
+            android:textSize="@dimen/text_tinny"
+            android:textColor="@color/gray_white_color"/>
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"
+            android:background="@color/gray_white_color"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdAuthButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/wechat_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/padding_x1"
+            android:drawableTop="@drawable/third_wechatlogin_selector"
+            android:gravity="center"
+            android:scaleType="center"
+            android:text="@string/auth_login_wechat2"/>
+
+        <TextView
+            android:id="@+id/qq_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/padding_x1"
+            android:layout_marginLeft="@dimen/margin_x8"
+            android:layout_marginRight="@dimen/margin_x8"
+            android:drawableTop="@drawable/third_qqlogin_selector"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:text="@string/auth_login_qq2"/>
+
+        <TextView
+            android:id="@+id/sina_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/padding_x1"
+            android:drawableTop="@drawable/third_weibologin_selector"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:text="@string/auth_login_sina2"/>
+    </LinearLayout>
+
+</LinearLayout>

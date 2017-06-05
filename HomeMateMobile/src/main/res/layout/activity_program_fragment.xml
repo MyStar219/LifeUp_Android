@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/ll_program_guides"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nbTitle"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_more_programs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_pulldown" />
+
+        <ImageView
+            android:id="@+id/iv_vertical_split_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_more_programs"
+            android:src="@drawable/pic_classify_line" />
+
+        <com.orvibo.homemate.view.custom.categoryscrollview.CategoryTabStrip
+            android:id="@+id/cts_programs_guides"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_vertical_split_line"
+            android:clipToPadding="false"
+            android:paddingLeft="6.0dip"
+            android:paddingRight="6.0dip" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/ll_program_guides"
+        android:background="@color/divide_line_color" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_programs_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_divide_line"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/ll_program_guides_gd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nbTitle"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/all_program_guides"
+                android:textColor="@color/device_name_en_color"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_hide_program_guides"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_callback" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divide_line_color" />
+
+        <GridView
+            android:id="@+id/gv_program_guides"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="10dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="30dp"></GridView>
+    </LinearLayout>
+
+    <include layout="@layout/view_allone_data_load" />
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="120dip"
+    android:layout_marginLeft="@dimen/margin_x4"
+    android:layout_marginRight="@dimen/margin_x4"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:id="@+id/item_LinearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/padding_x4"
+        android:paddingLeft="@dimen/margin_x4"
+        android:paddingTop="@dimen/padding_x4">
+
+        <ImageView
+            android:id="@+id/securityImageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bigcircle_red_normal"
+            android:scaleType="center"
+            android:src="@drawable/icon_security" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_x2"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/securityNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/intelligent_security_model"
+                android:textColor="@color/intelligent_red"
+                android:textSize="@dimen/text_big" />
+
+
+            <!-- <ImageView
+                 android:id="@+id/securityDeviceIconImageView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 />-->
+            <GridView
+                android:id="@+id/deviceTypeIconGridView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:cacheColorHint="@color/transparent"
+                android:listSelector="@null"
+                android:numColumns="5"
+                android:scrollbarStyle="outsideOverlay" />
+
+            <com.orvibo.homemate.view.custom.SecurityCountdownTextView
+                android:id="@+id/delayTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/intelligent_scene_security_tips2"
+                android:textColor="@color/intelligent_red"
+                android:textSize="@dimen/text_tinny" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_line_t" />
+
+       <!-- <TextView
+            android:id="@+id/securityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_x4"
+            android:background="@drawable/bt_red"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/intelligent_scene_active"
+            android:textColor="@color/intelligent_red"
+            android:textSize="@dimen/text_normal" />-->
+        <com.orvibo.homemate.view.custom.ProgressView
+
+            android:layout_margin="@dimen/margin_x4"
+            android:id="@+id/securityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/intelligent_scene_active"
+           />
+
+        <ImageView
+            android:id="@+id/activateImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_x4"
+            android:src="@drawable/intelligent_scene_switch"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/security_item_stop_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_x1"
+        android:layout_marginLeft="@dimen/margin_x1"
+        android:paddingLeft="@dimen/margin_x4"
+        android:text="@string/intelligent_security_stop_tips"
+        android:textColor="@color/intelligent_red"
+        android:textSize="@dimen/text_tinny" />
+
+
+</RelativeLayout>

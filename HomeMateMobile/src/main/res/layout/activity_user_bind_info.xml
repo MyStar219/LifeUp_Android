@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/common_background"
+    android:layout_height="match_parent">
+
+    <com.orvibo.homemate.view.custom.NavigationCocoBar
+        android:id="@id/navigationBar"
+        android:layout_width="match_parent"
+        app:centerText="@string/user_phone"
+        app:leftDrawableLeft="@drawable/back"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/bindIconImageView"
+        android:layout_width="wrap_content"
+        android:src="@drawable/user_phone_icon"
+        android:layout_marginTop="@dimen/margin_x12"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/bindInfoTextView"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_big"
+        android:text="@string/user_phone_has_bind"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bindChangeButton"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_x4"
+        android:layout_marginRight="@dimen/margin_x4"
+        android:layout_marginTop="@dimen/margin_x8"
+        android:text="@string/user_phone_change"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_big"
+        android:background="@drawable/button_green"
+        android:layout_height="wrap_content" />
+</LinearLayout>

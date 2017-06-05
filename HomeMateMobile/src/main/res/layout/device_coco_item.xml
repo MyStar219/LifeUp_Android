@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_x4"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:orientation="horizontal"
+            >
+            <com.orvibo.homemate.view.custom.DeviceCustomView
+                android:id="@+id/deviceCustomView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+            <ImageView
+               android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/margin_x4"
+                android:src="@drawable/device_item_arrow_right"/>
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@drawable/line_divide"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_x6"
+            android:layout_marginBottom="@dimen/margin_x6"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/deviceIcon_iv"
+                android:layout_width="wrap_content"
+                android:src="@drawable/icon_socket_big_on_normal"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@drawable/line_divide"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <com.orvibo.homemate.view.custom.TouchImageView
+                android:id="@+id/model_layout"
+                android:layout_width="0dp"
+                android:scaleType="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                custom:normalDrawable="@drawable/icon_pattern_normal"
+                custom:pressDrawable="@drawable/icon_pattern_press"
+                android:text="@string/mode_title"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_tinny"
+                android:paddingTop="@dimen/padding_x2"
+                android:paddingBottom="@dimen/padding_x2"
+                />
+            <View
+                android:layout_width="0.5dp"
+                android:background="@color/gray_white"
+                android:layout_height="match_parent" />
+            <com.orvibo.homemate.view.custom.TouchImageView
+                android:id="@+id/time_layout"
+                android:layout_width="0dp"
+                android:scaleType="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                custom:normalDrawable="@drawable/icon_time_normal"
+                custom:pressDrawable="@drawable/icon_time_press"
+                android:text="@string/timing"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_tinny"
+                android:paddingTop="@dimen/padding_x2"
+                android:paddingBottom="@dimen/padding_x2"
+                />
+            <View
+                android:layout_width="0.5dp"
+                android:background="@color/gray_white"
+                android:layout_height="match_parent" />
+            <com.orvibo.homemate.view.custom.TouchImageView
+                android:id="@+id/countdown_layout"
+                android:layout_width="0dp"
+                android:scaleType="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                custom:normalDrawable="@drawable/icon_countdown_normal"
+                custom:pressDrawable="@drawable/icon_countdown_press"
+                android:text="@string/countdown_"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_tinny"
+                android:paddingTop="@dimen/padding_x2"
+                android:paddingBottom="@dimen/padding_x2"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_white"/>
+    </LinearLayout>
+</LinearLayout>

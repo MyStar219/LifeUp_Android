@@ -1,0 +1,1 @@
+1.versionCode>=150后服务器支持模式定时,OEM app如果要支持模式定时，versionCode要>=150

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_image_item_height"
+    android:background="@null"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_image_item_height"
+        android:background="@drawable/item_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_x4"
+        android:paddingRight="@dimen/margin_x4">
+
+        <RelativeLayout
+            android:layout_width="@dimen/button_height"
+            android:layout_height="@dimen/button_height"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivDeviceIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/device_type_lighting" />
+
+            <include layout="@layout/offline" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_x4"
+            android:paddingRight="@dimen/margin_x4">
+
+            <TextView
+                android:id="@+id/tvDeviceName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="device name"
+                android:textColor="@color/navigation_text_color"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:id="@+id/room_tv"
+                style="@style/view_vertical"
+                android:layout_weight="2"
+                android:gravity="top"
+                android:text="@string/app_name"
+                android:textColor="@color/font_white_gray"
+                android:textSize="@dimen/text_small"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbDevice"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:tag="@string/save"
+            android:clickable="false"
+            android:button="@drawable/check_box"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>
